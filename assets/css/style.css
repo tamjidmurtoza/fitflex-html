@@ -28,6 +28,7 @@
   --heading-color: #fff;
   --body-color: rgba(255, 255, 255, 0.6);
   --gray-color: rgba(255, 255, 255, 0.04);
+  --black-color: #222;
   --border-color: rgba(255, 255, 255, 0.1);
   --accent-color: #f2fd84;
   --heading-font: "Sora", sans-serif;
@@ -2726,6 +2727,48 @@ hr {
 /*--------------------------------------------------------------
   12. CTA
 ----------------------------------------------------------------*/
+.cs_banner_style_1 {
+  min-height: 550px;
+}
+
+.cs_banner_style_1_content {
+  max-width: 50%;
+}
+.cs_banner_style_1_content h2 {
+  color: var(--heading-color);
+  font-family: Sora;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 64px;
+}
+.cs_banner_style_1_content span {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--heading-color);
+  color: transparent;
+}
+.cs_banner_style_1_content p {
+  color: var(--heading-color);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.cs_banner_style_1_button {
+  background-color: var(--accent-color);
+  color: var(--black-color);
+  padding: 18px 32px;
+  font-family: Sora;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px; /* 162.5% */
+  letter-spacing: 0.24px;
+  border: none;
+}
+
 /*--------------------------------------------------------------
   13. Testimonial
 ----------------------------------------------------------------*/
