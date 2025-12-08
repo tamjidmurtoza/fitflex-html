@@ -8,7 +8,7 @@
 }
 .cs_fs_18 {
   font-size: 18px;
-  line-height: 1.33em;
+  line-height: 28px;
 }
 .cs_fs_20 {
   font-size: 20px;
@@ -30,9 +30,9 @@
   font-size: 42px;
   line-height: 1.34em;
 }
-.cs_fs_48 {
-  font-size: 48px;
-  line-height: 1.33em;
+.cs_fs_54 {
+  font-size: 54px;
+  line-height: 1.185em;
 }
 
 .cs_light {
@@ -220,11 +220,25 @@ hr {
 }
 
 .cs_btn_style_1 {
+  background-color: var(--accent-color);
+  color: var(--black-color);
+  padding: 11px 32px;
+  font-weight: 600;
+  letter-spacing: 0.24px;
+  border: none;
+  outline: none;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  padding: 16px 40px;
-  outline: none;
-  border: 1px solid currentColor;
+  &:hover {
+    color: var(--black-color);
+    background-color: var(--heading-color);
+  }
+}
+.cs_text_strock {
+  span {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--heading-color);
+    color: transparent;
+  }
 }

@@ -63,7 +63,7 @@ h6 {
   color: var(--heading-color);
   padding: 0;
   margin: 0 0 20px 0;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2em;
   font-family: var(--heading-font);
 }
@@ -154,7 +154,7 @@ button {
 
 a:hover {
   text-decoration: none;
-  color: var(--heading-color);
+  color: var(--accent-color);
 }
 
 table {
@@ -1598,7 +1598,7 @@ label {
 
 .cs_fs_18 {
   font-size: 18px;
-  line-height: 1.33em;
+  line-height: 28px;
 }
 
 .cs_fs_20 {
@@ -1626,9 +1626,9 @@ label {
   line-height: 1.34em;
 }
 
-.cs_fs_48 {
-  font-size: 48px;
-  line-height: 1.33em;
+.cs_fs_54 {
+  font-size: 54px;
+  line-height: 1.185em;
 }
 
 .cs_light {
@@ -1820,13 +1820,26 @@ hr {
 }
 
 .cs_btn_style_1 {
+  background-color: var(--accent-color);
+  color: var(--black-color);
+  padding: 11px 32px;
+  font-weight: 600;
+  letter-spacing: 0.24px;
+  border: none;
+  outline: none;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  padding: 16px 40px;
-  outline: none;
-  border: 1px solid currentColor;
+}
+.cs_btn_style_1:hover {
+  color: var(--black-color);
+  background-color: var(--heading-color);
+}
+
+.cs_text_strock span {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--heading-color);
+  color: transparent;
 }
 
 /*--------------------------------------------------------------
@@ -2518,6 +2531,158 @@ hr {
 /*--------------------------------------------------------------
   8. Footer
 ----------------------------------------------------------------*/
+.cs_footer_row {
+  display: flex;
+  gap: 0px 60px;
+  padding: 74px 0 45px;
+}
+@media (max-width: 1199px) {
+  .cs_footer_row {
+    gap: 30px 45px;
+  }
+}
+@media (max-width: 991px) {
+  .cs_footer_row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 35px 24px;
+    padding: 70px 0 50px;
+  }
+}
+@media (max-width: 380px) {
+  .cs_footer_row {
+    flex-direction: column;
+  }
+}
+.cs_footer_row .cs_footer_col {
+  flex: none;
+  max-width: 150px;
+}
+.cs_footer_row .cs_footer_col:last-child {
+  flex: 1;
+  max-width: 451px;
+}
+@media (max-width: 991px) {
+  .cs_footer_row .cs_footer_col:last-child {
+    width: 100%;
+    flex: none;
+  }
+}
+
+.cs_footer_widget_title {
+  font-size: 16px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-family: var(--body-font);
+  line-height: 1.625em;
+}
+
+.cs_footer_widget_menu a {
+  line-height: 1.625em;
+}
+.cs_footer_widget_menu li:not(:last-child) {
+  margin-bottom: 0px;
+}
+
+.cs_footer_widget_menu a {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, currentColor 0, currentColor 100%);
+  transition: background-size 0.42s cubic-bezier(0.49, 0.49, 0.08, 1), color 0.27s ease-out;
+  background-position: 100% calc(100% - 0px);
+  background-size: 0 1px;
+}
+.cs_footer_widget_menu a:hover {
+  background-size: 100% 1px;
+  background-position: 0 calc(100% - 0px);
+}
+
+.cs_text_widget {
+  display: flex;
+}
+@media (max-width: 575px) {
+  .cs_text_widget {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.cs_footer_widget + .cs_footer_widget {
+  margin-top: 10px;
+}
+
+.cs_newsletter.cs_style_1 {
+  display: flex;
+  gap: 0px 14px;
+}
+.cs_newsletter.cs_style_1 .cs_newsletter_input {
+  border: none;
+  outline: none;
+  line-height: 1.625em;
+  min-width: 276px;
+  height: 48px;
+  padding-left: 20px;
+}
+@media (max-width: 1199px) {
+  .cs_newsletter.cs_style_1 .cs_newsletter_input {
+    height: 70px;
+    padding: 10px 70px 10px 20px;
+  }
+}
+.cs_newsletter.cs_style_1 .cs_newsletter_input::-moz-placeholder {
+  color: var(--black-color);
+  opacity: 0.5;
+}
+.cs_newsletter.cs_style_1 .cs_newsletter_input::placeholder {
+  color: var(--black-color);
+  opacity: 0.5;
+}
+.cs_newsletter.cs_style_1 .cs_newsletter_input::-ms-input-placeholder {
+  color: var(--heading-color);
+  opacity: 0.5;
+}
+.cs_newsletter.cs_style_1 .cs_newsletter_btn {
+  width: 161px;
+  background-color: var(--accent-color);
+  color: var(--black-color);
+  padding: 11px 32px;
+  font-weight: 600;
+  letter-spacing: 0.24px;
+  border: none;
+  outline: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1199px) {
+  .cs_newsletter.cs_style_1 .cs_newsletter_btn {
+    right: 11px;
+    top: 11px;
+  }
+}
+
+.cs_social_btns {
+  display: flex;
+  margin-top: 34px;
+}
+.cs_social_btns a {
+  background: var(--heading-color);
+  opacity: 0.5;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2.66em;
+  margin-right: 12px;
+  color: var(--black-color);
+}
+.cs_social_btns a:hover {
+  background-color: var(--accent-color);
+  opacity: 1;
+  color: var(--black-color);
+}
+
 /*--------------------------------------------------------------
   9. Isotope
 ----------------------------------------------------------------*/
@@ -2727,46 +2892,11 @@ hr {
 /*--------------------------------------------------------------
   12. CTA
 ----------------------------------------------------------------*/
-.cs_banner_style_1 {
+.cs_cta_style_1 {
   min-height: 550px;
 }
-
-.cs_banner_style_1_content {
+.cs_cta_style_1 .cs_cta_content {
   max-width: 50%;
-}
-.cs_banner_style_1_content h2 {
-  color: var(--heading-color);
-  font-family: Sora;
-  font-size: 54px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 64px;
-}
-.cs_banner_style_1_content span {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--heading-color);
-  color: transparent;
-}
-.cs_banner_style_1_content p {
-  color: var(--heading-color);
-  font-family: Roboto;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
-}
-
-.cs_banner_style_1_button {
-  background-color: var(--accent-color);
-  color: var(--black-color);
-  padding: 18px 32px;
-  font-family: Sora;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 26px; /* 162.5% */
-  letter-spacing: 0.24px;
-  border: none;
 }
 
 /*--------------------------------------------------------------
