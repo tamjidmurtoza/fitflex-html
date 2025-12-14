@@ -2,6 +2,12 @@
   4. General
 ----------------------------------------------------------------*/
 
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1264px;
+  }
+}
+
 .cs_fs_16 {
   font-size: 16px;
   line-height: 1.5em;
@@ -235,6 +241,10 @@ hr {
     background-color: var(--heading-color);
   }
 }
+
+// .cs_section_heading_style_1{
+
+// }
 .cs_text_strock {
   span {
     -webkit-text-stroke-width: 1px;

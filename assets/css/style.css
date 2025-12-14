@@ -1591,6 +1591,11 @@ label {
 /*--------------------------------------------------------------
   4. General
 ----------------------------------------------------------------*/
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1264px;
+  }
+}
 .cs_fs_16 {
   font-size: 16px;
   line-height: 1.5em;
@@ -2922,4 +2927,34 @@ hr {
 }
 .cs_value_card_style_1 .cs_value_text {
   margin-top: auto;
+}
+
+/*--------------------------------------------------------------
+Feature
+----------------------------------------------------------------*/
+.cs_feature_list {
+  width: min(100%, 713px);
+}
+.cs_feature_list li {
+  margin-bottom: 28px;
+  position: relative;
+  padding-left: 50px;
+}
+.cs_feature_list li:last-child {
+  margin-bottom: 0;
+}
+.cs_feature_list li .cs_feature_icon {
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-size: 24px;
+  line-height: 1em;
+}
+.cs_feature_list li .cs_feature_title {
+  margin-bottom: 10px;
+  line-height: 1.417em;
+}
+.cs_feature_list li .cs_feature_subtitle {
+  line-height: 1.625em;
 }/*# sourceMappingURL=style.css.map */
