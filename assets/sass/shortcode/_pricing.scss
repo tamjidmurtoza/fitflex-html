@@ -1,0 +1,51 @@
+/*--------------------------------------------------------------
+Feature
+----------------------------------------------------------------*/
+.cs_pricing_card {
+  padding: 55px 40px 60px 40px;
+  height: 100%;
+  border: 1px solid rgb(255 255 255 / 10%);
+  background: rgba(255, 255, 255, 0.04);
+  .cs_pricing_card_content {
+    width: 100%;
+    .cs_pricing_head {
+      text-align: center;
+      .cs_pricing_plan {
+        line-height: 1.625em;
+      }
+      .cs_price_value {
+        color: var(--accent-color);
+        font-weight: 600;
+      }
+      .cs_pricing_head_subtitle {
+        background: rgba(255, 255, 255, 0.06);
+        margin-left: -40px;
+        margin-right: -40px;
+        padding: 10px 0px;
+        letter-spacing: 1.6px;
+      }
+    }
+  }
+
+  .cs_btn_style_1 {
+    width: 100%;
+    // width: min(100%, 320px);
+    // margin: 0px 40px 60px 40px;
+  }
+}
+
+.cs_pricing_feature_list {
+  li {
+    // padding: 0px 40px;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    .cs_feature_icon {
+      padding-right: 20px;
+      font-size: 16px;
+      line-height: 1em;
+      color: var(--accent-color);
+    }
+  }
+}
