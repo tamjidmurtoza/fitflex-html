@@ -1,3 +1,23 @@
 /*--------------------------------------------------------------
   15. Card
 ----------------------------------------------------------------*/
+.cs_card_stryle_1 {
+  border: 1px solid red;
+  .cs_card_thumbnail {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .cs_btn_style_1 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: 1px solid red;
+  }
+  .cs_card_info {
+    padding: 40px 20px;
+  }
+}

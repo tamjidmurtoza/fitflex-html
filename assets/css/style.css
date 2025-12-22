@@ -1796,6 +1796,13 @@ hr {
   justify-content: center;
 }
 
+.cs_center_column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .cs_heading_color {
   color: var(--heading-color);
 }
@@ -1847,11 +1854,27 @@ hr {
   color: transparent;
 }
 
+.cs_section_heading_style_2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
 /*--------------------------------------------------------------
   5. Slider
 ----------------------------------------------------------------*/
 .cs_slider {
   position: relative;
+}
+
+.cs_full_screen_right {
+  width: calc(60vw + 650px);
+}
+@media (max-width: 991px) {
+  .cs_full_screen_right {
+    width: 100%;
+  }
 }
 
 .slick-arrow {
@@ -2907,33 +2930,34 @@ hr {
 /*--------------------------------------------------------------
   13. Testimonial
 ----------------------------------------------------------------*/
-.cs_testimonial_section .cs_section_heading_style_1 {
-  gap: 100px;
-}
-.cs_testimonial_section .cs_section_heading_style_1 .cs_section_heading_column_2 .cs_btn_style_1 {
-  width: 165px;
-  right: 0;
-  bottom: 12px;
-}
-
 .cs_testimonial_card {
-  height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);
 }
 .cs_testimonial_card .cs_testimonial_image {
+  width: 37%;
+  flex: none;
+  height: 100%;
+}
+.cs_testimonial_card .cs_testimonial_image img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cs_testimonial_card .cs_testimonial_content {
-  padding: 55px 40px 52px 40px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.cs_testimonial_card .cs_testimonial_content .cs_testimonial_user {
-  font-weight: 700;
-}
-.cs_testimonial_card .cs_testimonial_rating {
+.cs_testimonial_card .cs_testimonial_content .cs_testimonial_rating {
   color: var(--accent-color);
   font-size: 16px;
   line-height: 1em;
+}
+.cs_testimonial_card .cs_testimonial_content .cs_testimonial_user {
+  font-weight: 700;
 }
 
 /*--------------------------------------------------------------
@@ -2942,6 +2966,26 @@ hr {
 /*--------------------------------------------------------------
   15. Card
 ----------------------------------------------------------------*/
+.cs_card_stryle_1 {
+  border: 1px solid red;
+}
+.cs_card_stryle_1 .cs_card_thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cs_card_stryle_1 .cs_btn_style_1 {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: 1px solid red;
+}
+.cs_card_stryle_1 .cs_card_info {
+  padding: 40px 20px;
+}
+
 .cs_value_heading .cs_value_tagline {
   max-width: 500px;
 }
@@ -2999,6 +3043,9 @@ Feature
 }
 .cs_pricing_card .cs_pricing_card_content {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .cs_pricing_card .cs_pricing_card_content .cs_pricing_head {
   text-align: center;
@@ -3019,6 +3066,7 @@ Feature
 }
 .cs_pricing_card .cs_btn_style_1 {
   width: 100%;
+  margin-top: auto;
 }
 
 .cs_pricing_feature_list li {

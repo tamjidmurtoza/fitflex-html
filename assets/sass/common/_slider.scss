@@ -4,7 +4,13 @@
 .cs_slider {
   position: relative;
 }
+.cs_full_screen_right {
+  width: calc(60vw + 650px);
 
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+}
 .slick-arrow {
   cursor: pointer;
 }
