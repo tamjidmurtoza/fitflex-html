@@ -2,7 +2,8 @@
   15. Card
 ----------------------------------------------------------------*/
 .cs_card_stryle_1 {
-  border: 1px solid red;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
   .cs_card_thumbnail {
     img {
       width: 100%;
@@ -11,13 +12,44 @@
     }
   }
   .cs_btn_style_1 {
+    color: var(--heading-color);
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
-    border: 1px solid red;
+    border: 1px solid var(--heading-color);
+    padding: 10px 36px;
+    visibility: hidden;
+    opacity: 0;
+    // display: none;
+  }
+  &:hover .cs_btn_style_1 {
+    display: block;
+    visibility: visible;
+    opacity: 1;
   }
   .cs_card_info {
-    padding: 40px 20px;
+    padding: 35px 20px;
+    .cs_card_title {
+      line-height: 1.416em;
+      //Hover Effect
+      background-repeat: no-repeat;
+      background-image: linear-gradient(
+        90deg,
+        currentColor 0,
+        currentColor 100%
+      );
+      transition: background-size 0.42s cubic-bezier(0.49, 0.49, 0.08, 1),
+        color 0.27s ease-out;
+      background-position: 100% calc(100% - 0px);
+      background-size: 0 1px;
+      &:hover {
+        background-size: 100% 1px;
+        background-position: 0 calc(100% - 0px);
+      }
+    }
+    .cs_card_text {
+      opacity: 0.6;
+    }
   }
 }
