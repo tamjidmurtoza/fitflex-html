@@ -119,12 +119,18 @@
     padding: 11px 32px;
     font-weight: 600;
     letter-spacing: 0.24px;
-    border: none;
+    // border: none;
     outline: none;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
+    height: 48px;
+    border: 1px solid var(--accent-color);
+    &:hover {
+      color: var(--heading-color);
+      background: transparent;
+      border: 1px solid var(--heading-color);
+    }
     @media (max-width: 1199px) {
       right: 11px;
       top: 11px;
