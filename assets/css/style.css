@@ -1636,6 +1636,11 @@ label {
   line-height: 1.185em;
 }
 
+.cs_fs_72 {
+  font-size: 72px;
+  line-height: 1.139em;
+}
+
 .cs_light {
   font-weight: 300;
 }
@@ -1842,10 +1847,13 @@ hr {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  height: 48px;
+  border: 1px solid var(--accent-color);
 }
 .cs_btn_style_1:hover {
-  color: var(--black-color);
-  background-color: var(--heading-color);
+  color: var(--heading-color);
+  background-color: transparent;
+  border: 1px solid var(--heading-color);
 }
 
 .cs_text_strock span {
@@ -2911,6 +2919,37 @@ hr {
 /*--------------------------------------------------------------
   10. Hero
 ----------------------------------------------------------------*/
+.cs_hero_section .cs_hero_heading_content {
+  max-width: 536px;
+}
+.cs_hero_section .cs_hero_btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 18px;
+}
+.cs_hero_section .cs_hero_btns a:last-child {
+  color: var(--heading-color);
+  background: transparent;
+  border: 1px solid var(--heading-color);
+}
+.cs_hero_section .cs_hero_btns a:last-child:hover {
+  color: var(--black-color);
+  background: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+.cs_hero_section .cs_hero_content {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 35px 40px;
+  gap: 0px 25px;
+}
+.cs_hero_section .cs_hero_content .cs_hero_content_style_1 {
+  max-width: 265px;
+}
+.cs_hero_section .cs_hero_content .cs_hero_content_heading {
+  line-height: 1.238em;
+}
+
 /*--------------------------------------------------------------
   11. Iconbox
 ----------------------------------------------------------------*/

@@ -40,6 +40,10 @@
   font-size: 54px;
   line-height: 1.185em;
 }
+.cs_fs_72 {
+  font-size: 72px;
+  line-height: 1.139em;
+}
 
 .cs_light {
   font-weight: 300;
@@ -242,9 +246,12 @@ hr {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  height: 48px;
+  border: 1px solid var(--accent-color);
   &:hover {
-    color: var(--black-color);
-    background-color: var(--heading-color);
+    color: var(--heading-color);
+    background-color: transparent;
+    border: 1px solid var(--heading-color);
   }
 }
 
