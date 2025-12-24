@@ -4,7 +4,8 @@
 // Footer Row
 .cs_footer_row {
   display: flex;
-  gap: 0px 60px;
+  justify-content: space-between;
+  gap: 25px;
   padding: 74px 0 45px;
   @media (max-width: 1199px) {
     gap: 30px 45px;
