@@ -12,6 +12,16 @@ Feature
 //   gap: 0 70px;
 // }
 
+// Feature Image
+.cs_feature_widget_img {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  @media screen {
+  }
+}
+
 //Feature Section List
 .cs_feature_list {
   width: min(100%, 713px);
@@ -70,7 +80,3 @@ Feature
     }
   }
 }
-// Feature Image
-// .cs_feature_widget_img {
-//   width: 100%;
-// }

@@ -2,9 +2,12 @@
   10. Hero
 ----------------------------------------------------------------*/
 .cs_hero_section {
-  .cs_hero_heading_content {
-    max-width: 536px;
+  .cs_section_heading_style_1 {
+    width: min(100%, 760px);
   }
+  // .cs_hero_heading_content {
+  //   max-width: 536px;
+  // }
   .cs_hero_btns {
     display: flex;
     flex-wrap: wrap;
@@ -26,12 +29,21 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.04);
     padding: 35px 40px;
-    gap: 0px 25px;
+    gap: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, auto));
+    // flex-wrap: wrap;
     .cs_hero_content_style_1 {
       max-width: 265px;
     }
     .cs_hero_content_heading {
       line-height: 1.238em;
+    }
+  }
+  @media (max-width: 991px) {
+    .cs_hero_content {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

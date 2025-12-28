@@ -248,6 +248,7 @@ hr {
   align-items: center;
   height: 48px;
   border: 1px solid var(--accent-color);
+  text-wrap: nowrap;
   &:hover {
     color: var(--heading-color);
     background-color: transparent;
@@ -267,4 +268,14 @@ hr {
   align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
+  .cs_section_heading_column_1 {
+    max-width: 780px;
+  }
+  // .cs_btn_style_1 {
+    // flex: none;
+  // }
+  @media (max-width: 991px){
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
