@@ -39,10 +39,22 @@
 .cs_fs_54 {
   font-size: 54px;
   line-height: 1.185em;
+  @media (max-width: 1199px) {
+    font-size: 48px;
+  }
+  @media (max-width: 767px) {
+    font-size: 42px;
+  }
 }
 .cs_fs_72 {
   font-size: 72px;
   line-height: 1.139em;
+  @media (max-width: 1199px) {
+    font-size: 66px;
+  }
+  @media (max-width: 767px) {
+    font-size: 56px;
+  }
 }
 
 .cs_light {
@@ -272,9 +284,9 @@ hr {
     max-width: 780px;
   }
   // .cs_btn_style_1 {
-    // flex: none;
+  // flex: none;
   // }
-  @media (max-width: 991px){
+  @media (max-width: 991px) {
     flex-direction: column;
     align-items: flex-start;
   }

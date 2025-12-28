@@ -1635,10 +1635,30 @@ label {
   font-size: 54px;
   line-height: 1.185em;
 }
+@media (max-width: 1199px) {
+  .cs_fs_54 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .cs_fs_54 {
+    font-size: 42px;
+  }
+}
 
 .cs_fs_72 {
   font-size: 72px;
   line-height: 1.139em;
+}
+@media (max-width: 1199px) {
+  .cs_fs_72 {
+    font-size: 66px;
+  }
+}
+@media (max-width: 767px) {
+  .cs_fs_72 {
+    font-size: 56px;
+  }
 }
 
 .cs_light {
@@ -2583,47 +2603,41 @@ hr {
   flex: 1;
   max-width: 451px;
 }
-
-.cs_footer_widget_title {
+.cs_footer_row .cs_footer_widget_title {
   font-size: 16px;
   margin-bottom: 18px;
   font-weight: 700;
   font-family: var(--body-font);
   line-height: 1.625em;
 }
-
-.cs_footer_widget_menu a {
+.cs_footer_row .cs_footer_widget_menu a {
   line-height: 1.625em;
 }
-.cs_footer_widget_menu li:not(:last-child) {
+.cs_footer_row .cs_footer_widget_menu li:not(:last-child) {
   margin-bottom: 0px;
 }
-
-.cs_footer_widget_menu a {
+.cs_footer_row .cs_footer_widget_menu a {
   background-repeat: no-repeat;
   background-image: linear-gradient(90deg, currentColor 0, currentColor 100%);
   transition: background-size 0.42s cubic-bezier(0.49, 0.49, 0.08, 1), color 0.27s ease-out;
   background-position: 100% calc(100% - 0px);
   background-size: 0 1px;
 }
-.cs_footer_widget_menu a:hover {
+.cs_footer_row .cs_footer_widget_menu a:hover {
   background-size: 100% 1px;
   background-position: 0 calc(100% - 0px);
 }
-
-.cs_text_widget {
+.cs_footer_row .cs_text_widget {
   display: flex;
 }
-
-.cs_footer_widget + .cs_footer_widget {
+.cs_footer_row .cs_footer_widget + .cs_footer_widget {
   margin-top: 10px;
 }
-
-.cs_newsletter.cs_style_1 {
+.cs_footer_row .cs_newsletter.cs_style_1 {
   display: flex;
   gap: 0px 14px;
 }
-.cs_newsletter.cs_style_1 .cs_newsletter_input {
+.cs_footer_row .cs_newsletter.cs_style_1 .cs_newsletter_input {
   border: none;
   outline: none;
   line-height: 1.625em;
@@ -2631,19 +2645,19 @@ hr {
   height: 48px;
   padding-left: 20px;
 }
-.cs_newsletter.cs_style_1 .cs_newsletter_input::-moz-placeholder {
+.cs_footer_row .cs_newsletter.cs_style_1 .cs_newsletter_input::-moz-placeholder {
   color: var(--black-color);
   opacity: 0.5;
 }
-.cs_newsletter.cs_style_1 .cs_newsletter_input::placeholder {
+.cs_footer_row .cs_newsletter.cs_style_1 .cs_newsletter_input::placeholder {
   color: var(--black-color);
   opacity: 0.5;
 }
-.cs_newsletter.cs_style_1 .cs_newsletter_input::-ms-input-placeholder {
+.cs_footer_row .cs_newsletter.cs_style_1 .cs_newsletter_input::-ms-input-placeholder {
   color: var(--heading-color);
   opacity: 0.5;
 }
-.cs_newsletter.cs_style_1 .cs_newsletter_btn {
+.cs_footer_row .cs_newsletter.cs_style_1 .cs_newsletter_btn {
   width: 161px;
   background-color: var(--accent-color);
   color: var(--black-color);
@@ -2657,17 +2671,16 @@ hr {
   height: 48px;
   border: 1px solid var(--accent-color);
 }
-.cs_newsletter.cs_style_1 .cs_newsletter_btn:hover {
+.cs_footer_row .cs_newsletter.cs_style_1 .cs_newsletter_btn:hover {
   color: var(--heading-color);
   background: transparent;
   border: 1px solid var(--heading-color);
 }
-
-.cs_social_btns {
+.cs_footer_row .cs_social_btns {
   display: flex;
   margin-top: 34px;
 }
-.cs_social_btns a {
+.cs_footer_row .cs_social_btns a {
   background: var(--heading-color);
   opacity: 0.5;
   height: 32px;
@@ -2680,10 +2693,21 @@ hr {
   margin-right: 12px;
   color: var(--black-color);
 }
-.cs_social_btns a:hover {
+.cs_footer_row .cs_social_btns a:hover {
   background-color: var(--accent-color);
   opacity: 1;
   color: var(--black-color);
+}
+@media (max-width: 767px) {
+  .cs_footer_row {
+    flex-direction: column;
+  }
+}
+@media (max-width: 475px) {
+  .cs_footer_row .cs_newsletter.cs_style_1 {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2948,6 +2972,11 @@ hr {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);
 }
+@media (max-width: 520px) {
+  .cs_testimonial_card {
+    flex-direction: column;
+  }
+}
 .cs_testimonial_card .cs_testimonial_image {
   width: 37%;
   flex: none;
@@ -2958,6 +2987,12 @@ hr {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 520px) {
+  .cs_testimonial_card .cs_testimonial_image {
+    width: 100%;
+    height: auto;
+  }
 }
 .cs_testimonial_card .cs_testimonial_content {
   padding: 20px 40px;
