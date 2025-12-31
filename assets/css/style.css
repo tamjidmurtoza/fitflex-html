@@ -3044,7 +3044,8 @@ hr {
   15. Card
 ----------------------------------------------------------------*/
 .cs_card_style_1,
-.cs_card_style_2 {
+.cs_card_style_2,
+.cs_card_style_3 {
   border: 1px solid;
   -o-border-image: linear-gradient(360deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
      border-image: linear-gradient(360deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
@@ -3053,20 +3054,23 @@ hr {
 }
 @media (max-width: 450px) {
   .cs_card_style_1,
-  .cs_card_style_2 {
+  .cs_card_style_2,
+  .cs_card_style_3 {
     min-height: 445px;
     width: 290px;
   }
 }
 .cs_card_style_1 .cs_card_thumbnail img,
-.cs_card_style_2 .cs_card_thumbnail img {
+.cs_card_style_2 .cs_card_thumbnail img,
+.cs_card_style_3 .cs_card_thumbnail img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .cs_card_style_1 .cs_btn_style_1,
-.cs_card_style_2 .cs_btn_style_1 {
+.cs_card_style_2 .cs_btn_style_1,
+.cs_card_style_3 .cs_btn_style_1 {
   color: var(--heading-color);
   left: 50%;
   top: 50%;
@@ -3078,16 +3082,19 @@ hr {
   opacity: 0;
 }
 .cs_card_style_1:hover .cs_btn_style_1,
-.cs_card_style_2:hover .cs_btn_style_1 {
+.cs_card_style_2:hover .cs_btn_style_1,
+.cs_card_style_3:hover .cs_btn_style_1 {
   visibility: visible;
   opacity: 1;
 }
 .cs_card_style_1 .cs_card_info,
-.cs_card_style_2 .cs_card_info {
+.cs_card_style_2 .cs_card_info,
+.cs_card_style_3 .cs_card_info {
   padding: 35px 20px;
 }
 .cs_card_style_1 .cs_card_info .cs_card_title,
-.cs_card_style_2 .cs_card_info .cs_card_title {
+.cs_card_style_2 .cs_card_info .cs_card_title,
+.cs_card_style_3 .cs_card_info .cs_card_title {
   line-height: 1.416em;
   background-repeat: no-repeat;
   background-image: linear-gradient(90deg, currentColor 0, currentColor 100%);
@@ -3096,18 +3103,19 @@ hr {
   background-size: 0 1px;
 }
 .cs_card_style_1 .cs_card_info .cs_card_title:hover,
-.cs_card_style_2 .cs_card_info .cs_card_title:hover {
+.cs_card_style_2 .cs_card_info .cs_card_title:hover,
+.cs_card_style_3 .cs_card_info .cs_card_title:hover {
   background-size: 100% 1px;
   background-position: 0 calc(100% - 0px);
 }
 .cs_card_style_1 .cs_card_info .cs_card_text,
-.cs_card_style_2 .cs_card_info .cs_card_text {
+.cs_card_style_2 .cs_card_info .cs_card_text,
+.cs_card_style_3 .cs_card_info .cs_card_text {
   opacity: 0.6;
 }
 
 .cs_card_style_2 {
   padding: 25px 25px 35px;
-  border: 1px solid;
   -o-border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
      border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
 }
@@ -3132,6 +3140,14 @@ hr {
 .cs_card_style_2:hover {
   -o-border-image: linear-gradient(45deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
      border-image: linear-gradient(45deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
+}
+
+.cs_card_style_3 {
+  -o-border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+     border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+}
+.cs_card_style_3 .cs_card_info {
+  padding: 0 30px 26px;
 }
 
 .cs_value_heading .cs_value_tagline {
@@ -3248,4 +3264,25 @@ Feature
     margin-left: -20px;
     margin-right: -20px;
   }
+}
+
+.cs_video_style_1 {
+  min-height: 600px;
+}
+.cs_video_style_1 a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.cs_video_style_1 .cs_section_heading_style_1 {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  transform: translate(0%, -100%);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 37px 50px 36px 40px;
+  border: 1px solid;
+  -o-border-image: linear-gradient(270deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+     border-image: linear-gradient(270deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
 }/*# sourceMappingURL=style.css.map */
