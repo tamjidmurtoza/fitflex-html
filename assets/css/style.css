@@ -2947,7 +2947,9 @@ hr {
   border: 1px solid var(--accent-color);
 }
 .cs_hero_section .cs_hero_content {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid;
+  -o-border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+     border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
   background: rgba(255, 255, 255, 0.04);
   padding: 35px 40px;
   gap: 25px;
@@ -2988,7 +2990,9 @@ hr {
 ----------------------------------------------------------------*/
 .cs_testimonial_card {
   height: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid;
+  -o-border-image: linear-gradient(270deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+     border-image: linear-gradient(270deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
   background: rgba(255, 255, 255, 0.04);
 }
 @media (max-width: 520px) {
@@ -3041,8 +3045,11 @@ hr {
 ----------------------------------------------------------------*/
 .cs_card_style_1,
 .cs_card_style_2 {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid;
+  -o-border-image: linear-gradient(360deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+     border-image: linear-gradient(360deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
   background: rgba(255, 255, 255, 0.04);
+  transition: all 0.4s ease;
 }
 @media (max-width: 450px) {
   .cs_card_style_1,
@@ -3100,6 +3107,9 @@ hr {
 
 .cs_card_style_2 {
   padding: 25px 25px 35px;
+  border: 1px solid;
+  -o-border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+     border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
 }
 .cs_card_style_2 .cs_btn_style_1 {
   color: var(--black-color);
@@ -3120,7 +3130,8 @@ hr {
   padding: 27px 0 0;
 }
 .cs_card_style_2:hover {
-  border: 1px solid var(--accent-color);
+  -o-border-image: linear-gradient(45deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
+     border-image: linear-gradient(45deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
 }
 
 .cs_value_heading .cs_value_tagline {
@@ -3181,7 +3192,9 @@ Feature
 .cs_pricing_card {
   padding: 55px 40px 60px 40px;
   height: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid;
+  -o-border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+     border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
   background: rgba(255, 255, 255, 0.04);
 }
 .cs_pricing_card .cs_pricing_card_content {

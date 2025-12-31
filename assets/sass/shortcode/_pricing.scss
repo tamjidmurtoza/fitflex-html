@@ -5,7 +5,13 @@ Feature
   padding: 55px 40px 60px 40px;
   // padding: 1px;
   height: 100%;
-  border: 1px solid rgb(255 255 255 / 10%);
+  border: 1px solid;
+  border-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0)
+    )
+    1;
   background: rgba(255, 255, 255, 0.04);
   // background: red;
   .cs_pricing_card_content {
