@@ -1,3 +1,4 @@
+// About Page Video Section
 .cs_video_style_1 {
   min-height: 600px;
   a {
@@ -7,11 +8,11 @@
     transform: translate(-50%, -50%);
   }
   .cs_section_heading_style_1 {
+    width: min(100%, 700px);
     position: absolute;
     top: 100%;
     left: 0%;
     transform: translate(0%, -100%);
-    background: rgba(255, 255, 255, 0.2);
     padding: 37px 50px 36px 40px;
     border: 1px solid;
     border-image: linear-gradient(
@@ -20,5 +21,20 @@
         rgba(255, 255, 255, 0)
       )
       1;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    mask-image: linear-gradient(360deg, transparent 0%, black 30%, black 100%);
+    -webkit-mask-image: linear-gradient(
+      360deg,
+      transparent 0%,
+      black 30%,
+      black 100%
+    );
+    @media (max-width: 767px) {
+      padding: 30px 20px;
+    }
+    @media (max-width: 575px) {
+      padding: 25px 15px;
+    }
   }
 }

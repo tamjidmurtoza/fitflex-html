@@ -14,10 +14,7 @@
     1;
   background: rgba(255, 255, 255, 0.04);
   transition: all 0.4s ease;
-  @media (max-width: 450px) {
-    min-height: 445px;
-    width: 290px;
-  }
+
   .cs_card_thumbnail {
     img {
       width: 100%;
@@ -65,6 +62,13 @@
     }
   }
 }
+// Card 1 Custom Design
+@media (max-width: 450px) {
+  .cs_card_style_1 {
+    min-height: 445px;
+    width: 290px;
+  }
+}
 
 //Card 2 Custom Design
 .cs_card_style_2 {
@@ -105,6 +109,7 @@
 
 //Card 3 Custom Design
 .cs_card_style_3 {
+  height: 100%;
   border-image: linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.3),
@@ -114,6 +119,9 @@
   .cs_card_info {
     padding: 0 30px 26px;
   }
-  // &:hover {
-  // }
+  @media (max-width: 1199px) {
+    .cs_card_title {
+      word-wrap: break-word;
+    }
+  }
 }
