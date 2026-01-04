@@ -19,6 +19,9 @@
   .cs_section_heading_style_1 {
     width: 51%;
     flex-direction: column;
+    h2 {
+      margin-bottom: 60px;
+    }
     @media (max-width: 1199px) {
       width: 55%;
     }
@@ -35,4 +38,19 @@
       width: 100%;
     }
   }
+}
+.cs_radial_gradiant {
+  height: 680px;
+  width: 680px;
+  // background-color: beige;
+  border-radius: 680px;
+  opacity: 1;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #f2fd84 0%,
+    rgba(34, 34, 34, 0) 100%
+  );
+  top: 388px;
+  left: 940px;
+  position: absolute;
 }

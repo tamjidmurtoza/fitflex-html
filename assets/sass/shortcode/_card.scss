@@ -72,7 +72,8 @@
 
 //Card 2 Custom Design
 .cs_card_style_2 {
-  padding: 25px 25px 35px;
+  height: 100%;
+  padding: 25px 25px 30px;
   border-image: linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.3),
@@ -117,7 +118,10 @@
     )
     1;
   .cs_card_info {
-    padding: 0 30px 26px;
+    padding: 0 30px 23px;
+  }
+  .cs_card_text {
+    line-height: 1.625em;
   }
   @media (max-width: 1199px) {
     .cs_card_title {

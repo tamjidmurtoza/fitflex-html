@@ -1,8 +1,1 @@
-.breadcrumb-item + .breadcrumb-item::before {
-  color: var(--body-color);
-  content: var(--bs-breadcrumb-divider, ">");
-}
 
-.breadcrumb-item.active {
-  color: var(--heading-color);
-}
