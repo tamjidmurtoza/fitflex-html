@@ -198,7 +198,7 @@ hr {
   margin: 0;
   padding: 0;
   border: none;
-  border-top: 1px solid var(--heading-color);
+  border-top: 1px solid currentColor;
   opacity: 1;
 }
 
@@ -319,6 +319,8 @@ hr {
     rgba(34, 34, 34, 0) 100%
   );
 }
+
+// Effect On About Page
 .cs_about_section {
   // overflow: hidden;
   .cs_about_style_1 {
