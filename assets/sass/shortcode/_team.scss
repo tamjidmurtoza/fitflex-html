@@ -5,6 +5,8 @@
 //About Page About Section
 .cs_about_style_1 {
   gap: 30px;
+  position: relative;
+  z-index: 1;
   .cs_about_image {
     // height: 100%;
     width: 42%;
@@ -43,19 +45,4 @@
       width: 100%;
     }
   }
-}
-.cs_radial_gradiant {
-  height: 680px;
-  width: 680px;
-  // background-color: beige;
-  border-radius: 680px;
-  opacity: 1;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #f2fd84 0%,
-    rgba(34, 34, 34, 0) 100%
-  );
-  top: 388px;
-  left: 940px;
-  position: absolute;
 }
