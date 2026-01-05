@@ -63,3 +63,10 @@
 .breadcrumb-item.active {
   color: var(--heading-color);
 }
+
+//Service Page Custom Design
+.cs_services_section {
+  .cs_section_heading_style_1 {
+    width: min(100%, 900px);
+  }
+}
