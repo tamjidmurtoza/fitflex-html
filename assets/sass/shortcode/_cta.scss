@@ -15,5 +15,11 @@
     h2 {
       margin-bottom: 65px;
     }
+    @media (max-width: 991px) {
+      width: 100%;
+      h2 {
+        margin-bottom: 40px;
+      }
+    }
   }
 }

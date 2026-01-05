@@ -3012,6 +3012,14 @@ hr {
 .cs_cta_style_2 .cs_cta_content h2 {
   margin-bottom: 65px;
 }
+@media (max-width: 991px) {
+  .cs_cta_style_2 .cs_cta_content {
+    width: 100%;
+  }
+  .cs_cta_style_2 .cs_cta_content h2 {
+    margin-bottom: 40px;
+  }
+}
 
 /*--------------------------------------------------------------
   13. Testimonial
@@ -3088,9 +3096,14 @@ hr {
 .cs_about_style_1 .cs_section_heading_style_1 h2 {
   margin-bottom: 60px;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1399px) {
   .cs_about_style_1 .cs_section_heading_style_1 {
     width: 55%;
+  }
+}
+@media (max-width: 1199px) {
+  .cs_about_style_1 .cs_section_heading_style_1 h2 {
+    margin-bottom: 25px;
   }
 }
 @media (max-width: 991px) {
@@ -3357,10 +3370,36 @@ Feature
   min-height: 600px;
 }
 .cs_video_style_1 a {
+  display: block;
+  width: 84px;
+  height: 84px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.cs_video_style_1 a img {
+  position: relative;
+  z-index: 1;
+}
+.cs_video_style_1 a::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--accent-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  border-radius: 50%;
+  animation: border-scale 3s cubic-bezier(0.29, 0.36, 0.13, 0.44) infinite;
+  z-index: 0;
+  opacity: 0.13;
+}
+@keyframes border-scale {
+  50% {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
 }
 .cs_video_style_1 .cs_section_heading_style_1 {
   width: min(100%, 700px);
