@@ -315,8 +315,8 @@ hr {
   position: absolute;
   z-index: 0;
   border-radius: 680px;
-  opacity: 0.1;
-  // border: 1px solid;
+  opacity: 1;
+  border: 1px solid;
   background: radial-gradient(
     50% 50% at 50% 50%,
     #f2fd84 0%,
@@ -369,5 +369,28 @@ hr {
   .cs_radial_gradiant {
     left: -171px;
     top: -391px;
+  }
+}
+
+// Effect on Servie Page
+.cs_service_card{
+  .cs_card_style_4{
+    position: relative;
+    z-index: 1;
+  }
+  .cs_radial_gradiant{
+    right: -271px;
+    top: -245px;
+  }
+}
+.cs_cta_style_3{
+  .cs_cta_content{
+    position: relative;
+    z-index: 1;
+  }
+  .cs_radial_gradiant{
+    // opacity: 0.05;
+    left: -100px;
+    top: -365px;
   }
 }

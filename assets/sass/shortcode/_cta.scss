@@ -30,6 +30,9 @@
     width: min(100%, 840px);
     h2 {
       margin-bottom: 85px;
+      @media (max-width: 991px) {
+        margin-bottom: 50px;
+      }
     }
   }
 }

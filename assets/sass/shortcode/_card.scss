@@ -135,6 +135,9 @@
 
 //Card 4 Custom Design
 .cs_card_style_4 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   border-image: linear-gradient(
       360deg,
       rgba(255, 255, 255, 0),
@@ -163,6 +166,7 @@
     }
   }
   .cs_card_info {
+    flex: 1;
     border: 1px solid;
     padding: 33px 20px 31px;
     border-image: linear-gradient(
