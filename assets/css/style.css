@@ -3214,6 +3214,31 @@ hr {
   }
 }
 
+.cs_class_about_section .cs_about_style_1 {
+  gap: 0px 30px;
+}
+.cs_class_about_section .cs_about_style_1 .cs_about_image {
+  width: min(100%, 715px);
+}
+.cs_class_about_section .cs_about_style_1 .cs_about_content {
+  width: min(100%, 420px);
+}
+.cs_class_about_section .cs_about_style_1 .cs_feature_list li {
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 0px;
+}
+.cs_class_about_section .cs_about_style_1 .cs_feature_list li .cs_feature_title {
+  line-height: 1.625em;
+  margin-bottom: 5px;
+}
+.cs_class_about_section .cs_about_style_1 .cs_feature_list li .cs_feature_subtitle {
+  line-height: 1.555em;
+}
+.cs_class_about_section .cs_about_style_1 .cs_feature_list :last-child {
+  margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
   15. Card
 ----------------------------------------------------------------*/
