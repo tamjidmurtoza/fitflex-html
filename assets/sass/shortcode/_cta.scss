@@ -36,9 +36,18 @@
     }
   }
 }
-
+// CTA Service Details Page
 .cs_cta_style_4 {
+  .cs_cta_content {
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: start !important;
+    }
+  }
   .cs_cta_title {
     width: min(100%, 810px);
+    @media (max-width: 991px) {
+      margin-bottom: 40px !important;
+    }
   }
 }

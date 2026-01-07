@@ -49,13 +49,20 @@
 
 // Class Details Page About Section
 .cs_class_about_section {
-  .cs_about_style_1 {
-    gap: 0px 30px;
+  // .cs_about_style_1 {
+    // gap: 0px 30px;
     .cs_about_image {
       width: min(100%, 715px);
     }
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
     .cs_about_content {
       width: min(100%, 420px);
+      @media (max-width: 991px) {
+        width: 100%;
+      }
     }
     .cs_feature_list li {
       margin-bottom: 25px;
@@ -72,5 +79,5 @@
     .cs_feature_list :last-child {
       margin-bottom: 0;
     }
-  }
+  // }
 }

@@ -187,13 +187,12 @@
   }
 }
 //Card Service Details Page
-.cs_benefits {
-  .cs_card_wrapper_1 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 80px 0px;
-    overflow: hidden;
-  }
+// .cs_benefits {
+.cs_card_wrapper_1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px 0px;
+  overflow: hidden;
   .cs_card_style_3 {
     display: flex;
     flex-direction: column;
@@ -217,11 +216,41 @@
         background-color: var(--accent-color);
       }
     }
+    .cs_card_info {
+      padding: 0 20px;
+    }
+  }
+  @media (max-width: 991px) {
+    // .cs_card_wrapper_1 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 0px;
+    // }
+    .cs_card_style_3 {
+      &:nth-child(even) {
+        border-right: none;
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    // .cs_card_wrapper_1 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px 0px;
+    // }
+    .cs_card_style_3 {
+      margin: 0 auto;
+      width: min(100%, 370px);
+      border-right: none;
+    }
   }
 }
+
+// }
 //
 .cs_classes_card {
   .cs_section_heading_column_1 {
     width: min(100%, 546px);
+    @media (max-width: 991px) {
+      width: 100%;
+    }
   }
 }

@@ -1917,15 +1917,19 @@ hr {
     display: none;
   }
 }
-.cs_radial_gradiant {
+.cs_radial_gradiant,
+.cs_radial_gradiant_2 {
   height: 680px;
   width: 680px;
   position: absolute;
   z-index: 0;
   border-radius: 680px;
   opacity: 1;
-  border: 1px solid;
   background: radial-gradient(50% 50% at 50% 50%, #f2fd84 0%, rgba(34, 34, 34, 0) 100%);
+}
+
+.cs_radial_gradiant_2 {
+  width: 556px;
 }
 
 .cs_about_section .cs_about_style_1 {
@@ -1982,6 +1986,47 @@ hr {
 .cs_cta_style_3 .cs_radial_gradiant {
   left: -100px;
   top: -365px;
+}
+
+.cs_class_about_section {
+  overflow: hidden;
+}
+.cs_class_about_section .cs_about_style_1 {
+  position: relative;
+  z-index: 1;
+}
+.cs_class_about_section .cs_radial_gradiant_2 {
+  right: -100px;
+  top: -520px;
+}
+
+.cs_benefits .cs_section_heading_style_1,
+.cs_benefits .cs_card_wrapper_1 {
+  position: relative;
+  z-index: 1;
+}
+.cs_benefits .cs_radial_gradiant_2 {
+  left: -100px;
+  top: -530px;
+}
+
+.cs_gallery .cs_gallery_style_1 {
+  position: relative;
+  z-index: 1;
+}
+.cs_gallery .cs_radial_gradiant_2 {
+  right: 22px;
+  bottom: -50px;
+}
+
+.cs_classes_card .cs_section_heading_style_2,
+.cs_classes_card .cs_card_style_4 {
+  position: relative;
+  z-index: 1;
+}
+.cs_classes_card .cs_radial_gradiant_2 {
+  left: -43px;
+  bottom: -115px;
 }
 
 /*--------------------------------------------------------------
@@ -3112,8 +3157,19 @@ hr {
   }
 }
 
+@media (max-width: 991px) {
+  .cs_cta_style_4 .cs_cta_content {
+    flex-direction: column;
+    align-items: start !important;
+  }
+}
 .cs_cta_style_4 .cs_cta_title {
   width: min(100%, 810px);
+}
+@media (max-width: 991px) {
+  .cs_cta_style_4 .cs_cta_title {
+    margin-bottom: 40px !important;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -3218,28 +3274,35 @@ hr {
   }
 }
 
-.cs_class_about_section .cs_about_style_1 {
-  gap: 0px 30px;
-}
-.cs_class_about_section .cs_about_style_1 .cs_about_image {
+.cs_class_about_section .cs_about_image {
   width: min(100%, 715px);
 }
-.cs_class_about_section .cs_about_style_1 .cs_about_content {
+.cs_class_about_section img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cs_class_about_section .cs_about_content {
   width: min(100%, 420px);
 }
-.cs_class_about_section .cs_about_style_1 .cs_feature_list li {
+@media (max-width: 991px) {
+  .cs_class_about_section .cs_about_content {
+    width: 100%;
+  }
+}
+.cs_class_about_section .cs_feature_list li {
   margin-bottom: 25px;
   position: relative;
   padding-left: 0px;
 }
-.cs_class_about_section .cs_about_style_1 .cs_feature_list li .cs_feature_title {
+.cs_class_about_section .cs_feature_list li .cs_feature_title {
   line-height: 1.625em;
   margin-bottom: 5px;
 }
-.cs_class_about_section .cs_about_style_1 .cs_feature_list li .cs_feature_subtitle {
+.cs_class_about_section .cs_feature_list li .cs_feature_subtitle {
   line-height: 1.555em;
 }
-.cs_class_about_section .cs_about_style_1 .cs_feature_list :last-child {
+.cs_class_about_section .cs_feature_list :last-child {
   margin-bottom: 0;
 }
 
@@ -3409,13 +3472,13 @@ hr {
      border-image: linear-gradient(360deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
 }
 
-.cs_benefits .cs_card_wrapper_1 {
+.cs_card_wrapper_1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 80px 0px;
   overflow: hidden;
 }
-.cs_benefits .cs_card_style_3 {
+.cs_card_wrapper_1 .cs_card_style_3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3423,23 +3486,51 @@ hr {
   background: none;
   border-right: 1px solid var(--accent-color);
 }
-.cs_benefits .cs_card_style_3:nth-child(4n) {
+.cs_card_wrapper_1 .cs_card_style_3:nth-child(4n) {
   border-right: none;
 }
-.cs_benefits .cs_card_style_3 .cs_card_image {
+.cs_card_wrapper_1 .cs_card_style_3 .cs_card_image {
   height: 61px;
   width: 61px;
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
   transition: all 0.4s ease;
 }
-.cs_benefits .cs_card_style_3:hover .cs_card_image {
+.cs_card_wrapper_1 .cs_card_style_3:hover .cs_card_image {
   color: var(--black-color);
   background-color: var(--accent-color);
+}
+.cs_card_wrapper_1 .cs_card_style_3 .cs_card_info {
+  padding: 0 20px;
+}
+@media (max-width: 991px) {
+  .cs_card_wrapper_1 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 0px;
+  }
+  .cs_card_wrapper_1 .cs_card_style_3:nth-child(even) {
+    border-right: none;
+  }
+}
+@media (max-width: 575px) {
+  .cs_card_wrapper_1 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px 0px;
+  }
+  .cs_card_wrapper_1 .cs_card_style_3 {
+    margin: 0 auto;
+    width: min(100%, 370px);
+    border-right: none;
+  }
 }
 
 .cs_classes_card .cs_section_heading_column_1 {
   width: min(100%, 546px);
+}
+@media (max-width: 991px) {
+  .cs_classes_card .cs_section_heading_column_1 {
+    width: 100%;
+  }
 }
 
 .cs_value_heading .cs_value_tagline {
@@ -3625,19 +3716,42 @@ Feature
   grid-template-rows: repeat(2, 1fr);
   gap: 24px;
 }
-.cs_gallery_style_1 div {
+.cs_gallery_style_1 .cs_gallery_item {
   grid-column: auto/span 1;
   grid-row: auto/span 1;
 }
-.cs_gallery_style_1 div img {
+.cs_gallery_style_1 .cs_gallery_item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cs_gallery_style_1 div:nth-child(2) {
+.cs_gallery_style_1 .cs_gallery_item:nth-child(2) {
   grid-row: auto/span 2;
 }
-.cs_gallery_style_1 div:nth-child(3) {
+.cs_gallery_style_1 .cs_gallery_item:nth-child(3) {
   grid-column: auto/span 2;
+}
+@media (max-width: 767px) {
+  .cs_gallery_style_1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cs_gallery_style_1 .cs_gallery_item:nth-child(1) {
+    order: 1;
+  }
+  .cs_gallery_style_1 .cs_gallery_item:nth-child(2) {
+    order: 2;
+  }
+  .cs_gallery_style_1 .cs_gallery_item:nth-child(3) {
+    order: 4;
+  }
+  .cs_gallery_style_1 .cs_gallery_item:nth-child(4) {
+    order: 3;
+  }
+  .cs_gallery_style_1 .cs_gallery_item:nth-child(5) {
+    order: 5;
+  }
+  .cs_gallery_style_1 .cs_gallery_item:nth-child(6) {
+    order: 6;
+  }
 }/*# sourceMappingURL=style.css.map */
