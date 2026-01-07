@@ -1,7 +1,8 @@
 /*--------------------------------------------------------------
   12. CTA
 ----------------------------------------------------------------*/
-.cs_cta_style_1 {
+.cs_cta_style_1,
+.cs_cta_style_5 {
   // min-height: 550px;
   .cs_cta_content {
     // max-width: 50%;
@@ -48,6 +49,14 @@
     width: min(100%, 810px);
     @media (max-width: 991px) {
       margin-bottom: 40px !important;
+    }
+  }
+}
+// CTA Schedule Page
+.cs_cta_style_5 {
+  .cs_cta_content {
+    p {
+      width: min(100%, 305px);
     }
   }
 }

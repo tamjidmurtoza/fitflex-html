@@ -1647,7 +1647,7 @@ label {
 }
 @media (max-width: 575px) {
   .cs_fs_54 {
-    font-size: 36px;
+    font-size: 34px;
   }
 }
 
@@ -1657,17 +1657,17 @@ label {
 }
 @media (max-width: 1199px) {
   .cs_fs_72 {
-    font-size: 66px;
+    font-size: 60px;
   }
 }
 @media (max-width: 767px) {
   .cs_fs_72 {
-    font-size: 56px;
+    font-size: 50px;
   }
 }
 @media (max-width: 575px) {
   .cs_fs_72 {
-    font-size: 50px;
+    font-size: 42px;
   }
 }
 
@@ -3122,7 +3122,8 @@ hr {
 /*--------------------------------------------------------------
   12. CTA
 ----------------------------------------------------------------*/
-.cs_cta_style_1 .cs_cta_content {
+.cs_cta_style_1 .cs_cta_content,
+.cs_cta_style_5 .cs_cta_content {
   width: min(100%, 656px);
 }
 
@@ -3170,6 +3171,10 @@ hr {
   .cs_cta_style_4 .cs_cta_title {
     margin-bottom: 40px !important;
   }
+}
+
+.cs_cta_style_5 .cs_cta_content p {
+  width: min(100%, 305px);
 }
 
 /*--------------------------------------------------------------
