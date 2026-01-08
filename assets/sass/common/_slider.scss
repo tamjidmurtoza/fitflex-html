@@ -48,6 +48,17 @@
   }
 }
 
+.cs_slider_gap_36 {
+  .slick-slide {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .slick-list {
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+}
+
 .cs_slider_gap_100 {
   .slick-slide {
     padding-left: 50px;
@@ -93,10 +104,10 @@
 .cs_slider_arrows.cs_style_1 {
   gap: 30px;
 }
-.cs_left_arrow:hover,
-.cs_right_arrow:hover {
-  color: var(--gray-color);
-}
+// .cs_left_arrow:hover,
+// .cs_right_arrow:hover {
+//   color: var(--gray-color);
+// }
 
 .cs_pagination.cs_style_1 {
   display: flex;
