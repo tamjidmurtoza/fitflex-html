@@ -3613,10 +3613,7 @@ hr {
 }
 
 .cs_content_row .cs_content_col {
-  padding: 25px 12px 19px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 30px 12px 22px;
   text-align: center;
   width: 140px;
 }
@@ -3654,11 +3651,21 @@ hr {
 .cs_content_row .cs_time {
   font-size: 12px;
   line-height: 1.833em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .cs_content_row .cs_schedule_icon {
   height: 17px;
   width: 27px;
+}
+
+.cs_content_row .cs_schedule_wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .cs_content_row .cs_schedule_wrapper .cs_schedule_title {
