@@ -2121,6 +2121,43 @@ hr {
 .cs_slider_arrows.cs_style_1 {
   gap: 30px;
 }
+.cs_slider_arrows.cs_style_1 .cs_left_arrow,
+.cs_slider_arrows.cs_style_1 .cs_right_arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 42px;
+  width: 42px;
+  border: 1px solid var(--accent-color);
+  color: var(--heading-color);
+}
+.cs_slider_arrows.cs_style_1 .cs_left_arrow:hover,
+.cs_slider_arrows.cs_style_1 .cs_right_arrow:hover {
+  background-color: var(--accent-color);
+  color: var(--black-color);
+}
+.cs_slider_arrows.cs_style_1 .cs_left_arrow {
+  left: 0;
+}
+.cs_slider_arrows.cs_style_1 .cs_right_arrow {
+  right: 0;
+}
+
+.cs_schedule_style_1 .cs_slider_wrapper {
+  padding: 0px 77px;
+}
+.cs_schedule_style_1 .cs_btn_style_1 {
+  height: 42px;
+  background-color: transparent;
+  color: var(--heading-color);
+  border: 1px solid var(--heading-color);
+  box-shadow: 0 4px 18px 0 rgba(242, 253, 132, 0.09);
+}
+.cs_schedule_style_1 .cs_btn_style_1:hover {
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--black-color);
+}
 
 .cs_pagination.cs_style_1 {
   display: flex;
@@ -3540,6 +3577,105 @@ hr {
   .cs_classes_card .cs_section_heading_column_1 {
     width: 100%;
   }
+}
+
+.cs_timeline_wrapper {
+  overflow-x: auto;
+}
+
+.cs_days_row {
+  min-width: 1240px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.cs_days_row .cs_day_col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 10px;
+  letter-spacing: 0.24px;
+  background-color: rgba(242, 253, 132, 0.1);
+  width: 140px;
+}
+.cs_days_row .cs_day_col:first-child {
+  width: 190px;
+}
+
+.cs_content_row {
+  min-width: 1240px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.cs_content_row .cs_content_col {
+  padding: 25px 12px 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 140px;
+}
+.cs_content_row .cs_content_col:first-child {
+  width: 190px;
+  border: none;
+}
+.cs_content_row .cs_content_col:has(*) {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid;
+  -o-border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+     border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  visibility: visible;
+}
+.cs_content_row .cs_content_col:has(*):hover {
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+}
+.cs_content_row .cs_content_col:has(*):hover:first-child {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: none;
+}
+
+.cs_content_row .cs_content_col:hover .cs_schedule_icon,
+.cs_content_row .cs_content_col:hover .cs_schedule_title,
+.cs_content_row .cs_content_col:hover .cs_schedule_time {
+  color: var(--black-color);
+}
+
+.cs_content_row .cs_content_col:hover .cs_doctor_title {
+  color: var(--black-color);
+  opacity: 0.6;
+}
+
+.cs_content_row .cs_time {
+  font-size: 12px;
+  line-height: 1.833em;
+}
+
+.cs_content_row .cs_schedule_icon {
+  height: 17px;
+  width: 27px;
+}
+
+.cs_content_row .cs_schedule_wrapper .cs_schedule_title {
+  line-height: 1.625em;
+  margin-bottom: 2px;
+}
+
+.cs_content_row .cs_schedule_wrapper .cs_schedule_time {
+  font-size: 12px;
+  line-height: 1.833em;
+  margin-bottom: 3px;
+}
+
+.cs_content_row .cs_schedule_wrapper .cs_doctor_title {
+  font-size: 12px;
+  line-height: 1.833em;
+  margin-bottom: 0;
 }
 
 .cs_value_heading .cs_value_tagline {

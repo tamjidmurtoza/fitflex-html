@@ -100,14 +100,52 @@
     }
   }
 }
-
+// Timetble Page Arrow Custom Style
 .cs_slider_arrows.cs_style_1 {
   gap: 30px;
+  .cs_left_arrow,
+  .cs_right_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 42px;
+    width: 42px;
+    border: 1px solid var(--accent-color);
+    // background-color: var(--accent-color);
+    color: var(--heading-color);
+    &:hover {
+      background-color: var(--accent-color);
+      color: var(--black-color);
+    }
+  }
+  .cs_left_arrow {
+    left: 0;
+  }
+  .cs_right_arrow {
+    right: 0;
+  }
 }
 // .cs_left_arrow:hover,
 // .cs_right_arrow:hover {
 //   color: var(--gray-color);
 // }
+.cs_schedule_style_1 {
+  .cs_slider_wrapper {
+    padding: 0px 77px;
+  }
+  .cs_btn_style_1 {
+    height: 42px;
+    background-color: transparent;
+    color: var(--heading-color);
+    border: 1px solid var(--heading-color);
+    box-shadow: 0 4px 18px 0 rgba(242, 253, 132, 0.09);
+    &:hover {
+      border: 1px solid var(--accent-color);
+      background-color: var(--accent-color);
+      color: var(--black-color);
+    }
+  }
+}
 
 .cs_pagination.cs_style_1 {
   display: flex;

@@ -1,0 +1,158 @@
+// Schedule desin with grid
+.cs_timeline_wrapper {
+  overflow-x: auto;
+}
+//ok
+
+// days start
+.cs_days_row {
+  min-width: 1240px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-bottom: 10px;
+  gap: 10px;
+}
+//ok
+
+.cs_days_row .cs_day_col {
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  display: flex;
+  // -webkit-box-align: center;
+  // -ms-flex-align: center;
+  align-items: center;
+  // -webkit-box-pack: center;
+  // -ms-flex-pack: center;
+  justify-content: center;
+
+  // text-transform: uppercase;
+  // -webkit-transition: all 0.4s ease;
+  // transition: all 0.4s ease;
+
+  //add
+  padding: 17px 10px;
+  letter-spacing: 0.24px;
+  background-color: rgba(242, 253, 132, 0.1);
+  width: 140px;
+  &:first-child {
+    width: 190px;
+  }
+}
+//ok
+
+//Days Hover
+// .cs_days_row .cs_day_col:hover {
+//   background-color: var(--blue-color);
+//   color: var(--white);
+// }
+// days end
+
+// content start
+// row start
+.cs_content_row {
+  min-width: 1240px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-bottom: 10px;
+  gap: 10px;
+}
+//ok
+// row end
+
+// column start
+.cs_content_row .cs_content_col {
+  // need to change
+  padding: 25px 12px 19px;
+
+  // -webkit-box-flex: 0;
+  // -ms-flex: none;
+  // flex: none;
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  display: flex;
+  // -webkit-box-align: center;
+  // -ms-flex-align: center;
+  align-items: center;
+  // -webkit-box-pack: center;
+  // -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  // position: relative;
+
+  //add
+  width: 140px;
+  &:first-child {
+    width: 190px;
+    border: none;
+  }
+  &:has(*) {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid;
+    border-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+      )
+      1;
+    visibility: visible;
+    &:hover {
+      border: 1px solid var(--accent-color);
+      background-color: var(--accent-color);
+      &:first-child {
+        background-color: rgba(255, 255, 255, 0.02);
+        border: none;
+      }
+    }
+  }
+}
+
+.cs_content_row .cs_content_col:hover .cs_schedule_icon,
+.cs_content_row .cs_content_col:hover .cs_schedule_title,
+.cs_content_row .cs_content_col:hover .cs_schedule_time {
+  color: var(--black-color);
+}
+.cs_content_row .cs_content_col:hover .cs_doctor_title {
+  color: var(--black-color);
+  opacity: 0.6;
+}
+
+.cs_content_row .cs_time {
+  font-size: 12px;
+  line-height: 1.833em;
+}
+//ok
+
+//Icon
+.cs_content_row .cs_schedule_icon {
+  height: 17px;
+  width: 27px;
+}
+//ok
+
+// content of column
+// .cs_content_row .cs_schedule_wrapper {
+//   width: 100%;
+//   position: relative;
+//   z-index: 1;
+// }
+//////////////
+.cs_content_row .cs_schedule_wrapper .cs_schedule_title {
+  line-height: 1.625em;
+  margin-bottom: 2px;
+}
+//ok
+
+.cs_content_row .cs_schedule_wrapper .cs_schedule_time {
+  font-size: 12px;
+  line-height: 1.833em;
+  margin-bottom: 3px;
+}
+//ok
+
+.cs_content_row .cs_schedule_wrapper .cs_doctor_title {
+  font-size: 12px;
+  line-height: 1.833em;
+  //ok
+
+  margin-bottom: 0;
+}
