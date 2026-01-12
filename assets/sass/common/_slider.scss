@@ -11,32 +11,40 @@
   //   width: 100%;
   // }
 }
+
+// Draggable & Arrow Cursor For Slider
 .slick-arrow {
   cursor: pointer;
 }
-// .draggable {
-//   cursor: url(../img/drag.png) 16 9, ew-resize !important;
-// }
+.draggable {
+  cursor: url(../img/drag.png) 16 9, ew-resize !important;
+}
+
+// Default For Backup (Not To Break Design)
 .slick-slide > div {
   display: flex;
   flex-direction: column;
 }
-.cs_remove_overflow {
-  .slick-list {
-    overflow: visible;
-  }
 
-  .slick-slide {
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s linear;
+// For Slider Item Shadow / If not Used Shadow Will Be Hidden
+// .cs_remove_overflow {
+//   .slick-list {
+//     overflow: visible;
+//   }
 
-    &.slick-active {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-}
+//   .slick-slide {
+//     opacity: 0;
+//     visibility: hidden;
+//     transition: all 0.3s linear;
+
+//     &.slick-active {
+//       opacity: 1;
+//       visibility: visible;
+//     }
+//   }
+// }
+
+// Start of Slider Gap
 .cs_slider_gap_24 {
   .slick-slide {
     padding-left: 12px;
@@ -79,74 +87,30 @@
     }
   }
 }
+// End of Slider Gap
 
-.cs_slider_gap_104 {
-  .slick-slide {
-    padding-left: 52px;
-    padding-right: 52px;
-  }
-  .slick-list {
-    margin-left: -52px;
-    margin-right: -52px;
-  }
-  @media (max-width: 991px) {
-    .slick-slide {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-    .slick-list {
-      margin-left: -15px;
-      margin-right: -15px;
-    }
-  }
-}
-// Timetble Page Arrow Custom Style
-.cs_slider_arrows.cs_style_1 {
-  gap: 30px;
-  .cs_left_arrow,
-  .cs_right_arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 42px;
-    width: 42px;
-    border: 1px solid var(--accent-color);
-    // background-color: var(--accent-color);
-    color: var(--heading-color);
-    &:hover {
-      background-color: var(--accent-color);
-      color: var(--black-color);
-    }
-  }
-  .cs_left_arrow {
-    left: 0;
-  }
-  .cs_right_arrow {
-    right: 0;
-  }
-}
-// .cs_left_arrow:hover,
-// .cs_right_arrow:hover {
-//   color: var(--gray-color);
+// .cs_slider_gap_104 {
+//   .slick-slide {
+//     padding-left: 52px;
+//     padding-right: 52px;
+//   }
+//   .slick-list {
+//     margin-left: -52px;
+//     margin-right: -52px;
+//   }
+//   @media (max-width: 991px) {
+//     .slick-slide {
+//       padding-left: 15px;
+//       padding-right: 15px;
+//     }
+//     .slick-list {
+//       margin-left: -15px;
+//       margin-right: -15px;
+//     }
+//   }
 // }
-.cs_schedule_style_1 {
-  .cs_slider_wrapper {
-    padding: 0px 77px;
-  }
-  .cs_btn_style_1 {
-    height: 42px;
-    background-color: transparent;
-    color: var(--heading-color);
-    border: 1px solid var(--heading-color);
-    box-shadow: 0 4px 18px 0 rgba(242, 253, 132, 0.09);
-    &:hover {
-      border: 1px solid var(--accent-color);
-      background-color: var(--accent-color);
-      color: var(--black-color);
-    }
-  }
-}
 
+// Homepage Slider Pagination
 .cs_pagination.cs_style_1 {
   display: flex;
   justify-content: center;
@@ -187,31 +151,78 @@
   }
 }
 
-@media (max-width: 991px) {
-  .cs_hide_lg {
-    display: none;
+// @media (max-width: 991px) {
+//   .cs_hide_lg {
+//     display: none;
+//   }
+// }
+
+// .cs_show_lg {
+//   display: none !important;
+// }
+// @media (max-width: 991px) {
+//   .cs_hide_lg {
+//     display: none !important;
+//   }
+// }
+
+// @media (max-width: 991px) {
+//   .cs_show_lg {
+//     display: flex !important;
+//   }
+// }
+
+// .cs_slider_indicator {
+//   max-width: 875px;
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 30px;
+// }
+
+// Start of Timetble Page Arrow & List Item Custom Style
+.cs_slider_arrows.cs_style_1 {
+  .cs_left_arrow,
+  .cs_right_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 42px;
+    width: 42px;
+    border: 1px solid var(--accent-color);
+    color: var(--heading-color);
+    &:hover {
+      background-color: var(--accent-color);
+      color: var(--black-color);
+    }
+  }
+  .cs_left_arrow {
+    left: 0;
+  }
+  .cs_right_arrow {
+    right: 0;
   }
 }
-
-.cs_show_lg {
-  display: none !important;
-}
-@media (max-width: 991px) {
-  .cs_hide_lg {
-    display: none !important;
+.cs_schedule_style_1 {
+  .cs_slider_wrapper {
+    padding: 0px 77px;
+  }
+  .cs_btn_style_1 {
+    height: 42px;
+    background-color: transparent;
+    color: var(--heading-color);
+    border: 1px solid var(--heading-color);
+    box-shadow: 0 4px 18px 0 rgba(242, 253, 132, 0.09);
+    &:hover {
+      border: 1px solid var(--accent-color);
+      background-color: var(--accent-color);
+      color: var(--black-color);
+    }
+  }
+  .cs_tab_links li.active a {
+    color: var(--black-color);
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
   }
 }
-
-@media (max-width: 991px) {
-  .cs_show_lg {
-    display: flex !important;
-  }
-}
-
-.cs_slider_indicator {
-  max-width: 875px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
+// End of Timetble Page Arrow & List Item Custom Style

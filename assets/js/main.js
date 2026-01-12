@@ -421,7 +421,9 @@
         .fadeIn(400)
         .siblings()
         .hide();
-      $(this).parents("li").addClass("active").siblings().removeClass("active");
+
+      $(this).closest(".cs_tab_links").find("li").removeClass("active");
+      $(this).parents("li").addClass("active");
       e.preventDefault();
     });
   }

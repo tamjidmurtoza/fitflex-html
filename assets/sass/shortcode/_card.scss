@@ -6,16 +6,10 @@
 .cs_card_style_2,
 .cs_card_style_3,
 .cs_card_style_4 {
-  border: 1px solid;
-  border-image: linear-gradient(
-      360deg,
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0)
-    )
-    1;
+  display: flex;
+  flex-direction: column;
   background: rgba(255, 255, 255, 0.04);
   transition: all 0.4s ease;
-
   .cs_card_thumbnail {
     img {
       width: 100%;
@@ -64,6 +58,20 @@
   }
 }
 // Card 1 Custom Design
+.cs_programs_section {
+  .cs_card_style_1 {
+    .cs_card_info {
+      flex: 1;
+      border: 1px solid;
+      border-image: linear-gradient(
+          360deg,
+          rgba(255, 255, 255, 0.3),
+          rgba(255, 255, 255, 0)
+        )
+        1;
+    }
+  }
+}
 @media (max-width: 450px) {
   .cs_card_style_1 {
     min-height: 445px;
@@ -75,6 +83,7 @@
 .cs_card_style_2 {
   height: 100%;
   padding: 25px 25px 30px;
+  border: 1px solid;
   border-image: linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.3),
@@ -114,6 +123,7 @@
   // position: relative;
   // z-index: 1;
   height: 100%;
+  border: 1px solid;
   border-image: linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.3),
@@ -138,6 +148,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  border: 1px solid;
   border-image: linear-gradient(
       360deg,
       rgba(255, 255, 255, 0),
