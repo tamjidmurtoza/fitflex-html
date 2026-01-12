@@ -1,17 +1,19 @@
 /*--------------------------------------------------------------
   12. CTA
 ----------------------------------------------------------------*/
+// CTA Homepage & Schedule Page
 .cs_cta_style_1,
 .cs_cta_style_5 {
-  // min-height: 550px;
   .cs_cta_content {
-    // max-width: 50%;
     width: min(100%, 656px);
+    p {
+      width: min(100%, 305px);
+    }
   }
 }
 
-.cs_cta_style_2,
-.cs_cta_style_3 {
+// CTA About Page
+.cs_cta_style_2 {
   .cs_cta_content {
     width: min(100%, 596px);
     h2 {
@@ -26,6 +28,7 @@
   }
 }
 
+// CTA Services Page
 .cs_cta_style_3 {
   .cs_cta_content {
     width: min(100%, 840px);
@@ -37,6 +40,7 @@
     }
   }
 }
+
 // CTA Service Details Page
 .cs_cta_style_4 {
   .cs_cta_content {
@@ -52,11 +56,12 @@
     }
   }
 }
-// CTA Schedule Page
-.cs_cta_style_5 {
-  .cs_cta_content {
-    p {
-      width: min(100%, 305px);
-    }
-  }
-}
+
+// CTA Schedule Page Custom Design
+// .cs_cta_style_5 {
+//   .cs_cta_content {
+//     p {
+//       width: min(100%, 305px);
+//     }
+//   }
+// }

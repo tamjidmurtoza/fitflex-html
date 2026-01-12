@@ -1,4 +1,7 @@
-// About Page Video Section
+/*--------------------------------------------------------------
+About Page Video Section
+----------------------------------------------------------------*/
+
 .cs_video_style_1 {
   min-height: 600px;
   a {
@@ -68,7 +71,10 @@
   }
 }
 
-//Service Details Page Gallery Style
+/*--------------------------------------------------------------
+Service Details Page Gallery Style
+----------------------------------------------------------------*/
+
 .cs_gallery_style_1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

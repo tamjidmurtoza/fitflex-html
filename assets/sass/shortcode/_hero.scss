@@ -1,18 +1,25 @@
 /*--------------------------------------------------------------
   10. Hero
 ----------------------------------------------------------------*/
+// Start of BootStrap Breadcumb Override
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--body-color);
+  content: var(--bs-breadcrumb-divider, ">");
+}
+
+.breadcrumb-item.active {
+  color: var(--heading-color);
+}
+// End of BootStrap Breadcumb Override
+
+// Start of Hero Section
 .cs_hero_section {
   .cs_section_heading_style_1 {
     width: min(100%, 760px);
   }
-  // .cs_hero_heading_content {
-  //   max-width: 536px;
-  // }
   .cs_hero_btns {
     display: flex;
     flex-wrap: wrap;
-    // align-items: stretch;
-    // width: 100%;
     gap: 15px 18px;
     a:last-child {
       color: var(--heading-color);
@@ -36,10 +43,8 @@
     background: rgba(255, 255, 255, 0.03);
     padding: 35px 40px;
     gap: 25px;
-
     display: grid;
     grid-template-columns: repeat(4, minmax(150px, auto));
-    // flex-wrap: wrap;
     .cs_hero_content_style_1 {
       max-width: 265px;
     }
@@ -54,19 +59,11 @@
   }
 }
 
-// BS Custom Breadcumb Style
-.breadcrumb-item + .breadcrumb-item::before {
-  color: var(--body-color);
-  content: var(--bs-breadcrumb-divider, ">");
-}
-
-.breadcrumb-item.active {
-  color: var(--heading-color);
-}
-
-//Service Page Custom Design
-.cs_services_section {
+// Service & Schedule Page Custom Design
+.cs_hero_section_2 {
   .cs_section_heading_style_1 {
     width: min(100%, 900px);
   }
 }
+
+// End of Hero Section

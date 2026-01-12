@@ -1,9 +1,8 @@
 /*--------------------------------------------------------------
-Feature
+Homepage Pricing Card Design
 ----------------------------------------------------------------*/
 .cs_pricing_card {
   padding: 55px 40px 60px 40px;
-  // padding: 1px;
   height: 100%;
   border: 1px solid;
   border-image: linear-gradient(
@@ -13,14 +12,11 @@ Feature
     )
     1;
   background: rgba(255, 255, 255, 0.04);
-  // background: red;
   .cs_pricing_card_content {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    // background: rgba(255, 255, 255, 1);
-    // padding: 55px 40px 60px 40px;
   }
   .cs_pricing_head {
     text-align: center;
@@ -42,7 +38,6 @@ Feature
 
   .cs_pricing_list {
     li {
-      // padding: 0px 40px;
       margin-bottom: 12px;
       position: relative;
       padding-left: 36px;
@@ -59,14 +54,11 @@ Feature
     position: absolute;
     top: 7px;
     left: 0px;
-    // padding-right: 20px;
   }
 
   .cs_btn_style_1 {
     width: 100%;
     margin-top: auto;
-    // width: min(100%, 320px);
-    // margin: 0px 40px 60px 40px;
   }
 
   @media (max-width: 1399px) {

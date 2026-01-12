@@ -1,33 +1,15 @@
 /*--------------------------------------------------------------
-Feature
+Homepage Feature Section
 ----------------------------------------------------------------*/
-// Feature Section Title
-// .cs_feature_title {
-//   h2 {
-//     line-height: 1.185em;
-//   }
-// }
-// Feature Row
-// .cs_feature_row {
-//   gap: 0 70px;
-// }
-
-// Feature Image
 .cs_feature_widget_img {
   width: 100%;
   img {
     width: 100%;
   }
-  @media screen {
-  }
 }
 
-//Feature Section List
 .cs_feature_list {
   width: min(100%, 713px);
-  // max-width: 713px;
-  // padding-left: 50px;
-  // position: relative;
 
   //method 1
   // li::before {
@@ -75,7 +57,6 @@ Feature
       line-height: 1.417em;
     }
     .cs_feature_subtitle {
-      // margin-bottom: 28px;
       line-height: 1.625em;
     }
   }
