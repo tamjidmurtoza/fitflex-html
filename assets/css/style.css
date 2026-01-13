@@ -2780,6 +2780,9 @@ hr {
 }
 .cs_hero_section .cs_hero_content .cs_hero_content_heading {
   line-height: 1.238em;
+  letter-spacing: 2px;
+  gap: 0px 2px;
+  display: flex;
 }
 @media (max-width: 991px) {
   .cs_hero_section .cs_hero_content {
@@ -3223,7 +3226,7 @@ hr {
 /*--------------------------------------------------------------
 
 ----------------------------------------------------------------*/
-.cs_timeline_wrapper {
+.cs_timeline_wrapper_1 {
   overflow-x: auto;
 }
 
@@ -3328,6 +3331,16 @@ hr {
   font-size: 12px;
   line-height: 1.833em;
   margin-bottom: 0;
+}
+
+.cs_tab_body {
+  position: relative;
+}
+.cs_tab_body .cs_tab {
+  display: none;
+}
+.cs_tab_body .cs_tab.active {
+  display: block;
 }
 
 /*--------------------------------------------------------------

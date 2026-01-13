@@ -50,6 +50,9 @@
     }
     .cs_hero_content_heading {
       line-height: 1.238em;
+      letter-spacing: 2px;
+      gap: 0px 2px;
+      display: flex;
     }
   }
   @media (max-width: 991px) {

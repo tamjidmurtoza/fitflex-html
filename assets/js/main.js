@@ -43,6 +43,7 @@
     dynamicBackground();
     slickInit();
     modalVideo();
+    counterInit();
     accordian();
     lightGallery();
     hoverActive();
@@ -421,10 +422,33 @@
         .fadeIn(400)
         .siblings()
         .hide();
-
+        console.log(currentAttrValue)
       $(this).closest(".cs_tab_links").find("li").removeClass("active");
       $(this).parents("li").addClass("active");
       e.preventDefault();
     });
+  }
+
+   /*=====================================================================
+    09. Counter Animation
+  =======================================================================*/
+  function counterInit() {
+    if ($.exists(".odometer")) {
+      $(window).on("scroll", function () {
+        function winScrollPosition() {
+          var scrollPos = $(window).scrollTop(),
+            winHeight = $(window).height();
+          var scrollPosition = Math.round(scrollPos + winHeight / 1.2);
+          return scrollPosition;
+        }
+
+        $(".odometer").each(function () {
+          var elemOffset = $(this).offset().top;
+          if (elemOffset < winScrollPosition()) {
+            $(this).html($(this).data("count-to"));
+          }
+        });
+      });
+    }
   }
 })(jQuery); // End of use strict
