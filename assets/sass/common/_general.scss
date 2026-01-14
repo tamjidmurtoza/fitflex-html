@@ -320,7 +320,7 @@ hr {
   z-index: 0;
   border-radius: 680px;
   opacity: 0.1;
-  border: 1px solid;
+  // border: 1px solid;
   background: radial-gradient(
     50% 50% at 50% 50%,
     #f2fd84 0%,
@@ -467,4 +467,97 @@ hr {
     right: -272px;
     bottom: -301px;
   }
+}
+
+// Contact Page Design
+.cs_map {
+  // height: 100%;
+  height: 680px;
+  filter: blur(0.5px);
+  &:hover{
+    filter: blur(0);
+  }
+}
+.cs_map iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+.cs_pl_40 {
+  padding-left: 40px;
+}
+// .cs_section_heading.cs_style_4 .cs_section_title span {
+//   background: linear-gradient(
+//     223deg,
+//     rgba(255, 255, 255, 0.8) 0.37%,
+//     #a0a6a1 49.66%
+//   );
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+// }
+.cs_form_field {
+  display: block;
+  width: 100%;
+  // border: none;
+  border: 1px solid var(--body-color);
+  outline: none;
+  padding: 13px 20px;
+  // border-radius: 10px;
+  color: var(--body-color);
+  background-color: var(--gray-color);
+}
+
+// .cs_contact_style_1 {
+//   .cs_btn_style_1 {
+//     border-radius: 10px;
+//     padding: 13px 40px;
+//   }
+// }
+
+.cs_contact_info {
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  display: flex;
+  // -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 25px 50px;
+}
+// End of Contact Page Design
+
+// Blog Page Design
+.cs_post.cs_style_1 .cs_post_thumb {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 25px;
+}
+.cs_post.cs_style_1 .cs_post_thumb img {
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.cs_post.cs_style_1 .cs_post_thumb::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_post.cs_style_1 .cs_post_meta {
+  margin-bottom: 10px;
+}
+.cs_post_meta.cs_style_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cs_post_meta.cs_style_1 > *:not(:last-child) {
+  margin-right: 14px;
+  padding-right: 14px;
 }

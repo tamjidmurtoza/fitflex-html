@@ -27,7 +27,9 @@
 :root {
   --heading-color: #fff;
   --body-color: rgba(255, 255, 255, 0.6);
+  --gray-color: rgba(255, 255, 255, 0.04);
   --black-color: #222;
+  --border-color: rgba(255, 255, 255, 0.1);
   --accent-color: #f2fd84;
   --heading-font: "Sora", sans-serif;
   --body-font: "Roboto", sans-serif;
@@ -1792,7 +1794,6 @@ hr {
   z-index: 0;
   border-radius: 680px;
   opacity: 0.1;
-  border: 1px solid;
   background: radial-gradient(50% 50% at 50% 50%, #f2fd84 0%, rgba(34, 34, 34, 0) 100%);
 }
 
@@ -1917,6 +1918,77 @@ hr {
 .cs_schedule_section .cs_radial_gradiant_4 {
   right: -272px;
   bottom: -301px;
+}
+
+.cs_map {
+  height: 680px;
+  filter: blur(0.5px);
+}
+.cs_map:hover {
+  filter: blur(0);
+}
+
+.cs_map iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.cs_pl_40 {
+  padding-left: 40px;
+}
+
+.cs_form_field {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--body-color);
+  outline: none;
+  padding: 13px 20px;
+  color: var(--body-color);
+  background-color: var(--gray-color);
+}
+
+.cs_contact_info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 50px;
+}
+
+.cs_post.cs_style_1 .cs_post_thumb {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.cs_post.cs_style_1 .cs_post_thumb img {
+  transition: all 0.8s ease;
+}
+
+.cs_post.cs_style_1 .cs_post_thumb::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.cs_post.cs_style_1 .cs_post_meta {
+  margin-bottom: 10px;
+}
+
+.cs_post_meta.cs_style_1 {
+  display: flex;
+}
+
+.cs_post_meta.cs_style_1 > *:not(:last-child) {
+  margin-right: 14px;
+  padding-right: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -2848,6 +2920,18 @@ hr {
 @media (max-width: 991px) {
   .cs_cta_style_4 .cs_cta_title {
     margin-bottom: 40px !important;
+  }
+}
+
+.cs_cta_style_6 .cs_cta_content {
+  width: min(100%, 600px);
+}
+.cs_cta_style_6 .cs_cta_content h2 {
+  margin-bottom: 50px;
+}
+@media (max-width: 991px) {
+  .cs_cta_style_6 .cs_cta_content h2 {
+    margin-bottom: 30px;
   }
 }
 
