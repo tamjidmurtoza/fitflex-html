@@ -1920,22 +1920,39 @@ hr {
   bottom: -301px;
 }
 
-.cs_map {
-  height: 680px;
-  filter: blur(0.5px);
+.cs_contact_info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 50px;
 }
-.cs_map:hover {
-  filter: blur(0);
+.cs_contact_info li {
+  position: relative;
+  padding-left: 60px;
+}
+.cs_contact_info li:hover .cs_iconbox {
+  background-color: var(--accent-color);
+  color: var(--black-color);
+}
+.cs_contact_info .cs_iconbox {
+  color: var(--heading-color);
+  height: 42px;
+  width: 42px;
+  font-size: 20px;
+  line-height: 1em;
+  border: 1px solid var(--accent-color);
+  transition: all 0.4s ease;
+  position: absolute;
+  left: 0;
+  top: 6px;
 }
 
-.cs_map iframe {
-  height: 100%;
-  width: 100%;
-  border: none;
-}
-
-.cs_pl_40 {
+.cs_contact_form_1 {
   padding-left: 40px;
+}
+@media (max-width: 991px) {
+  .cs_contact_form_1 {
+    padding-left: 0;
+  }
 }
 
 .cs_form_field {
@@ -1948,47 +1965,33 @@ hr {
   background-color: var(--gray-color);
 }
 
-.cs_contact_info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px 50px;
+.cs_map {
+  height: 680px;
+  filter: blur(0.5px);
+}
+.cs_map:hover {
+  filter: blur(0);
+}
+@media (max-width: 767px) {
+  .cs_map {
+    height: 580px;
+  }
+}
+@media (max-width: 575px) {
+  .cs_map {
+    height: 480px;
+  }
+}
+@media (max-width: 480px) {
+  .cs_map {
+    height: 380px;
+  }
 }
 
-.cs_post.cs_style_1 .cs_post_thumb {
-  display: block;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 25px;
-}
-
-.cs_post.cs_style_1 .cs_post_thumb img {
-  transition: all 0.8s ease;
-}
-
-.cs_post.cs_style_1 .cs_post_thumb::after {
-  content: "";
-  position: absolute;
+.cs_map iframe {
   height: 100%;
   width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-
-.cs_post.cs_style_1 .cs_post_meta {
-  margin-bottom: 10px;
-}
-
-.cs_post_meta.cs_style_1 {
-  display: flex;
-}
-
-.cs_post_meta.cs_style_1 > *:not(:last-child) {
-  margin-right: 14px;
-  padding-right: 14px;
+  border: none;
 }
 
 /*--------------------------------------------------------------
