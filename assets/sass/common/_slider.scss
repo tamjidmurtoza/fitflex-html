@@ -9,10 +9,6 @@
 //Slide From Right Side
 .cs_full_screen_right {
   width: calc(60vw + 650px);
-
-  // @media (max-width: 991px) {
-  //   width: 100%;
-  // }
 }
 
 // Draggable & Arrow Cursor For Slider
@@ -30,24 +26,6 @@
   display: flex;
   flex-direction: column;
 }
-
-// For Slider Item Shadow / If not Used Shadow Will Be Hidden
-// .cs_remove_overflow {
-//   .slick-list {
-//     overflow: visible;
-//   }
-
-//   .slick-slide {
-//     opacity: 0;
-//     visibility: hidden;
-//     transition: all 0.3s linear;
-
-//     &.slick-active {
-//       opacity: 1;
-//       visibility: visible;
-//     }
-//   }
-// }
 
 // Start of Slider Gap
 .cs_slider_gap_24 {
@@ -132,33 +110,3 @@
     }
   }
 }
-
-// @media (max-width: 991px) {
-//   .cs_hide_lg {
-//     display: none;
-//   }
-// }
-
-// .cs_show_lg {
-//   display: none !important;
-// }
-// @media (max-width: 991px) {
-//   .cs_hide_lg {
-//     display: none !important;
-//   }
-// }
-
-// @media (max-width: 991px) {
-//   .cs_show_lg {
-//     display: flex !important;
-//   }
-// }
-
-// .cs_slider_indicator {
-//   max-width: 875px;
-//   display: inline-flex;
-//   align-items: center;
-//   justify-content: center;
-//   gap: 30px;
-// }
-
