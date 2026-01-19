@@ -3482,8 +3482,7 @@ Service Details Page Gallery Style
   margin-bottom: 10px;
   gap: 10px;
 }
-
-.cs_day_col {
+.cs_days_row .cs_day_col {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3492,7 +3491,7 @@ Service Details Page Gallery Style
   background-color: rgba(242, 253, 132, 0.1);
   width: 140px;
 }
-.cs_day_col:first-child {
+.cs_days_row .cs_day_col:first-child {
   width: 190px;
 }
 
@@ -3503,45 +3502,41 @@ Service Details Page Gallery Style
   margin-bottom: 10px;
   gap: 10px;
 }
-
-.cs_content_col {
+.cs_content_row .cs_content_col {
   padding: 30px 12px 22px;
   transition: all 0.4s ease;
   text-align: center;
   width: 140px;
 }
-.cs_content_col:first-child {
+.cs_content_row .cs_content_col:first-child {
   width: 190px;
   border: none;
 }
-.cs_content_col:has(*) {
+.cs_content_row .cs_content_col:has(*) {
   background-color: rgba(255, 255, 255, 0.02);
   border: 1px solid;
   -o-border-image: linear-gradient(225deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
      border-image: linear-gradient(225deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
   visibility: visible;
 }
-.cs_content_col:has(*):hover {
+.cs_content_row .cs_content_col:has(*):hover {
   border: 1px solid var(--accent-color);
   background-color: var(--accent-color);
 }
-.cs_content_col:has(*):hover:first-child {
+.cs_content_row .cs_content_col:has(*):hover:first-child {
   background-color: rgba(255, 255, 255, 0.02);
   border: none;
 }
-
-.cs_content_col:hover .cs_schedule_icon,
-.cs_content_col:hover .cs_schedule_title,
-.cs_content_col:hover .cs_schedule_time {
+.cs_content_row .cs_content_col:has(*):hover .cs_schedule_icon,
+.cs_content_row .cs_content_col:has(*):hover .cs_schedule_title,
+.cs_content_row .cs_content_col:has(*):hover .cs_schedule_time,
+.cs_content_row .cs_content_col:has(*):hover .cs_trainer_title {
   color: var(--black-color);
 }
-
-.cs_content_col:hover .cs_trainer_title {
-  color: var(--black-color);
+.cs_content_row .cs_content_col:has(*):hover .cs_trainer_title {
   opacity: 0.6;
 }
-
-.cs_time {
+.cs_content_row .cs_time {
   font-size: 12px;
   line-height: 1.833em;
   display: flex;
@@ -3549,30 +3544,25 @@ Service Details Page Gallery Style
   justify-content: center;
   height: 100%;
 }
-
-.cs_schedule_icon {
+.cs_content_row .cs_schedule_icon {
   height: 17px;
   width: 27px;
 }
-
-.cs_schedule_wrapper {
+.cs_content_row .cs_schedule_wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-
-.cs_schedule_title {
+.cs_content_row .cs_schedule_wrapper .cs_schedule_title {
   line-height: 1.625em;
   margin-bottom: 2px;
 }
-
-.cs_schedule_time {
+.cs_content_row .cs_schedule_wrapper .cs_schedule_time {
   font-size: 12px;
   line-height: 1.833em;
   margin-bottom: 3px;
 }
-
-.cs_trainer_title {
+.cs_content_row .cs_schedule_wrapper .cs_trainer_title {
   font-size: 12px;
   line-height: 1.833em;
   margin-bottom: 0;
