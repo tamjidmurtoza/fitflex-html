@@ -56,6 +56,7 @@
     }
   }
 }
+
 // Card 1 Custom Design
 .cs_programs_section {
   .cs_card_style_1 {
@@ -121,8 +122,6 @@
 
 //Card 3 Custom Design
 .cs_card_style_3 {
-  // position: relative;
-  // z-index: 1;
   height: 100%;
   border: 1px solid;
   border-image: linear-gradient(
@@ -196,68 +195,5 @@
         rgba(255, 255, 255, 0)
       )
       1;
-  }
-}
-
-// Service Details Page
-// Heading - Classes Section
-.cs_classes_card {
-  .cs_section_heading_column_1 {
-    width: min(100%, 546px);
-    @media (max-width: 991px) {
-      width: 100%;
-    }
-  }
-}
-// Card - Classes Section
-.cs_card_wrapper_1 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 80px 0px;
-  overflow: hidden;
-  .cs_card_style_3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: none;
-    background: none;
-    border-right: 1px solid var(--accent-color);
-    &:nth-child(4n) {
-      border-right: none;
-    }
-    .cs_card_image {
-      height: 61px;
-      width: 61px;
-      border: 1px solid var(--accent-color);
-      color: var(--accent-color);
-      transition: all 0.4s ease;
-    }
-    &:hover {
-      .cs_card_image {
-        color: var(--black-color);
-        background-color: var(--accent-color);
-      }
-    }
-    .cs_card_info {
-      padding: 0 20px;
-    }
-  }
-  @media (max-width: 991px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 0px;
-    .cs_card_style_3 {
-      &:nth-child(even) {
-        border-right: none;
-      }
-    }
-  }
-  @media (max-width: 575px) {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px 0px;
-    .cs_card_style_3 {
-      margin: 0 auto;
-      width: min(100%, 370px);
-      border-right: none;
-    }
   }
 }

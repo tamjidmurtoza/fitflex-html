@@ -31,11 +31,10 @@ About Page Video Section
       opacity: 0.13;
     }
   }
-  //Animation
+  // Animation
   @keyframes border-scale {
     50% {
       transform: translate(-50%, -50%) scale(1.4);
-      // opacity: 0;
     }
   }
 
@@ -89,12 +88,10 @@ Service Details Page Gallery Style
       object-fit: cover;
     }
     &:nth-child(2) {
-      // grid-column: auto / span 1;
       grid-row: auto / span 2;
     }
     &:nth-child(3) {
       grid-column: auto / span 2;
-      // grid-row: auto / span 1;
     }
   }
   @media (max-width: 767px) {

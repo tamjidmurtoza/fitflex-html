@@ -1,145 +1,65 @@
 /*--------------------------------------------------------------
-
+ Service & Service Details Page 
 ----------------------------------------------------------------*/
-
-.cs_timeline_wrapper_1 {
-  overflow-x: auto;
-}
-
-.cs_days_row {
-  min-width: 1240px;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  margin-bottom: 10px;
-  gap: 10px;
-}
-
-// .cs_days_row
-.cs_day_col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 17px 10px;
-  letter-spacing: 0.24px;
-  background-color: rgba(242, 253, 132, 0.1);
-  width: 140px;
-  &:first-child {
-    width: 190px;
-  }
-}
-
-.cs_content_row {
-  min-width: 1240px;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  margin-bottom: 10px;
-  gap: 10px;
-}
-
-// .cs_content_row
-.cs_content_col {
-  padding: 30px 12px 22px;
-  transition: all 0.4s ease;
-  text-align: center;
-  width: 140px;
-  &:first-child {
-    width: 190px;
-    border: none;
-  }
-  &:has(*) {
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid;
-    border-image: linear-gradient(
-        225deg,
-        rgba(255, 255, 255, 0.3),
-        rgba(255, 255, 255, 0)
-      )
-      1;
-    visibility: visible;
-    &:hover {
-      border: 1px solid var(--accent-color);
-      background-color: var(--accent-color);
-      &:first-child {
-        background-color: rgba(255, 255, 255, 0.02);
-        border: none;
-      }
+// Service Details Page
+// Heading - Classes Section
+.cs_classes_card {
+  .cs_section_heading_column_1 {
+    width: min(100%, 546px);
+    @media (max-width: 991px) {
+      width: 100%;
     }
   }
 }
-
-// .cs_content_row
-.cs_content_col:hover .cs_schedule_icon,
-.cs_content_col:hover .cs_schedule_title,
-.cs_content_col:hover .cs_schedule_time {
-  color: var(--black-color);
-}
-
-// .cs_content_row
-.cs_content_col:hover .cs_trainer_title {
-  color: var(--black-color);
-  opacity: 0.6;
-}
-// .cs_content_row
-.cs_time {
-  font-size: 12px;
-  line-height: 1.833em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-//Icon
-// .cs_content_row
-.cs_schedule_icon {
-  height: 17px;
-  width: 27px;
-}
-
-// content of column
-// .cs_content_row
-.cs_schedule_wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-// .cs_content_row .cs_schedule_wrapper
-.cs_schedule_title {
-  line-height: 1.625em;
-  margin-bottom: 2px;
-}
-
-// .cs_content_row .cs_schedule_wrapper
-.cs_schedule_time {
-  font-size: 12px;
-  line-height: 1.833em;
-  margin-bottom: 3px;
-}
-
-// .cs_content_row .cs_schedule_wrapper
-.cs_trainer_title {
-  font-size: 12px;
-  line-height: 1.833em;
-  margin-bottom: 0;
-}
-
-// Tab
-.cs_tab_body {
-  position: relative;
-  .cs_tab {
-    display: none;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // visibility: hidden;
-    // opacity: 0;
-    // transition: all 0.4s ease;
-    &.active {
-      display: block;
-      // position: initial;
-      // visibility: visible;
-      // opacity: 1;
+// Card - Classes Section
+.cs_card_wrapper_1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px 0px;
+  overflow: hidden;
+  .cs_card_style_3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: none;
+    border-right: 1px solid var(--accent-color);
+    &:nth-child(4n) {
+      border-right: none;
+    }
+    .cs_card_image {
+      height: 61px;
+      width: 61px;
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      transition: all 0.4s ease;
+    }
+    &:hover {
+      .cs_card_image {
+        color: var(--black-color);
+        background-color: var(--accent-color);
+      }
+    }
+    .cs_card_info {
+      padding: 0 20px;
+    }
+  }
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 0px;
+    .cs_card_style_3 {
+      &:nth-child(even) {
+        border-right: none;
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px 0px;
+    .cs_card_style_3 {
+      margin: 0 auto;
+      width: min(100%, 370px);
+      border-right: none;
     }
   }
 }

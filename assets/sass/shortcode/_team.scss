@@ -2,13 +2,12 @@
   14. Team
 ----------------------------------------------------------------*/
 
-//About Page About Section
+// About Page About Section
 .cs_about_style_1 {
   gap: 30px;
   position: relative;
   z-index: 1;
   .cs_about_image {
-    // height: 100%;
     width: 42%;
     gap: 0px 20px;
   }
@@ -49,8 +48,6 @@
 
 // Class Details Page About Section
 .cs_class_about_section {
-  // .cs_about_style_1 {
-  // gap: 0px 30px;
   .cs_about_image {
     width: min(100%, 715px);
   }
@@ -79,5 +76,4 @@
   .cs_feature_list :last-child {
     margin-bottom: 0;
   }
-  // }
 }

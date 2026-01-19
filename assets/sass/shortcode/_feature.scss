@@ -11,7 +11,7 @@ Homepage Feature Section
 .cs_feature_list {
   width: min(100%, 713px);
 
-  //method 1
+  // method for icon
   // li::before {
   //   content: " ";
   //   background-image: url(/assets/img/check.svg);
@@ -19,24 +19,12 @@ Homepage Feature Section
   //   width: 24px;
   //   background-repeat: no-repeat;
   //   display: block;
-  //   position: absolute;
-  //   left: 0;
-
-  //method 2
-  // content: "\f058";
-  // background-image: url(/assets/img/check.svg);
-  // height: 24px;
-  // width: 24px;
-  // font-family: "Font Awesome 6 Free";
-  // font-size: 20px;
-  // font-weight: 900;
-  // color: var(--accent-color);
-  // background-repeat: no-repeat;
-  // display: block;
-  // position: absolute;
-  // top: 4px;
-  // left: 0;
+  //   content: "\f058";
+  //   font-family: "Font Awesome 6 Free";
+  //   font-size: 20px;
+  //   color: var(--accent-color);
   // }
+
   li {
     margin-bottom: 28px;
     position: relative;

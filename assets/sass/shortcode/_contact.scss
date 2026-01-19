@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+>> Contact Page:
+--------------------------------------------------------------*/
+// Info
+.cs_contact_info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 50px;
+  li {
+    position: relative;
+    padding-left: 60px;
+    &:hover {
+      .cs_iconbox {
+        background-color: var(--accent-color);
+        color: var(--black-color);
+      }
+    }
+  }
+  .cs_iconbox {
+    color: var(--heading-color);
+    height: 42px;
+    width: 42px;
+    font-size: 20px;
+    line-height: 1em;
+    border: 1px solid var(--accent-color);
+    transition: all 0.4s ease;
+    position: absolute;
+    left: 0;
+    top: 6px;
+  }
+}
+
+// Form
+.cs_contact_form_1 {
+  padding-left: 40px;
+  @media (max-width: 991px) {
+    padding-left: 0;
+  }
+}
+.cs_form_field {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--body-color);
+  outline: none;
+  padding: 9px 20px;
+  color: var(--body-color);
+  background-color: var(--gray-color);
+}
+
+// Map
+.cs_map {
+  height: 680px;
+  &:hover {
+    filter: blur(0);
+  }
+  @media (max-width: 767px) {
+    height: 580px;
+  }
+  @media (max-width: 575px) {
+    height: 480px;
+  }
+  @media (max-width: 480px) {
+    height: 380px;
+  }
+}
+.cs_map iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+  filter: brightness(0.6) grayscale(0.7);
+}
+// End of Contact Page Design

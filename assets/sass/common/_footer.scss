@@ -41,7 +41,8 @@
         currentColor 0,
         currentColor 100%
       );
-      transition: background-size 0.42s cubic-bezier(0.49, 0.49, 0.08, 1),
+      transition:
+        background-size 0.42s cubic-bezier(0.49, 0.49, 0.08, 1),
         color 0.27s ease-out;
       background-position: 100% calc(100% - 0px);
       background-size: 0 1px;
@@ -71,8 +72,6 @@
       line-height: 1.625em;
       min-width: 276px;
       padding: 11px 20px;
-      // height: 48px;
-      // padding-left: 20px;
       &::placeholder {
         color: var(--black-color);
         opacity: 0.5;
@@ -89,7 +88,6 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      // height: 48px;
       border: 1px solid var(--accent-color);
       &:hover {
         color: var(--heading-color);

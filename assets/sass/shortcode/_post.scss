@@ -1,1 +1,208 @@
+/*--------------------------------------------------------------
+  Blog Post
+----------------------------------------------------------------*/
 
+// Gap Between Posts
+.cs_post_1_list {
+  .cs_post.cs_style_1 {
+    &:not(:first-child) {
+      margin-top: 60px;
+      @media (max-width: 991px) {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+// Post Contents
+.cs_post.cs_style_1 {
+  .cs_post_thumb {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+    img {
+      transition: all 0.8s ease;
+    }
+  }
+  a.cs_post_thumb {
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+  .cs_post_meta.cs_style_1 {
+    margin-bottom: 10px;
+    display: flex;
+    > * {
+      position: relative;
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 14px;
+        padding-right: 14px;
+        &::before {
+          content: "";
+          height: 20px;
+          width: 1px;
+          border-radius: 2px;
+          background-color: var(--body-color);
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+      }
+    }
+  }
+
+  .cs_post_title {
+    margin-bottom: 15px;
+    font-size: 36px;
+    line-height: 1.25em;
+    @media (max-width: 1199px) {
+      font-size: 30px;
+    }
+    @media (max-width: 480px) {
+      font-size: 26px;
+    }
+    a {
+      background-repeat: no-repeat;
+      background-image: linear-gradient(
+        90deg,
+        currentColor 0,
+        currentColor 100%
+      );
+      transition:
+        background-size 0.42s cubic-bezier(0.49, 0.49, 0.08, 1),
+        color 0.27s ease-out;
+      background-position: 100% calc(100% - 0px);
+      background-size: 0 2px;
+      &:hover {
+        background-size: 100% 2px;
+        background-position: 0 calc(100% - 0px);
+      }
+    }
+  }
+
+  .cs_post_sub_title {
+    margin-bottom: 14px;
+    line-height: 1.6em;
+  }
+
+  .cs_btn.cs_style_2 {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background-color: currentColor;
+      transition: all 0.6s cubic-bezier(0.7, -0.56, 0.27, 1.6);
+    }
+    &:hover {
+      &::after {
+        width: 50%;
+      }
+    }
+  }
+
+  // Blog Details Specific Style
+  p {
+    margin-bottom: 35px;
+    line-height: 1.75em;
+  }
+  .embed-responsive {
+    margin-bottom: 35px;
+  }
+  h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    @media (max-width: 1199px) {
+      font-size: 26px;
+    }
+  }
+  blockquote {
+    line-height: 1.7em;
+    border-left: 3px solid var(--accent-color);
+    background-color: var(--gray-color);
+    padding: 40px 35px;
+    color: var(--heading-color);
+    margin-bottom: 35px;
+    @media (max-width: 991px) {
+      font-size: 18px;
+      padding: 25px 20px;
+    }
+    small {
+      display: block;
+      position: relative;
+      color: var(--body-color);
+      font-size: 16px;
+      line-height: 1.9em;
+      font-style: initial;
+      font-weight: 400;
+      margin-top: 15px;
+      padding-left: 35px;
+      &::before {
+        content: "";
+        height: 2px;
+        width: 20px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--accent-color);
+      }
+    }
+  }
+  &.cs_type_1 {
+    font-size: 18px;
+    line-height: 1.7em;
+    @media (max-width: 991px) {
+      font-size: 16px;
+    }
+    .cs_post_title {
+      font-size: 40px;
+      @media (max-width: 1199px) {
+        font-size: 32px;
+      }
+    }
+  }
+}
+// Post Pagination Styles
+.cs_pagination_box {
+  margin: -5px;
+  .cs_pagination_item {
+    margin: 5px;
+    height: 42px;
+    width: 42px;
+    background-color: var(--gray-color);
+    &:hover {
+      background-color: var(--accent-color);
+      color: var(--black-color);
+    }
+    &.active {
+      background-color: var(--accent-color);
+      color: var(--black-color);
+      pointer-events: none;
+    }
+  }
+}
+// End of Blog Page

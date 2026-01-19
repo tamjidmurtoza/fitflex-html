@@ -1,21 +1,23 @@
 /*--------------------------------------------------------------
 >> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-1. Typography
-2. Preloader
-3. Spacing
-4. General
-5. Slider
-6. Video Modal
-7. Header
-8. Footer
-9. Isotope
-10. Hero
-11. Iconbox
-12. CTA
-13. Testimonial
-14. Team
-15. Card
+1. Fonts
+2. Variable
+3. Typography
+4. Preloader
+5. Spacing
+6. General
+7. Slider
+8. Video Modal
+9. Header
+10. Footer
+11. Isotope
+12. Hero
+13. Iconbox
+14. CTA
+15. Testimonial
+16. Team
+17. Card
 --------------------------------------------------------------*/
 
 @import "default/fonts";
@@ -29,13 +31,13 @@
 @import "common/header";
 @import "common/footer";
 @import "common/isotope";
-@import "common/sidebar";
 @import "shortcode/hero";
 @import "shortcode/iconbox";
 @import "shortcode/cta";
 @import "shortcode/testimonial";
 @import "shortcode/team";
 @import "shortcode/card";
+@import "common/sidebar";
 @import "shortcode/service";
 @import "shortcode/project";
 @import "shortcode/contact";
@@ -44,8 +46,10 @@
 @import "shortcode/value";
 @import "shortcode/expertise";
 @import "shortcode/partner";
-@import "shortcode/award";
+// @import "shortcode/award";
 @import "shortcode/process";
 @import "shortcode/feature";
 @import "shortcode/pricing";
 @import "shortcode/video";
+@import "shortcode/gradiant";
+@import "shortcode/timetable";
