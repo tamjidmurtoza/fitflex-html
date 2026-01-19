@@ -28,10 +28,13 @@
 //   font-size: 28px;
 //   line-height: 1.33em;
 // }
-// .cs_fs_32 {
-//   font-size: 32px;
-//   line-height: 1.31em;
-// }
+.cs_fs_32 {
+  font-size: 32px;
+  line-height: 1.31em;
+  @media (max-width: 1199px) {
+    font-size: 28px;
+  }
+}
 .cs_fs_42 {
   font-size: 42px;
   line-height: 1.34em;
@@ -330,7 +333,68 @@ hr {
 .cs_radial_gradiant_2 {
   width: 556px;
 }
-
+// Effect On Home Page
+.cs_programs_section {
+  // overflow: hidden;
+  .cs_section_heading_style_1 {
+    position: relative;
+    z-index: 1;
+  }
+  .cs_card_style_1 {
+    position: relative;
+    z-index: 1;
+  }
+  .cs_radial_gradiant {
+    left: -300px;
+    top: -50px;
+  }
+}
+.cs_testimonial_section {
+  // overflow: hidden;
+  .cs_section_heading_style_2 {
+    position: relative;
+    z-index: 1;
+  }
+  .cs_testimonial_card {
+    position: relative;
+    z-index: 1;
+  }
+  .cs_radial_gradiant {
+    right: -350px;
+    top: -200px;
+  }
+}
+.cs_pricing_section {
+  // overflow: hidden;
+  .cs_section_heading_style_1 {
+    position: relative;
+    z-index: 1;
+  }
+  .cs_pricing_card {
+    position: relative;
+    z-index: 1;
+  }
+  .cs_radial_gradiant {
+    left: -200px;
+    top: -170px;
+  }
+}
+.cs_feature_section {
+  // overflow: hidden;
+  .cs_section_heading_style_1 {
+    position: relative;
+    z-index: 1;
+  }
+  .cs_feature_widget_img,
+  .cs_feature_list {
+    position: relative;
+    z-index: 1;
+  }
+  .cs_radial_gradiant {
+    right: -150px;
+    top: -270px;
+  }
+}
 // Effect On About Page
 .cs_about_section {
   // overflow: hidden;
@@ -378,7 +442,6 @@ hr {
     top: -391px;
   }
 }
-
 // Effect on Servie Page
 .cs_service_card {
   .cs_card_style_4 {
@@ -401,7 +464,6 @@ hr {
     top: -365px;
   }
 }
-
 // Effect on Service Details Page
 .cs_class_about_section {
   overflow: hidden;
@@ -446,7 +508,6 @@ hr {
     bottom: -115px;
   }
 }
-
 // Effects On Schedule Page
 .cs_schedule_section {
   overflow: hidden;
@@ -466,6 +527,39 @@ hr {
   .cs_radial_gradiant_4 {
     right: -272px;
     bottom: -301px;
+  }
+}
+// Effect On Contact Page
+.cs_contact_style_1 {
+  // overflow: hidden;
+  .row {
+    position: relative;
+    z-index: 1;
+  }
+  .cs_radial_gradiant {
+    left: -300px;
+    top: -138px;
+  }
+}
+// Effect on Blog & Blog Details Page
+.cs_blog_section,
+.cs_blog_details {
+  // overflow: hidden;
+  .row {
+    position: relative;
+    z-index: 1;
+  }
+  .cs_radial_gradiant {
+    right: -400px;
+    top: -300px;
+  }
+  .cs_radial_gradiant_3 {
+    left: -300px;
+    top: 300px;
+  }
+  .cs_radial_gradiant_4 {
+    right: 150px;
+    top: 1200px;
   }
 }
 
@@ -512,16 +606,14 @@ hr {
   width: 100%;
   border: 1px solid var(--body-color);
   outline: none;
-  padding: 13px 20px;
+  padding: 9px 20px;
   color: var(--body-color);
   background-color: var(--gray-color);
 }
 
 // Map
 .cs_map {
-  // height: 100%;
   height: 680px;
-  filter: blur(0.5px);
   &:hover {
     filter: blur(0);
   }
@@ -539,5 +631,6 @@ hr {
   height: 100%;
   width: 100%;
   border: none;
+  filter: brightness(0.6) grayscale(0.7);
 }
 // End of Contact Page Design
