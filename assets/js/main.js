@@ -3,7 +3,7 @@
 
   /*
   |--------------------------------------------------------------------------
-  | Template Name: LeafLife
+  | Template Name: FitFlex
   | Author: Laralink
   | Version: 1.0.0
   |--------------------------------------------------------------------------
@@ -17,11 +17,10 @@
   | 4. Dynamic Background
   | 5. Slick Slider
   | 6. Modal Video
-  | 7. Accordian
-  | 8. Light Gallery
-  | 9. Hover To Active
-  | 10. Isotop
-  | 11. Dynamic contact form
+  | 7. Light Gallery
+  | 8. Dynamic contact form
+  | 9. Tabs
+  | 10. Counter Animation
   |
   */
 
@@ -34,7 +33,6 @@
 
   $(window).on("load", function () {
     preloader();
-    isotopInit();
   });
 
   $(function () {
@@ -44,20 +42,11 @@
     slickInit();
     modalVideo();
     counterInit();
-    accordian();
     lightGallery();
-    hoverActive();
-    isotopInit();
-    customMousePointer();
     tabs();
     if ($.exists(".wow")) {
       new WOW().init();
     }
-
-    $(".cs_award").hover(function () {
-      $(this).addClass("active");
-      $(this).siblings(".cs_award").removeClass("active");
-    });
   });
 
   $(window).on("scroll", function () {
@@ -89,13 +78,6 @@
     $(".cs_munu_dropdown_toggle").on("click", function () {
       $(this).toggleClass("active").siblings("ul").slideToggle();
       $(this).parent().toggleClass("active");
-    });
-    // Search Toggle
-    $(".cs_search_tobble_btn").on("click", function () {
-      $(".cs_header_form_wrap").toggleClass("active");
-    });
-    $(".cs_header_form_overlay").on("click", function () {
-      $(".cs_header_form_wrap").removeClass("active");
     });
   }
 
@@ -270,32 +252,7 @@
   }
 
   /*--------------------------------------------------------------
-    7. Accordian
-  --------------------------------------------------------------*/
-  function accordian() {
-    $(".cs_accordian").children(".cs_accordian_body").hide();
-    $(".cs_accordian.active").children(".cs_accordian_body").show();
-    $(".cs_accordian_head").on("click", function () {
-      $(this)
-        .parent(".cs_accordian")
-        .siblings()
-        .children(".cs_accordian_body")
-        .slideUp(250);
-      $(this).siblings().slideDown(250);
-      $(this)
-        .parent()
-        .parent()
-        .siblings()
-        .find(".cs_accordian_body")
-        .slideUp(250);
-      /* Accordian Active Class */
-      $(this).parents(".cs_accordian").addClass("active");
-      $(this).parent(".cs_accordian").siblings().removeClass("active");
-    });
-  }
-
-  /*--------------------------------------------------------------
-    8. Light Gallery
+    7. Light Gallery
   --------------------------------------------------------------*/
   function lightGallery() {
     $(".cs_lightgallery").each(function () {
@@ -309,45 +266,7 @@
   }
 
   /*--------------------------------------------------------------
-    9. Hover To Active
-  --------------------------------------------------------------*/
-  function hoverActive() {
-    $(".cs_hover_active").hover(function () {
-      $(this).addClass("active").siblings().removeClass("active");
-    });
-  }
-
-  /*--------------------------------------------------------------
-    10. Isotop
-  --------------------------------------------------------------*/
-  function isotopInit() {
-    if ($.exists(".cs_isotop")) {
-      $(".cs_isotop").isotope({
-        itemSelector: ".cs_isotop_item",
-        transitionDuration: "0.60s",
-        percentPosition: true,
-        masonry: {
-          columnWidth: ".cs_grid_sizer",
-        },
-      });
-      /* Active Class of Portfolio*/
-      $(".cs_isotop_filter ul li").on("click", function (event) {
-        $(this).siblings(".active").removeClass("active");
-        $(this).addClass("active");
-        event.preventDefault();
-      });
-      /*=== Portfolio filtering ===*/
-      $(".cs_isotop_filter ul").on("click", "a", function () {
-        var filterElement = $(this).attr("data-filter");
-        $(".cs_isotop").isotope({
-          filter: filterElement,
-        });
-      });
-    }
-  }
-
-  /*--------------------------------------------------------------
-    11. Dynamic contact form
+    8. Dynamic contact form
   --------------------------------------------------------------*/
   if ($.exists("#cs_form")) {
     const form = document.getElementById("cs_form");
@@ -394,26 +313,7 @@
   }
 
   /*--------------------------------------------------------------
-    18. Custom Mouse Pointer
-  --------------------------------------------------------------*/
-  function customMousePointer() {
-    $(".cs_custom_pointer_wrap").each(function () {
-      $(this).on("mousemove", function (e) {
-        let mouseX = e.pageX - $(this).offset().left;
-        let mouseY = e.pageY - $(this).offset().top;
-
-        $(this)
-          .find(".cs_mouse_point")
-          .css({
-            top: mouseY + "px",
-            left: mouseX + "px",
-          });
-      });
-    });
-  }
-
-  /*--------------------------------------------------------------
-    14. Tabs
+    9. Tabs
   --------------------------------------------------------------*/
   function tabs() {
     $(".cs_tabs .cs_tab_links a").on("click", function (e) {
@@ -429,8 +329,8 @@
     });
   }
 
-   /*=====================================================================
-    09. Counter Animation
+  /*=====================================================================
+    10. Counter Animation
   =======================================================================*/
   function counterInit() {
     if ($.exists(".odometer")) {
