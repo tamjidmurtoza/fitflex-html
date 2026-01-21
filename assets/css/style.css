@@ -1993,21 +1993,10 @@ hr {
 
 /*End Video Popup*/
 /*--------------------------------------------------------------
- 09. Header
+09. Header
 ----------------------------------------------------------------*/
 .cs_site_header {
-  position: relative;
   z-index: 101;
-  top: 30px;
-  background-color: red;
-}
-
-.cs_site-branding {
-  display: inline-block;
-  max-width: 180px;
-}
-
-.cs_site_header {
   transition: all 0.4s ease;
 }
 
@@ -2017,15 +2006,14 @@ hr {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 100px;
+  height: 80px;
   position: relative;
+  background-color: red;
 }
 .cs_site_header.cs_style_1 .cs_main_header_right {
   display: flex;
   align-items: center;
   gap: 30px;
-  height: 100%;
-  position: relative;
 }
 @media (max-width: 1199px) {
   .cs_site_header.cs_style_1 .cs_main_header_right {
@@ -2043,21 +2031,7 @@ hr {
   box-shadow: 0 10px 10px -10px rgba(33, 43, 53, 0.1);
 }
 
-.cs_site_header_full_width .container {
-  max-width: 100%;
-  padding: 0 100px;
-}
-
-@media screen and (max-width: 1199px) {
-  .cs_main_header .container {
-    max-width: 100%;
-  }
-  .cs_site_header.cs_style_1 .cs_nav {
-    display: flex;
-  }
-}
 .cs_nav ul {
-  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -2095,18 +2069,8 @@ hr {
 }
 
 @media screen and (min-width: 1200px) {
-  .cs_main_header {
-    position: relative;
-  }
-  .cs_main_header .container-fluid {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
   .cs_site_branding {
-    display: inline-block;
-  }
-  .cs_site_branding + .cs_main_header_center {
-    margin-left: 40px;
+    margin-right: 80px;
   }
   .cs_site_header.cs_style_1 .cs_main_header_center {
     display: flex;
@@ -2133,164 +2097,37 @@ hr {
     justify-content: center;
     align-items: center;
   }
-  .cs_site_header.cs_style_1.cs_type_1 .cs_nav_list a:hover {
-    color: var(--accent-color);
-  }
-  .cs_site_header.cs_style_1.cs_type_1 .cs_nav_list a::before {
-    background-color: var(--purple-color);
-  }
-  .cs_site_header.cs_style_1.cs_type_2 .cs_nav_list a:hover {
-    color: var(--white-color);
-  }
   .cs_nav {
-    display: flex;
-    align-items: center;
     height: 100%;
     line-height: 1.6em;
   }
   .cs_nav .cs_nav_list {
     display: flex !important;
-    flex-wrap: wrap;
     height: inherit;
   }
   .cs_nav .cs_nav_list > li {
-    margin-right: 40px;
+    margin-right: 50px;
     height: inherit;
-    position: relative;
   }
   .cs_nav .cs_nav_list > li:last-child {
     margin-right: 0;
   }
   .cs_nav .cs_nav_list > li > a {
-    padding: 10px 0;
     display: inline-flex;
-    position: relative;
     height: inherit;
     align-items: center;
   }
-  .cs_nav .cs_nav_list > li > a::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0;
-    background-color: var(--accent-color);
-    left: 0;
-    top: 61%;
-    transition: all 0.3s ease;
-  }
   .cs_nav .cs_nav_list > li > a:hover {
     color: var(--heading-color);
-  }
-  .cs_nav .cs_nav_list > li > a:hover::before {
-    width: 100%;
-  }
-  .cs_nav .cs_nav_list > li > ul {
-    left: 0;
-    top: calc(100% + 15px);
-  }
-  .cs_nav .cs_nav_list > li > ul::before {
-    content: "";
-    position: absolute;
-    height: 10px;
-    width: 10px;
-    background-color: #fff;
-    transform: rotate(45deg);
-    left: 20px;
-    top: -5px;
-    border-radius: 2px 0 0 0;
-  }
-  .cs_nav .cs_nav_list > li:hover > ul {
-    top: 100%;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.4s ease;
-  }
-  .cs_nav .cs_nav_list ul {
-    width: 260px;
-    background-color: var(--white-color);
-    position: absolute;
-    box-shadow: 0px 1px 2px 0px rgba(2, 0, 181, 0.1);
-    padding: 10px 0;
-    z-index: 100;
-    opacity: 0;
-    visibility: hidden;
-    display: block !important;
-    border-radius: 5px;
-    transition: all 0.1s ease;
-  }
-  .cs_nav .cs_nav_list ul li:hover ul {
-    top: 0px;
-  }
-  .cs_nav .cs_nav_list ul li:hover > ul {
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.4s ease;
-  }
-  .cs_nav .cs_nav_list ul a {
-    display: block;
-    line-height: inherit;
-    padding: 10px 20px;
-    color: var(--heading-color);
-  }
-  .cs_nav .cs_nav_list ul a:hover {
-    color: var(--accent-color);
-  }
-  .cs_nav .cs_nav_list ul ul {
-    top: 15px;
-    left: 100%;
   }
   .cs_menu_toggle,
   .cs_menu_dropdown_toggle {
     display: none;
   }
-  .cs_nav .cs_nav_list .cs_mega_menu {
-    position: relative;
-  }
 }
 @media screen and (max-width: 1199px) {
-  .cs_site_header_full_width .container {
-    padding: 0 15px;
-  }
-  .cs_site_header.cs_type_1 .cs_nav_list {
-    background-color: var(--heading-color);
-    color: var(--white-color);
-  }
-  .cs_menu_dropdown_toggle {
-    position: absolute;
-    height: 40px;
-    width: 100%;
-    top: 0;
-    left: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 23px 18px;
-    cursor: pointer;
-    z-index: 3;
-  }
-  .cs_menu_dropdown_toggle span {
-    display: block;
-    position: relative;
-    height: 10px;
-    width: 10px;
-  }
-  .cs_menu_dropdown_toggle span:before, .cs_menu_dropdown_toggle span:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    height: 2px;
-    width: 10px;
-    background-color: currentColor;
-    transition: all 0.3s ease;
-  }
-  .cs_menu_dropdown_toggle span:before {
-    transform: translate(-50%, -50%) rotate(90deg);
-  }
-  .cs_menu_dropdown_toggle.active span:before {
-    transform: translate(-50%, -50%) rotate(0deg);
+  .cs_main_header .container {
+    max-width: 100%;
   }
   .cs_site_branding {
     position: relative;
@@ -2327,11 +2164,11 @@ hr {
     font-size: 18px;
     line-height: 22px;
   }
-  .cs_animo_links > li > a .cs_animo_text {
-    text-shadow: 0 32px 0 currentColor;
+  .cs_site_header.cs_style_1 {
+    top: 0;
   }
-  .cs_animo_links > li > a:hover span {
-    transform: translateY(-32px);
+  .cs_site_header.cs_style_1 .cs_nav {
+    display: flex;
   }
   .cs_site_header.cs_style_1.cs_type_2 .cs_nav_list {
     background-color: var(--purple-color);
@@ -2411,9 +2248,6 @@ hr {
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
-  }
-  .cs_site_header.cs_style_1 {
-    top: 0;
   }
 }
 /*--------------------------------------------------------------

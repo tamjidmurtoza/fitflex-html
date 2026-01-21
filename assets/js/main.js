@@ -25,7 +25,7 @@
   */
 
   /*--------------------------------------------------------------
-    Scripts initialization
+  Scripts initialization
   --------------------------------------------------------------*/
   $.exists = function (selector) {
     return $(selector).length > 0;
@@ -54,7 +54,7 @@
   });
 
   /*--------------------------------------------------------------
-    1. Preloader
+  1. Preloader
   --------------------------------------------------------------*/
   function preloader() {
     $(".cs_preloader").fadeOut();
@@ -62,39 +62,54 @@
   }
 
   /*--------------------------------------------------------------
-    2. Mobile Menu
+  2. Mobile Menu
   --------------------------------------------------------------*/
   function mainNav() {
-    $(".cs_nav").append('<span class="cs_menu_toggle"><span></span></span>');
-    $(".menu-item-has-children").append(
-      '<span class="cs_munu_dropdown_toggle"><span></span></span>'
+    $('.cs_nav').append('<span class="cs_menu_toggle"><span></span></span>');
+    $('.menu-item-has-children').append(
+      '<span class="cs_menu_dropdown_toggle"><span></span></span>',
     );
-    $(".cs_menu_toggle").on("click", function () {
-      $(this)
-        .toggleClass("cs_toggle_active")
-        .siblings(".cs_nav_list_wrap")
-        .toggleClass("cs_active");
+    $('.cs_menu_toggle').on('click', function () {
+      $(this).toggleClass('cs_toggle_active').siblings('.cs_nav_list').toggleClass('cs_active');
     });
-    $(".cs_munu_dropdown_toggle").on("click", function () {
-      $(this).toggleClass("active").siblings("ul").slideToggle();
-      $(this).parent().toggleClass("active");
+    $('.cs_menu_dropdown_toggle').on('click', function () {
+      $(this).toggleClass('active').siblings('ul').slideToggle();
+      $(this).parent().toggleClass('active');
     });
   }
 
   /*--------------------------------------------------------------
-    3. Sticky Header
+  3. Sticky Header
   --------------------------------------------------------------*/
   function stickyHeader() {
-    var scroll = $(window).scrollTop();
-    if (scroll >= 10) {
-      $(".cs_sticky_header").addClass("cs_sticky_active");
-    } else {
-      $(".cs_sticky_header").removeClass("cs_sticky_active");
-    }
+    var $window = $(window);
+    var lastScrollTop = 0;
+    var $header = $('.cs_sticky_header');
+    var headerHeight = $header.outerHeight() + 20;
+
+    $window.scroll(function () {
+      var windowTop = $window.scrollTop();
+
+      if (windowTop >= headerHeight) {
+        $header.addClass('cs_gescout_sticky');
+      } else {
+        $header.removeClass('cs_gescout_sticky');
+        $header.removeClass('cs_gescout_show');
+      }
+
+      if ($header.hasClass('cs_gescout_sticky')) {
+        if (windowTop < lastScrollTop) {
+          $header.addClass('cs_gescout_show');
+        } else {
+          $header.removeClass('cs_gescout_show');
+        }
+      }
+      lastScrollTop = windowTop;
+    });
   }
 
   /*--------------------------------------------------------------
-    4. Dynamic Background
+  4. Dynamic Background
   --------------------------------------------------------------*/
   function dynamicBackground() {
     $("[data-src]").each(function () {
@@ -106,7 +121,7 @@
   }
 
   /*--------------------------------------------------------------
-    5. Slick Slider
+  5. Slick Slider
   --------------------------------------------------------------*/
   function slickInit() {
     if ($.exists(".cs_slider")) {
@@ -211,26 +226,26 @@
   }
 
   /*--------------------------------------------------------------
-    6. Modal Video
+  6. Modal Video
   --------------------------------------------------------------*/
   function modalVideo() {
     if ($.exists(".cs_video_open")) {
       $("body").append(`
-        <div class="cs_video_popup">
-          <div class="cs_video_popup-overlay"></div>
-          <div class="cs_video_popup-content">
-            <div class="cs_video_popup-layer"></div>
-            <div class="cs_video_popup-container">
-              <div class="cs_video_popup-align">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="about:blank"></iframe>
-                </div>
-              </div>
-              <div class="cs_video_popup-close"></div>
-            </div>
-          </div>
-        </div>
-      `);
+<div class="cs_video_popup">
+<div class="cs_video_popup-overlay"></div>
+<div class="cs_video_popup-content">
+<div class="cs_video_popup-layer"></div>
+<div class="cs_video_popup-container">
+<div class="cs_video_popup-align">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="about:blank"></iframe>
+</div>
+</div>
+<div class="cs_video_popup-close"></div>
+</div>
+</div>
+</div>
+`);
       $(document).on("click", ".cs_video_open", function (e) {
         e.preventDefault();
         var video = $(this).attr("href");
@@ -252,7 +267,7 @@
   }
 
   /*--------------------------------------------------------------
-    7. Light Gallery
+  7. Light Gallery
   --------------------------------------------------------------*/
   function lightGallery() {
     $(".cs_lightgallery").each(function () {
@@ -266,7 +281,7 @@
   }
 
   /*--------------------------------------------------------------
-    8. Dynamic contact form
+  8. Dynamic contact form
   --------------------------------------------------------------*/
   if ($.exists("#cs_form")) {
     const form = document.getElementById("cs_form");
@@ -313,7 +328,7 @@
   }
 
   /*--------------------------------------------------------------
-    9. Tabs
+  9. Tabs
   --------------------------------------------------------------*/
   function tabs() {
     $(".cs_tabs .cs_tab_links a").on("click", function (e) {
@@ -322,7 +337,7 @@
         .fadeIn(400)
         .siblings()
         .hide();
-        console.log(currentAttrValue)
+      console.log(currentAttrValue)
       $(this).closest(".cs_tab_links").find("li").removeClass("active");
       $(this).parents("li").addClass("active");
       e.preventDefault();
@@ -330,25 +345,28 @@
   }
 
   /*=====================================================================
-    10. Counter Animation
+  10. Counter Animation
   =======================================================================*/
   function counterInit() {
-    if ($.exists(".odometer")) {
-      $(window).on("scroll", function () {
-        function winScrollPosition() {
-          var scrollPos = $(window).scrollTop(),
-            winHeight = $(window).height();
-          var scrollPosition = Math.round(scrollPos + winHeight / 1.2);
-          return scrollPosition;
-        }
+    if (!$.exists(".odometer")) return;
 
-        $(".odometer").each(function () {
-          var elemOffset = $(this).offset().top;
-          if (elemOffset < winScrollPosition()) {
-            $(this).html($(this).data("count-to"));
+    const observer = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const el = $(entry.target);
+            el.html(el.data("count-to"));
+            observer.unobserve(entry.target); // run only once
           }
         });
-      });
-    }
+      },
+      {
+        threshold: 0.3, // 30% visible হলেই trigger
+      }
+    );
+
+    $(".odometer").each(function () {
+      observer.observe(this);
+    });
   }
 })(jQuery); // End of use strict
