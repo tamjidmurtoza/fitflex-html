@@ -27,9 +27,9 @@
   /*--------------------------------------------------------------
   Scripts initialization
   --------------------------------------------------------------*/
-  $.exists = function (selector) {
-    return $(selector).length > 0;
-  };
+ $.exists = function (selector) {
+  return $(selector).length > 0;
+};
 
   $(window).on("load", function () {
     preloader();
@@ -42,15 +42,23 @@
     slickInit();
     modalVideo();
     counterInit();
+    scrollUp();
     lightGallery();
     tabs();
+
+    // Automatic getting year in footer
+    if ($.exists('.cs_getting_year')) {
+      const date = new Date();
+      $('.cs_getting_year').text(date.getFullYear());
+    }
+    // WOW JS Animation on scroll
     if ($.exists(".wow")) {
       new WOW().init();
     }
   });
 
   $(window).on("scroll", function () {
-    // stickyHeader();
+   showScrollUp();
   });
 
   /*--------------------------------------------------------------
@@ -58,7 +66,7 @@
   --------------------------------------------------------------*/
   function preloader() {
     $(".cs_preloader").fadeOut();
-    $("cs_preloader_in").delay(150).fadeOut("slow");
+    $(".cs_preloader_in").delay(150).fadeOut("slow");
   }
 
   /*--------------------------------------------------------------
@@ -71,6 +79,9 @@
     );
     $('.cs_menu_toggle').on('click', function () {
       $(this).toggleClass('cs_toggle_active').siblings('.cs_nav_list_wrap').toggleClass('cs_active');
+    });
+    $('.menu-item-has-children >a').on('click', function (e) {
+     e.preventDefault();
     });
     $('.cs_menu_dropdown_toggle').on('click', function () {
       $(this).toggleClass('active').siblings('ul').slideToggle();
@@ -91,7 +102,6 @@
       var windowTop = $window.scrollTop();
 
       if (windowTop >= headerHeight) {
-        console.log($window)
         $header.addClass('cs_gescout_sticky');
       } else {
         $header.removeClass('cs_gescout_sticky');
@@ -159,11 +169,11 @@
           slidesPerView = 1;
         }
         if (slidesPerView == "responsive") {
-          var slidesPerView = parseInt($ts.attr("data-add-slides"), 10);
-          var lgPoint = parseInt($ts.attr("data-lg-slides"), 10);
-          var mdPoint = parseInt($ts.attr("data-md-slides"), 10);
-          var smPoint = parseInt($ts.attr("data-sm-slides"), 10);
-          var xsPoing = parseInt($ts.attr("data-xs-slides"), 10);
+          var slidesPerView = parseInt($ts.attr("data-add-slides"), 10) || 4;
+          var lgPoint = parseInt($ts.attr("data-lg-slides"), 10) || 4;
+          var mdPoint = parseInt($ts.attr("data-md-slides"), 10) || 3;
+          var smPoint = parseInt($ts.attr("data-sm-slides"), 10) || 2;
+          var xsPoing = parseInt($ts.attr("data-xs-slides"), 10) || 1;
         }
         // Fade Slider
         var fadeVar = parseInt($($ts).attr("data-fade-slide"));
@@ -232,27 +242,25 @@
   function modalVideo() {
     if ($.exists(".cs_video_open")) {
       $("body").append(`
-<div class="cs_video_popup">
-<div class="cs_video_popup-overlay"></div>
-<div class="cs_video_popup-content">
-<div class="cs_video_popup-layer"></div>
-<div class="cs_video_popup-container">
-<div class="cs_video_popup-align">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="about:blank"></iframe>
-</div>
-</div>
-<div class="cs_video_popup-close"></div>
-</div>
-</div>
-</div>
-`);
+        <div class="cs_video_popup">
+          <div class="cs_video_popup-overlay"></div>
+          <div class="cs_video_popup-content">
+            <div class="cs_video_popup-layer"></div>
+            <div class="cs_video_popup-container">
+              <div class="cs_video_popup-align">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="about:blank"></iframe>
+                </div>
+              </div>
+              <div class="cs_video_popup-close"></div>
+            </div>
+          </div>
+        </div>
+        `);
       $(document).on("click", ".cs_video_open", function (e) {
         e.preventDefault();
         var video = $(this).attr("href");
-
         $(".cs_video_popup-container iframe").attr("src", `${video}`);
-
         $(".cs_video_popup").addClass("active");
       });
       $(".cs_video_popup-close, .cs_video_popup-layer").on(
@@ -266,7 +274,30 @@
       );
     }
   }
+ /*--------------------------------------------------------------
+   07. Scroll Up
+  --------------------------------------------------------------*/
+  function scrollUp() {
+    $('.cs_scrollup').on('click', function (e) {
+      e.preventDefault();
+      $('html,body').animate(
+        {
+          scrollTop: 0,
+        },
+        0,
+      );
+    });
+  }
 
+  /* For Scroll Up */
+  function showScrollUp() {
+    let scroll = $(window).scrollTop();
+    if (scroll >= 350) {
+      $('.cs_scrollup').addClass('active');
+    } else {
+      $('.cs_scrollup').removeClass('active');
+    }
+  }
   /*--------------------------------------------------------------
   7. Light Gallery
   --------------------------------------------------------------*/
@@ -280,55 +311,7 @@
       });
     });
   }
-
-  /*--------------------------------------------------------------
-  8. Dynamic contact form
-  --------------------------------------------------------------*/
-  if ($.exists("#cs_form")) {
-    const form = document.getElementById("cs_form");
-    const result = document.getElementById("cs_result");
-
-    form.addEventListener("submit", function (e) {
-      const formData = new FormData(form);
-      e.preventDefault();
-      var object = {};
-      formData.forEach((value, key) => {
-        object[key] = value;
-      });
-      var json = JSON.stringify(object);
-      result.innerHTML = "Please wait...";
-
-      fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: json,
-      })
-        .then(async (response) => {
-          let json = await response.json();
-          if (response.status == 200) {
-            result.innerHTML = json.message;
-          } else {
-            console.log(response);
-            result.innerHTML = json.message;
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-          result.innerHTML = "Something went wrong!";
-        })
-        .then(function () {
-          form.reset();
-          setTimeout(() => {
-            result.style.display = "none";
-          }, 5000);
-        });
-    });
-  }
-
-  /*--------------------------------------------------------------
+ /*--------------------------------------------------------------
   9. Tabs
   --------------------------------------------------------------*/
   function tabs() {
@@ -338,7 +321,6 @@
         .fadeIn(400)
         .siblings()
         .hide();
-      console.log(currentAttrValue)
       $(this).closest(".cs_tab_links").find("li").removeClass("active");
       $(this).parents("li").addClass("active");
       e.preventDefault();
@@ -357,12 +339,12 @@
           if (entry.isIntersecting) {
             const el = $(entry.target);
             el.html(el.data("count-to"));
-            observer.unobserve(entry.target); // run only once
+            observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.3, // 30% visible হলেই trigger
+        threshold: 0.3,
       }
     );
 
@@ -370,4 +352,59 @@
       observer.observe(this);
     });
   }
+  /*--------------------------------------------------------------
+  8. Dynamic contact form
+  --------------------------------------------------------------*/
+  if ($.exists("#cs_form") && $.exists("#cs_result")) {
+  const form = document.getElementById("cs_form");
+  const result = document.getElementById("cs_result");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Collect form data
+    const formData = new FormData(form);
+    const payload = {};
+
+    formData.forEach((value, key) => {
+      payload[key] = value;
+    });
+
+    // Web3Forms requires access_key
+    if (!payload.access_key) {
+      result.style.display = "block";
+      result.innerHTML = "Missing form access key.";
+      return;
+    }
+
+    result.style.display = "block";
+    result.innerHTML = "Please wait...";
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(payload)
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        result.innerHTML = data.message || "Submission completed.";
+
+        if (data.success) {
+          form.reset();
+        }
+      })
+      .catch(() => {
+        result.innerHTML = "Something went wrong. Please try again later.";
+      })
+      .finally(() => {
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 5000);
+      });
+  });
+}
+
 })(jQuery); // End of use strict
