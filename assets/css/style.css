@@ -1,34 +1,39 @@
-/*--------------------------------------------------------------
+/*===============================================================
 >> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1. Fonts
-2. Variable
-3. Typography
-4. Preloader
-5. Spacing
-6. General
-7. Slider
-8. Video Modal
-9. Header
+=================================================================
+01 Google Fonts
+02. All Variable
+03. Typography
+04. Preloader
+05. Spacing
+06. General
+07. Slider
+08. Video Modal
+09. Header
 10. Footer
-11. Isotope
-12. Hero
-13. Sidebar
-14. CTA
-15. Testimonial
-16. Team
-17. Card
-18. Service
-19. Contact
-20. Post
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
- ** Google Fonts Integration
-----------------------------------------------------------------*/
+11. Hero
+12. Sidebar
+13. CTA
+14. Testimonial
+15. Team
+16. Card
+17. Service
+18. Contact
+19. Blog Post
+20. Feature
+21. Pricing
+22. Video
+23. Gradiant
+24. Timetable
+
+===============================================================*/
+/*==========================================================
+ 01 Google Fonts Integration
+============================================================*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap");
-/*--------------------------------------------------------------
-** All Variable
-----------------------------------------------------------------*/
+/*===========================================================
+02. All Variable
+=============================================================*/
 :root {
   --heading-color: #fff;
   --body-color: rgba(255, 255, 255, 0.6);
@@ -40,9 +45,9 @@
   --body-font: "Roboto", sans-serif;
 }
 
-/*--------------------------------------------------------------
-1. Typography
-----------------------------------------------------------------*/
+/*=========================================================
+03. Typography
+===========================================================*/
 body,
 html {
   color: var(--body-color);
@@ -212,7 +217,7 @@ label {
 }
 
 /*===========================================================
-  Preloader
+ 04. Preloader
 =============================================================*/
 .cs_preloader {
   position: fixed;
@@ -383,9 +388,9 @@ label {
     background: var(--accent-color);
   }
 }
-/*--------------------------------------------------------------
-  3. Spacing
-----------------------------------------------------------------*/
+/*=======================================================
+  05. Spacing
+=========================================================*/
 .cs_mb_1 {
   margin-bottom: 1px;
 }
@@ -1670,9 +1675,9 @@ label {
     height: 150px;
   }
 }
-/*--------------------------------------------------------------
-  4. General
-----------------------------------------------------------------*/
+/*========================================================
+  06. General
+==========================================================*/
 @media (min-width: 1400px) {
   .container {
     max-width: 1264px;
@@ -1830,6 +1835,10 @@ hr {
   color: var(--accent-color);
 }
 
+.cs_gray_color {
+  color: var(--gray-color);
+}
+
 .cs_body_color {
   color: var(--body-color);
 }
@@ -1854,6 +1863,9 @@ hr {
   border: 1px solid var(--heading-color);
 }
 
+/*===================================================
+ Start Scroll Top Button
+=====================================================*/
 .cs_scrollup {
   width: 48px;
   height: 48px;
@@ -1876,6 +1888,9 @@ hr {
   background-color: var(--heading-color);
 }
 
+/*===================================================
+ End Scroll Top Button
+=====================================================*/
 .cs_text_strock span {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--heading-color);
@@ -1887,6 +1902,8 @@ hr {
   align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
+  position: relative;
+  z-index: 6;
 }
 .cs_section_heading_style_2 .cs_section_heading_column_1 {
   max-width: 855px;
@@ -1898,14 +1915,17 @@ hr {
   }
 }
 
+/*======================================================
+ Animated Text
+========================================================*/
 @media (max-width: 991px) {
   br {
     display: none;
   }
 }
-/*--------------------------------------------------------------
-  5. Slider
-----------------------------------------------------------------*/
+/*======================================================
+  07. Slider
+========================================================*/
 .cs_slider {
   position: relative;
 }
@@ -1967,6 +1987,8 @@ hr {
 .cs_pagination.cs_style_1 {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 6;
 }
 .cs_pagination.cs_style_1 ul {
   list-style: none;
@@ -2000,9 +2022,9 @@ hr {
   width: 70px;
 }
 
-/*--------------------------------------------------------------
-  6. Video Modal
-----------------------------------------------------------------*/
+/*======================================================
+  08. Video Modal
+========================================================*/
 .cs-pd-video .cs_video_open,
 .cs-sample-img .cs_video_open {
   position: absolute;
@@ -2183,9 +2205,9 @@ hr {
 }
 
 /*End Video Popup*/
-/*--------------------------------------------------------------
-09. Header
-----------------------------------------------------------------*/
+/*=======================================================
+ 09. Header
+=========================================================*/
 .cs_site_header {
   z-index: 777;
   transition: all 0.4s ease;
@@ -2197,8 +2219,9 @@ hr {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 80px;
+  height: 100px;
   position: relative;
+  transition: all 0.4s ease;
 }
 .cs_site_header.cs_style_1 .cs_main_header_right {
   display: flex;
@@ -2239,20 +2262,18 @@ hr {
   list-style: none;
 }
 
-.cs_gescout_sticky {
-  position: fixed !important;
-  top: -110px;
-  opacity: 0;
-  background-color: var(--black-color);
-  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.3);
+.cs_sticky_header {
+  position: fixed;
+  top: 0;
   transition: all 0.4s ease;
 }
-
-.cs_gescout_show {
-  top: 0 !important;
-  opacity: 1;
+.cs_sticky_header.cs_sticky_active {
+  top: 0;
   background-color: var(--black-color);
-  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.cs_sticky_header.cs_sticky_active .cs_main_header_in {
+  height: 80px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -2441,7 +2462,9 @@ hr {
   .cs_site_header.cs_style_1 .cs_nav {
     display: flex;
   }
-  /*Mobile Menu Button*/
+  /*========================================
+   Mobile Menu Button
+   ========================================*/
   .cs_menu_toggle {
     display: inline-block;
     width: 30px;
@@ -2500,9 +2523,14 @@ hr {
     transition-delay: 0s, 0.2s;
   }
 }
-/*--------------------------------------------------------------
-  8. Footer
-----------------------------------------------------------------*/
+/*===========================================================
+  10. Footer
+=============================================================*/
+.cs_footer_style_1 {
+  /*==========================================
+   Newsletter
+  ============================================*/
+}
 .cs_footer_style_1 .cs_footer_row {
   display: flex;
   justify-content: space-between;
@@ -2546,43 +2574,6 @@ hr {
 .cs_footer_style_1 .cs_footer_row .cs_footer_widget + .cs_footer_widget {
   margin-top: 10px;
 }
-.cs_footer_style_1 .cs_footer_row .cs_newsletter.cs_style_1 {
-  display: flex;
-  gap: 0px 14px;
-}
-.cs_footer_style_1 .cs_footer_row .cs_newsletter.cs_style_1 .cs_newsletter_input {
-  border: none;
-  outline: none;
-  line-height: 1.625em;
-  min-width: 276px;
-  padding: 11px 20px;
-}
-.cs_footer_style_1 .cs_footer_row .cs_newsletter.cs_style_1 .cs_newsletter_input::-moz-placeholder {
-  color: var(--black-color);
-  opacity: 0.5;
-}
-.cs_footer_style_1 .cs_footer_row .cs_newsletter.cs_style_1 .cs_newsletter_input::placeholder {
-  color: var(--black-color);
-  opacity: 0.5;
-}
-.cs_footer_style_1 .cs_footer_row .cs_newsletter.cs_style_1 .cs_newsletter_btn {
-  width: 161px;
-  background-color: var(--accent-color);
-  color: var(--black-color);
-  padding: 11px 32px;
-  font-weight: 600;
-  letter-spacing: 0.24px;
-  outline: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--accent-color);
-}
-.cs_footer_style_1 .cs_footer_row .cs_newsletter.cs_style_1 .cs_newsletter_btn:hover {
-  color: var(--heading-color);
-  background: transparent;
-  border: 1px solid var(--heading-color);
-}
 .cs_footer_style_1 .cs_footer_row .cs_social_btns {
   display: flex;
   margin-top: 34px;
@@ -2604,30 +2595,61 @@ hr {
   background-color: var(--accent-color);
   opacity: 1;
 }
+.cs_footer_style_1 .cs_newsletter.cs_style_1 {
+  display: flex;
+  gap: 0px 14px;
+}
+.cs_footer_style_1 .cs_newsletter.cs_style_1 .cs_newsletter_input {
+  border: none;
+  outline: none;
+  line-height: 1.625em;
+  min-width: 276px;
+  padding: 11px 20px;
+}
+.cs_footer_style_1 .cs_newsletter.cs_style_1 .cs_newsletter_input::-moz-placeholder {
+  color: var(--black-color);
+  opacity: 0.5;
+}
+.cs_footer_style_1 .cs_newsletter.cs_style_1 .cs_newsletter_input::placeholder {
+  color: var(--black-color);
+  opacity: 0.5;
+}
+.cs_footer_style_1 .cs_newsletter.cs_style_1 .cs_newsletter_btn {
+  width: 161px;
+  background-color: var(--accent-color);
+  color: var(--black-color);
+  padding: 11px 32px;
+  font-weight: 600;
+  letter-spacing: 0.24px;
+  outline: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--accent-color);
+}
+.cs_footer_style_1 .cs_newsletter.cs_style_1 .cs_newsletter_btn:hover {
+  color: var(--heading-color);
+  background: transparent;
+  border: 1px solid var(--heading-color);
+}
 @media (max-width: 767px) {
   .cs_footer_style_1 .cs_footer_row {
     flex-direction: column;
   }
 }
 @media (max-width: 475px) {
-  .cs_footer_style_1 .cs_footer_row .cs_newsletter.cs_style_1 {
+  .cs_footer_style_1 .cs_newsletter.cs_style_1 {
     flex-direction: column;
     gap: 20px;
   }
+  .cs_footer_style_1 .cs_newsletter.cs_style_1 .cs_newsletter_btn {
+    width: 100%;
+  }
 }
 
-/*--------------------------------------------------------------
-  10. Hero
-----------------------------------------------------------------*/
-.breadcrumb-item + .breadcrumb-item::before {
-  color: var(--body-color);
-  content: var(--bs-breadcrumb-divider, ">");
-}
-
-.breadcrumb-item.active {
-  color: var(--heading-color);
-}
-
+/*=======================================================
+  11. Hero
+=========================================================*/
 .cs_hero_style_1 .cs_section_heading_style_1 {
   width: min(100%, 760px);
 }
@@ -2678,9 +2700,18 @@ hr {
   width: min(100%, 1200px);
 }
 
-/*--------------------------------------------------------------
-  10. Sidebar
-----------------------------------------------------------------*/
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--body-color);
+  content: var(--bs-breadcrumb-divider, ">");
+}
+
+.breadcrumb-item.active {
+  color: var(--heading-color);
+}
+
+/*=======================================================
+  12. Sidebar
+=========================================================*/
 .cs_right_sidebar {
   padding-left: 40px;
 }
@@ -2755,20 +2786,24 @@ hr {
   display: flex;
   align-items: center;
 }
-
-.cs_recent_post_thumb {
+.cs_recent_post .cs_recent_post_thumb {
   height: 70px;
   width: 70px;
   flex: none;
   overflow: hidden;
   margin-right: 15px;
 }
-.cs_recent_post_thumb:hover .cs_recent_post_thumb_in {
+.cs_recent_post .cs_recent_post_thumb:hover .cs_recent_post_thumb_in {
   transform: scale(1.06);
 }
-
-.cs_recent_post_thumb_in {
+.cs_recent_post .cs_recent_post_thumb_in {
   transition: all 0.4s ease;
+}
+.cs_recent_post .cs_recent_post_title a {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .tagcloud {
@@ -2790,9 +2825,9 @@ hr {
   border-color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-  12. CTA
-----------------------------------------------------------------*/
+/*========================================================
+  13. CTA
+==========================================================*/
 .cs_cta_style_1 .cs_cta_content,
 .cs_cta_style_5 .cs_cta_content {
   width: min(100%, 656px);
@@ -2844,9 +2879,9 @@ hr {
   }
 }
 
-/*--------------------------------------------------------------
-  13. Testimonial Homepage
-----------------------------------------------------------------*/
+/*=======================================================
+  14. Testimonial
+=========================================================*/
 .cs_testimonial_card {
   height: 100%;
   border: 1px solid;
@@ -2896,9 +2931,9 @@ hr {
   }
 }
 
-/*--------------------------------------------------------------
-  14. Team
-----------------------------------------------------------------*/
+/*=========================================================
+  15. Team
+===========================================================*/
 .cs_about_style_1 {
   gap: 30px;
   position: relative;
@@ -2978,9 +3013,9 @@ hr {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-  15. Card
-----------------------------------------------------------------*/
+/*=======================================================
+  16. Card
+=========================================================*/
 .cs_card_style_1,
 .cs_card_style_2,
 .cs_card_style_3,
@@ -3028,6 +3063,7 @@ hr {
 .cs_card_style_2 .cs_card_info .cs_card_title a,
 .cs_card_style_3 .cs_card_info .cs_card_title a,
 .cs_card_style_4 .cs_card_info .cs_card_title a {
+  color: var(--heading-color);
   line-height: 1.416em;
   background-repeat: no-repeat;
   background-image: linear-gradient(90deg, currentColor 0, currentColor 100%);
@@ -3149,6 +3185,9 @@ hr {
      border-image: linear-gradient(360deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
 }
 
+/*===============================================
+ Card Wrapper
+ ================================================*/
 .cs_programs_section .cs_card_style_1 {
   display: flex;
   flex-direction: column;
@@ -3161,9 +3200,9 @@ hr {
      border-image: linear-gradient(360deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
 }
 
-/*--------------------------------------------------------------
- Service & Service Details Page 
-----------------------------------------------------------------*/
+/*========================================================
+ 17. Service & Service Details
+==========================================================*/
 .cs_classes_card .cs_section_heading_column_1 {
   width: min(100%, 546px);
 }
@@ -3225,9 +3264,9 @@ hr {
   }
 }
 
-/*--------------------------------------------------------------
->> Contact Page:
---------------------------------------------------------------*/
+/*=========================================================
+ 18. Contact
+==========================================================*/
 .cs_contact_info {
   display: flex;
   flex-wrap: wrap;
@@ -3237,11 +3276,11 @@ hr {
   position: relative;
   padding-left: 60px;
 }
-.cs_contact_info li:hover .cs_iconbox {
+.cs_contact_info li:hover .cs_iconbox_icon {
   background-color: var(--accent-color);
   color: var(--black-color);
 }
-.cs_contact_info .cs_iconbox {
+.cs_contact_info .cs_iconbox_icon {
   color: var(--heading-color);
   height: 42px;
   width: 42px;
@@ -3254,6 +3293,9 @@ hr {
   top: 6px;
 }
 
+/*=================================================
+ Form 
+ =================================================*/
 .cs_contact_form_1 {
   padding-left: 40px;
 }
@@ -3270,9 +3312,12 @@ hr {
   outline: none;
   padding: 9px 20px;
   color: var(--body-color);
-  background-color: var(--gray-color);
+  background-color: transparent;
 }
 
+/*===========================================
+ Google Map
+ ============================================*/
 .cs_map {
   height: 680px;
 }
@@ -3299,12 +3344,12 @@ hr {
   height: 100%;
   width: 100%;
   border: none;
-  filter: brightness(0.6) grayscale(0.7);
+  filter: brightness(0.75) grayscale(0.9);
 }
 
-/*--------------------------------------------------------------
-  Blog Post
-----------------------------------------------------------------*/
+/*===========================================================
+ 19. Blog Post
+=============================================================*/
 .cs_post_1_list .cs_post.cs_style_1:not(:first-child) {
   margin-top: 60px;
 }
@@ -3314,6 +3359,11 @@ hr {
   }
 }
 
+.cs_post.cs_style_1 {
+  /*====================================================
+   Blog Details
+  ====================================================*/
+}
 .cs_post.cs_style_1 .cs_post_thumb {
   display: block;
   overflow: hidden;
@@ -3390,7 +3440,7 @@ hr {
   background-size: 100% 2px;
   background-position: 0 calc(100% - 0px);
 }
-.cs_post.cs_style_1 .cs_post_sub_title {
+.cs_post.cs_style_1 .cs_post_subtitle {
   margin-bottom: 14px;
   line-height: 1.6em;
 }
@@ -3498,9 +3548,9 @@ hr {
   pointer-events: none;
 }
 
-/*--------------------------------------------------------------
-Homepage Feature Section
-----------------------------------------------------------------*/
+/*==========================================================
+ 20. Feature
+============================================================*/
 .cs_feature_widget_img {
   width: 100%;
 }
@@ -3534,10 +3584,15 @@ Homepage Feature Section
 .cs_feature_list li .cs_feature_subtitle {
   line-height: 1.625em;
 }
+@media (max-width: 575px) {
+  .cs_feature_list li {
+    padding-left: 40px;
+  }
+}
 
-/*--------------------------------------------------------------
-Homepage Pricing Card Design
-----------------------------------------------------------------*/
+/*=====================================================
+ 21. Pricing
+=======================================================*/
 .cs_pricing_card {
   padding: 55px 40px 60px 40px;
   height: 100%;
@@ -3598,9 +3653,9 @@ Homepage Pricing Card Design
   }
 }
 
-/*--------------------------------------------------------------
-About Page Video Section
-----------------------------------------------------------------*/
+/*==========================================================
+ 22. Video
+============================================================*/
 .cs_video_style_1 {
   min-height: 600px;
 }
@@ -3634,11 +3689,6 @@ About Page Video Section
 .cs_video_style_1 a:hover::before {
   animation-play-state: paused;
 }
-@keyframes border-scale {
-  50% {
-    transform: translate(-50%, -50%) scale(1.4);
-  }
-}
 .cs_video_style_1 .cs_section_heading_style_1 {
   width: min(100%, 700px);
   position: absolute;
@@ -3665,9 +3715,9 @@ About Page Video Section
   }
 }
 
-/*--------------------------------------------------------------
-Service Details Page Gallery Style
-----------------------------------------------------------------*/
+/*==============================================
+ Gallery Style
+================================================*/
 .cs_gallery_style_1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -3677,18 +3727,23 @@ Service Details Page Gallery Style
 .cs_gallery_style_1 .cs_gallery_item {
   grid-column: auto/span 1;
   grid-row: auto/span 1;
+  overflow: hidden;
 }
 .cs_gallery_style_1 .cs_gallery_item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.6s ease;
 }
 .cs_gallery_style_1 .cs_gallery_item:nth-child(2) {
   grid-row: auto/span 2;
 }
 .cs_gallery_style_1 .cs_gallery_item:nth-child(3) {
   grid-column: auto/span 2;
+}
+.cs_gallery_style_1 .cs_gallery_item:hover img {
+  transform: scale(1.03);
 }
 @media (max-width: 767px) {
   .cs_gallery_style_1 {
@@ -3714,9 +3769,14 @@ Service Details Page Gallery Style
   }
 }
 
-/*--------------------------------------------------------------
->> Gradiants
---------------------------------------------------------------*/
+@keyframes border-scale {
+  50% {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+}
+/*======================================================
+ 23. Gradiant
+========================================================*/
 .cs_radial_gradiant,
 .cs_radial_gradiant_2,
 .cs_radial_gradiant_3,
@@ -3936,9 +3996,9 @@ Service Details Page Gallery Style
   top: 1200px;
 }
 
-/*--------------------------------------------------------------
-  Timetable
-----------------------------------------------------------------*/
+/*======================================================
+  24. Timetable
+========================================================*/
 .cs_slider_arrows.cs_style_1 .cs_left_arrow,
 .cs_slider_arrows.cs_style_1 .cs_right_arrow {
   position: absolute;

@@ -1,7 +1,6 @@
-/*--------------------------------------------------------------
->> Contact Page:
---------------------------------------------------------------*/
-// Info
+/*=========================================================
+ 18. Contact
+==========================================================*/
 .cs_contact_info {
   display: flex;
   flex-wrap: wrap;
@@ -10,13 +9,13 @@
     position: relative;
     padding-left: 60px;
     &:hover {
-      .cs_iconbox {
+      .cs_iconbox_icon {
         background-color: var(--accent-color);
         color: var(--black-color);
       }
     }
   }
-  .cs_iconbox {
+  .cs_iconbox_icon {
     color: var(--heading-color);
     height: 42px;
     width: 42px;
@@ -30,7 +29,9 @@
   }
 }
 
-// Form
+/*=================================================
+ Form 
+ =================================================*/
 .cs_contact_form_1 {
   padding-left: 40px;
   @media (max-width: 991px) {
@@ -44,10 +45,12 @@
   outline: none;
   padding: 9px 20px;
   color: var(--body-color);
-  background-color: var(--gray-color);
+  background-color: transparent;
 }
 
-// Map
+/*===========================================
+ Google Map
+ ============================================*/
 .cs_map {
   height: 680px;
   &:hover {
@@ -67,6 +70,5 @@
   height: 100%;
   width: 100%;
   border: none;
-  filter: brightness(0.6) grayscale(0.7);
+  filter: brightness(0.75) grayscale(0.9);
 }
-// End of Contact Page Design

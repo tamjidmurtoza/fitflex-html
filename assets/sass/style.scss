@@ -1,27 +1,32 @@
-/*--------------------------------------------------------------
+/*===============================================================
 >> TABLE OF CONTENTS:
-----------------------------------------------------------------
-1. Fonts
-2. Variable
-3. Typography
-4. Preloader
-5. Spacing
-6. General
-7. Slider
-8. Video Modal
-9. Header
+=================================================================
+01 Google Fonts
+02. All Variable
+03. Typography
+04. Preloader
+05. Spacing
+06. General
+07. Slider
+08. Video Modal
+09. Header
 10. Footer
-11. Isotope
-12. Hero
-13. Sidebar
-14. CTA
-15. Testimonial
-16. Team
-17. Card
-18. Service
-19. Contact
-20. Post
---------------------------------------------------------------*/
+11. Hero
+12. Sidebar
+13. CTA
+14. Testimonial
+15. Team
+16. Card
+17. Service
+18. Contact
+19. Blog Post
+20. Feature
+21. Pricing
+22. Video
+23. Gradiant
+24. Timetable
+
+===============================================================*/
 
 @import "default/fonts";
 @import "default/variable";
@@ -33,7 +38,6 @@
 @import "common/video-modal";
 @import "common/header";
 @import "common/footer";
-
 @import "shortcode/hero";
 @import "common/sidebar";
 @import "shortcode/cta";
@@ -43,7 +47,6 @@
 @import "shortcode/service";
 @import "shortcode/contact";
 @import "shortcode/post";
-
 @import "shortcode/feature";
 @import "shortcode/pricing";
 @import "shortcode/video";

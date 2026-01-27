@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
-About Page Video Section
-----------------------------------------------------------------*/
+/*==========================================================
+ 22. Video
+============================================================*/
 
 .cs_video_style_1 {
   min-height: 600px;
@@ -36,12 +36,6 @@ About Page Video Section
       }
     }
   }
-  // Animation
-  @keyframes border-scale {
-    50% {
-      transform: translate(-50%, -50%) scale(1.4);
-    }
-  }
 
   .cs_section_heading_style_1 {
     width: min(100%, 700px);
@@ -75,9 +69,9 @@ About Page Video Section
   }
 }
 
-/*--------------------------------------------------------------
-Service Details Page Gallery Style
-----------------------------------------------------------------*/
+/*==============================================
+ Gallery Style
+================================================*/
 
 .cs_gallery_style_1 {
   display: grid;
@@ -87,16 +81,21 @@ Service Details Page Gallery Style
   .cs_gallery_item {
     grid-column: auto / span 1;
     grid-row: auto / span 1;
+    overflow: hidden;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: all 0.6s ease;
     }
     &:nth-child(2) {
       grid-row: auto / span 2;
     }
     &:nth-child(3) {
       grid-column: auto / span 2;
+    }
+    &:hover img {
+      transform: scale(1.03);
     }
   }
   @media (max-width: 767px) {
@@ -123,4 +122,9 @@ Service Details Page Gallery Style
     }
   }
 }
-// End of Gallery Style
+
+@keyframes border-scale {
+  50% {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+}

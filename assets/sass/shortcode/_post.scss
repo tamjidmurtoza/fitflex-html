@@ -1,8 +1,6 @@
-/*--------------------------------------------------------------
-  Blog Post
-----------------------------------------------------------------*/
-
-// Gap Between Posts
+/*===========================================================
+ 19. Blog Post
+=============================================================*/
 .cs_post_1_list {
   .cs_post.cs_style_1 {
     &:not(:first-child) {
@@ -14,7 +12,6 @@
   }
 }
 
-// Post Contents
 .cs_post.cs_style_1 {
   .cs_post_thumb {
     display: block;
@@ -100,7 +97,7 @@
     }
   }
 
-  .cs_post_sub_title {
+  .cs_post_subtitle {
     margin-bottom: 14px;
     line-height: 1.6em;
   }
@@ -124,7 +121,9 @@
     }
   }
 
-  // Blog Details Specific Style
+  /*====================================================
+   Blog Details
+  ====================================================*/
   p {
     margin-bottom: 35px;
     line-height: 1.75em;

@@ -1,9 +1,6 @@
-/*--------------------------------------------------------------
- Service & Service Details Page 
-----------------------------------------------------------------*/
-// Service Details Page
-
-// Heading - Classes Section
+/*========================================================
+ 17. Service & Service Details
+==========================================================*/
 .cs_classes_card {
   .cs_section_heading_column_1 {
     width: min(100%, 546px);
@@ -12,7 +9,6 @@
     }
   }
 }
-// Card - Classes Section
 .cs_card_wrapper_1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

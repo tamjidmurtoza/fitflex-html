@@ -1,8 +1,6 @@
-/*--------------------------------------------------------------
-09. Header
-----------------------------------------------------------------*/
-
-// General Design For Header
+/*=======================================================
+ 09. Header
+=========================================================*/
 .cs_site_header {
   z-index: 777;
   transition: all 0.4s ease;
@@ -15,8 +13,9 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     position: relative;
+    transition: all 0.4s ease;
   }
 
   .cs_main_header_right {
@@ -57,25 +56,20 @@
   list-style: none;
 }
 
-// Sticky Header
-.cs_gescout_sticky {
-  position: fixed !important;
-  top: -110px;
-  opacity: 0;
-  background-color: var(--black-color);
-  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.3);
+.cs_sticky_header {
+  position: fixed;
+  top: 0;
   transition: all 0.4s ease;
+  &.cs_sticky_active {
+    top: 0;
+    background-color: var(--black-color);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    .cs_main_header_in {
+      height: 80px;
+    }
+  }
 }
 
-.cs_gescout_show {
-  top: 0 !important;
-  opacity: 1;
-  background-color: var(--black-color);
-  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.3);
-}
-// End of Sticky Header
-
-// Responsive Design
 @media screen and (min-width: 1200px) {
   .cs_site_branding {
     margin-right: 80px;
@@ -134,7 +128,6 @@
         &.menu-item-has-children {
           > a {
             position: relative;
-            // Icon on Header Menu
             &::after {
               content: "";
               display: inline-block;
@@ -152,7 +145,6 @@
           }
         }
       }
-      //Hide dropdown menu
       ul {
         width: 250px;
         background-color: var(--black-color);
@@ -164,7 +156,6 @@
         opacity: 0;
         visibility: hidden;
 
-        // Icon on Dropdown
         &::before {
           content: "";
           position: absolute;
@@ -200,7 +191,6 @@
     max-width: 100%;
   }
 
-  // Icon On Mobile Menu Dropdown List
   .cs_menu_dropdown_toggle {
     position: absolute;
     height: 40px;
@@ -247,7 +237,6 @@
       }
     }
   }
-  // End of Icon On Mobile Menu Dropdown List
 
   .cs_site_branding {
     position: relative;
@@ -313,8 +302,9 @@
     }
   }
 
-  /*Mobile Menu Button*/
-
+  /*========================================
+   Mobile Menu Button
+   ========================================*/
   .cs_menu_toggle {
     display: inline-block;
     width: 30px;

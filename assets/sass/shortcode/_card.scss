@@ -1,7 +1,6 @@
-/*--------------------------------------------------------------
-  15. Card
-----------------------------------------------------------------*/
-//Global Card Design
+/*=======================================================
+  16. Card
+=========================================================*/
 .cs_card_style_1,
 .cs_card_style_2,
 .cs_card_style_3,
@@ -33,8 +32,8 @@
   .cs_card_info {
     padding: 35px 20px;
     .cs_card_title a {
+      color: var(--heading-color);
       line-height: 1.416em;
-      //Hover Effect With Accent Color
       background-repeat: no-repeat;
       background-image: linear-gradient(
         90deg,
@@ -56,7 +55,6 @@
     }
   }
 }
-//Card 1 Custom Design
 .cs_card_style_1 {
   .cs_btn_style_1 {
     &:hover {
@@ -71,7 +69,6 @@
   }
 }
 
-//Card 2 Custom Design
 .cs_card_style_2 {
   height: 100%;
   padding: 25px 25px 30px;
@@ -109,7 +106,6 @@
   }
 }
 
-//Card 3 Custom Design
 .cs_card_style_3 {
   height: 100%;
   border: 1px solid;
@@ -132,7 +128,6 @@
   }
 }
 
-//Card 4 Custom Design
 .cs_card_style_4 {
   height: 100%;
   display: flex;
@@ -186,7 +181,9 @@
   }
 }
 
-// Program section Card 1 Custom Design
+/*===============================================
+ Card Wrapper
+ ================================================*/
 .cs_programs_section {
   .cs_card_style_1 {
     display: flex;

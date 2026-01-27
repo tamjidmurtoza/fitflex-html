@@ -1,7 +1,6 @@
-/*--------------------------------------------------------------
-  12. CTA
-----------------------------------------------------------------*/
-// CTA Homepage & Schedule Page
+/*========================================================
+  13. CTA
+==========================================================*/
 .cs_cta_style_1,
 .cs_cta_style_5 {
   .cs_cta_content {
@@ -12,7 +11,6 @@
   }
 }
 
-// CTA About Page
 .cs_cta_style_2 {
   .cs_cta_content {
     width: min(100%, 596px);
@@ -28,7 +26,6 @@
   }
 }
 
-// CTA Services Page
 .cs_cta_style_3 {
   .cs_cta_content {
     width: min(100%, 840px);
@@ -41,7 +38,6 @@
   }
 }
 
-// CTA Service Details Page
 .cs_cta_style_4 {
   .cs_cta_content {
     @media (max-width: 991px) {

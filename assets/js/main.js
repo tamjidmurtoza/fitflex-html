@@ -45,7 +45,6 @@
     scrollUp();
     lightGallery();
     tabs();
-
     // Automatic getting year in footer
     if ($.exists('.cs_getting_year')) {
       const date = new Date();
@@ -59,6 +58,7 @@
 
   $(window).on("scroll", function () {
    showScrollUp();
+   stickyHeader();
   });
 
   /*--------------------------------------------------------------
@@ -92,31 +92,13 @@
   /*--------------------------------------------------------------
   3. Sticky Header
   --------------------------------------------------------------*/
-  function stickyHeader() {
-    var $window = $(window);
-    var lastScrollTop = 0;
-    var $header = $('.cs_sticky_header');
-    var headerHeight = $header.outerHeight() + 20;
-
-    $window.scroll(function () {
-      var windowTop = $window.scrollTop();
-
-      if (windowTop >= headerHeight) {
-        $header.addClass('cs_gescout_sticky');
-      } else {
-        $header.removeClass('cs_gescout_sticky');
-        $header.removeClass('cs_gescout_show');
-      }
-
-      if ($header.hasClass('cs_gescout_sticky')) {
-        if (windowTop < lastScrollTop) {
-          $header.addClass('cs_gescout_show');
-        } else {
-          $header.removeClass('cs_gescout_show');
-        }
-      }
-      lastScrollTop = windowTop;
-    });
+   function stickyHeader() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 10) {
+      $(".cs_sticky_header").addClass("cs_sticky_active");
+    } else {
+      $(".cs_sticky_header").removeClass("cs_sticky_active");
+    }
   }
 
   /*--------------------------------------------------------------
@@ -406,5 +388,6 @@
       });
   });
 }
+
 
 })(jQuery); // End of use strict

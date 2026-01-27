@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
-  4. General
-----------------------------------------------------------------*/
+/*========================================================
+  06. General
+==========================================================*/
 
 @media (min-width: 1400px) {
   .container {
@@ -138,12 +138,14 @@ hr {
 .cs_accent_color {
   color: var(--accent-color);
 }
+.cs_gray_color {
+  color: var(--gray-color);
+}
 
 .cs_body_color {
   color: var(--body-color);
 }
 
-// Global Button Style
 .cs_btn_style_1 {
   background-color: var(--accent-color);
   color: var(--black-color);
@@ -163,7 +165,9 @@ hr {
     border: 1px solid var(--heading-color);
   }
 }
-// Scroll Top Button
+/*===================================================
+ Start Scroll Top Button
+=====================================================*/
 .cs_scrollup {
   width: 48px;
   height: 48px;
@@ -186,7 +190,9 @@ hr {
     background-color: var(--heading-color);
   }
 }
-// Global Text Stroke
+/*===================================================
+ End Scroll Top Button
+=====================================================*/
 .cs_text_strock {
   span {
     -webkit-text-stroke-width: 1px;
@@ -195,12 +201,13 @@ hr {
   }
 }
 
-// Section Heading for Global Usage
 .cs_section_heading_style_2 {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
+  position: relative;
+  z-index: 6;
   .cs_section_heading_column_1 {
     max-width: 855px;
   }
@@ -209,6 +216,10 @@ hr {
     align-items: flex-start;
   }
 }
+
+/*======================================================
+ Animated Text
+========================================================*/
 
 // Globally Break Tag Remove
 @media (max-width: 991px) {

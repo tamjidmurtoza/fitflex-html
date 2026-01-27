@@ -1,18 +1,6 @@
-/*--------------------------------------------------------------
-  10. Hero
-----------------------------------------------------------------*/
-// Start of BootStrap Breadcumb Override
-.breadcrumb-item + .breadcrumb-item::before {
-  color: var(--body-color);
-  content: var(--bs-breadcrumb-divider, ">");
-}
-
-.breadcrumb-item.active {
-  color: var(--heading-color);
-}
-// End of BootStrap Breadcumb Override
-
-// Start of Hero Section
+/*=======================================================
+  11. Hero
+=========================================================*/
 .cs_hero_style_1 {
   .cs_section_heading_style_1 {
     width: min(100%, 760px);
@@ -62,7 +50,6 @@
   }
 }
 
-// Service & Schedule Page Custom Design
 .cs_hero_style_2 {
   .cs_section_heading_style_1 {
     width: min(100%, 900px);
@@ -72,4 +59,11 @@
   }
 }
 
-// End of Hero Section
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--body-color);
+  content: var(--bs-breadcrumb-divider, ">");
+}
+
+.breadcrumb-item.active {
+  color: var(--heading-color);
+}

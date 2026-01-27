@@ -1,17 +1,14 @@
-/*--------------------------------------------------------------
-  5. Slider
-----------------------------------------------------------------*/
-// Slider Design Starts from here
+/*======================================================
+  07. Slider
+========================================================*/
 .cs_slider {
   position: relative;
 }
 
-//Slide From Right Side
 .cs_full_screen_right {
   width: calc(60vw + 650px);
 }
 
-// Draggable & Arrow Cursor For Slider
 .slick-arrow {
   cursor: pointer;
 }
@@ -21,13 +18,11 @@
     ew-resize !important;
 }
 
-// Default For Backup (Not To Break Design)
 .slick-slide > div {
   display: flex;
   flex-direction: column;
 }
 
-// Start of Slider Gap
 .cs_slider_gap_24 {
   .slick-slide {
     padding-left: 12px;
@@ -70,12 +65,12 @@
     }
   }
 }
-// End of Slider Gap
 
-// Homepage Slider Pagination
 .cs_pagination.cs_style_1 {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 6;
   ul {
     list-style: none;
     padding: 0;

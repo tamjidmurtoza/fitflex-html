@@ -1,15 +1,13 @@
-/*--------------------------------------------------------------
-  8. Footer
-----------------------------------------------------------------*/
+/*===========================================================
+  10. Footer
+=============================================================*/
 .cs_footer_style_1 {
-  // Footer Row
   .cs_footer_row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 25px;
     padding: 74px 0 45px;
-    // Footer Column
     .cs_footer_col {
       flex: none;
       max-width: 150px;
@@ -18,7 +16,6 @@
         max-width: 451px;
       }
     }
-    // Footer Widget/Column Title
     .cs_footer_widget_title {
       font-size: 16px;
       margin-bottom: 18px;
@@ -26,7 +23,6 @@
       font-family: var(--body-font);
       line-height: 1.625em;
     }
-    // Footer Widget Menu/List
     .cs_footer_widget_menu {
       li {
         &:not(:last-child) {
@@ -35,7 +31,6 @@
       }
       a {
         line-height: 1.625em;
-        // Footer Widget Menu/List Underline Hover Effect
         background-repeat: no-repeat;
         background-image: linear-gradient(
           90deg,
@@ -54,51 +49,13 @@
       }
     }
 
-    // Newsletter Heading
     .cs_text_widget {
       display: flex;
     }
-    // Subscription Widget Top Spacing
     .cs_footer_widget + .cs_footer_widget {
       margin-top: 10px;
     }
 
-    // Newsletter Form
-    .cs_newsletter.cs_style_1 {
-      display: flex;
-      gap: 0px 14px;
-      .cs_newsletter_input {
-        border: none;
-        outline: none;
-        line-height: 1.625em;
-        min-width: 276px;
-        padding: 11px 20px;
-        &::placeholder {
-          color: var(--black-color);
-          opacity: 0.5;
-        }
-      }
-      .cs_newsletter_btn {
-        width: 161px;
-        background-color: var(--accent-color);
-        color: var(--black-color);
-        padding: 11px 32px;
-        font-weight: 600;
-        letter-spacing: 0.24px;
-        outline: none;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid var(--accent-color);
-        &:hover {
-          color: var(--heading-color);
-          background: transparent;
-          border: 1px solid var(--heading-color);
-        }
-      }
-    }
-
-    // Social Buttons
     .cs_social_btns {
       display: flex;
       margin-top: 34px;
@@ -120,13 +77,54 @@
         }
       }
     }
-    @media (max-width: 767px) {
+  }
+  /*==========================================
+   Newsletter
+  ============================================*/
+  .cs_newsletter.cs_style_1 {
+    display: flex;
+    gap: 0px 14px;
+    .cs_newsletter_input {
+      border: none;
+      outline: none;
+      line-height: 1.625em;
+      min-width: 276px;
+      padding: 11px 20px;
+      &::placeholder {
+        color: var(--black-color);
+        opacity: 0.5;
+      }
+    }
+    .cs_newsletter_btn {
+      width: 161px;
+      background-color: var(--accent-color);
+      color: var(--black-color);
+      padding: 11px 32px;
+      font-weight: 600;
+      letter-spacing: 0.24px;
+      outline: none;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--accent-color);
+      &:hover {
+        color: var(--heading-color);
+        background: transparent;
+        border: 1px solid var(--heading-color);
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .cs_footer_row {
       flex-direction: column;
     }
-    @media (max-width: 475px) {
-      .cs_newsletter.cs_style_1 {
-        flex-direction: column;
-        gap: 20px;
+  }
+  @media (max-width: 475px) {
+    .cs_newsletter.cs_style_1 {
+      flex-direction: column;
+      gap: 20px;
+      .cs_newsletter_btn {
+        width: 100%;
       }
     }
   }
