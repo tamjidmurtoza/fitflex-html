@@ -2859,15 +2859,9 @@ hr {
 .cs_cta_style_2 .cs_cta_content {
   width: min(100%, 596px);
 }
-.cs_cta_style_2 .cs_cta_content h2 {
-  margin-bottom: 65px;
-}
 @media (max-width: 991px) {
   .cs_cta_style_2 .cs_cta_content {
     width: 100%;
-  }
-  .cs_cta_style_2 .cs_cta_content h2 {
-    margin-bottom: 40px;
   }
 }
 
