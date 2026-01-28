@@ -48,6 +48,22 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+  @media (max-width: 575px) {
+    .cs_hero_content {
+      padding: 30px 15px;
+    }
+  }
+  @media (max-width: 420px) {
+    .cs_hero_btns {
+      flex-direction: column;
+      a {
+        width: 100%;
+      }
+    }
+    .cs_hero_content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
 
 .cs_hero_style_2 {

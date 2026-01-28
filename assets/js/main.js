@@ -2,34 +2,35 @@
   "use strict";
 
   /*
-  |--------------------------------------------------------------------------
+  |================================================================
   | Template Name: FitFlex
   | Author: Laralink
   | Version: 1.0.0
-  |--------------------------------------------------------------------------
-  |--------------------------------------------------------------------------
+  |================================================================
+  |================================================================
   | TABLE OF CONTENTS:
-  |--------------------------------------------------------------------------
+  |================================================================
   |
-  | 1. Preloader
-  | 2. Mobile Menu
-  | 3. Sticky Header
-  | 4. Dynamic Background
-  | 5. Slick Slider
-  | 6. Modal Video
-  | 7. Light Gallery
-  | 8. Dynamic contact form
-  | 9. Tabs
+  | 01. Preloader
+  | 02. Mobile Menu
+  | 03. Sticky Header
+  | 04. Dynamic Background
+  | 05. Slick Slider
+  | 06. Modal Video
+  | 07. Scroll Up
+  | 08. Light Gallery
+  | 09. Tabs
   | 10. Counter Animation
+  | 11. Dynamic contact form
   |
   */
 
-  /*--------------------------------------------------------------
+  /*=======================================================
   Scripts initialization
-  --------------------------------------------------------------*/
- $.exists = function (selector) {
-  return $(selector).length > 0;
-};
+  =========================================================*/
+  $.exists = function (selector) {
+    return $(selector).length > 0;
+  };
 
   $(window).on("load", function () {
     preloader();
@@ -45,54 +46,53 @@
     scrollUp();
     lightGallery();
     tabs();
-    // Automatic getting year in footer
-    if ($.exists('.cs_getting_year')) {
+    if ($.exists(".cs_getting_year")) {
       const date = new Date();
-      $('.cs_getting_year').text(date.getFullYear());
+      $(".cs_getting_year").text(date.getFullYear());
     }
-    // WOW JS Animation on scroll
     if ($.exists(".wow")) {
       new WOW().init();
     }
   });
 
   $(window).on("scroll", function () {
-   showScrollUp();
-   stickyHeader();
+    showScrollUp();
+    stickyHeader();
   });
 
-  /*--------------------------------------------------------------
-  1. Preloader
-  --------------------------------------------------------------*/
+  /*=============================================================
+   01. Preloader
+  ===============================================================*/
   function preloader() {
     $(".cs_preloader").fadeOut();
     $(".cs_preloader_in").delay(150).fadeOut("slow");
   }
-
-  /*--------------------------------------------------------------
-  2. Mobile Menu
-  --------------------------------------------------------------*/
+  /*=============================================================
+   02. Mobile Menu
+  ===============================================================*/
   function mainNav() {
-    $('.cs_nav').append('<span class="cs_menu_toggle"><span></span></span>');
-    $('.menu-item-has-children').append(
+    $(".cs_nav").append('<span class="cs_menu_toggle"><span></span></span>');
+    $(".menu-item-has-children").append(
       '<span class="cs_menu_dropdown_toggle"><span></span></span>',
     );
-    $('.cs_menu_toggle').on('click', function () {
-      $(this).toggleClass('cs_toggle_active').siblings('.cs_nav_list_wrap').toggleClass('cs_active');
+    $(".cs_menu_toggle").on("click", function () {
+      $(this)
+        .toggleClass("cs_toggle_active")
+        .siblings(".cs_nav_list_wrap")
+        .toggleClass("cs_active");
     });
-    $('.menu-item-has-children >a').on('click', function (e) {
-     e.preventDefault();
+    $(".menu-item-has-children >a").on("click", function (e) {
+      e.preventDefault();
     });
-    $('.cs_menu_dropdown_toggle').on('click', function () {
-      $(this).toggleClass('active').siblings('ul').slideToggle();
-      $(this).parent().toggleClass('active');
+    $(".cs_menu_dropdown_toggle").on("click", function () {
+      $(this).toggleClass("active").siblings("ul").slideToggle();
+      $(this).parent().toggleClass("active");
     });
   }
-
-  /*--------------------------------------------------------------
-  3. Sticky Header
-  --------------------------------------------------------------*/
-   function stickyHeader() {
+  /*=============================================================
+   03. Sticky Header
+  ===============================================================*/
+  function stickyHeader() {
     var scroll = $(window).scrollTop();
     if (scroll >= 10) {
       $(".cs_sticky_header").addClass("cs_sticky_active");
@@ -100,10 +100,9 @@
       $(".cs_sticky_header").removeClass("cs_sticky_active");
     }
   }
-
-  /*--------------------------------------------------------------
-  4. Dynamic Background
-  --------------------------------------------------------------*/
+  /*=============================================================
+   04. Dynamic Background
+  ===============================================================*/
   function dynamicBackground() {
     $("[data-src]").each(function () {
       var src = $(this).attr("data-src");
@@ -112,10 +111,9 @@
       });
     });
   }
-
-  /*--------------------------------------------------------------
-  5. Slick Slider
-  --------------------------------------------------------------*/
+  /*=============================================================
+   05. Slick Slider
+  ===============================================================*/
   function slickInit() {
     if ($.exists(".cs_slider")) {
       $(".cs_slider").each(function () {
@@ -139,7 +137,7 @@
         var centerVar = Boolean(parseInt($ts.attr("data-center"), 10));
         // Variable Width
         var variableWidthVar = Boolean(
-          parseInt($ts.attr("data-variable-width"), 10)
+          parseInt($ts.attr("data-variable-width"), 10),
         );
         // Pagination
         var paginaiton = $(this)
@@ -166,9 +164,9 @@
           function (event, slick, currentSlide, nextSlide) {
             var i = (currentSlide ? currentSlide : 0) + 1;
             $status.html(
-              `<span class="cs_current_number" data-number="${i}"><span>${i}</span></span> <span class="cs_slider_number_seperator">/</span> <span class="cs_total_numbers"  data-number="${slick.slideCount}"><span>${slick.slideCount}</span></span>`
+              `<span class="cs_current_number" data-number="${i}"><span>${i}</span></span> <span class="cs_slider_number_seperator">/</span> <span class="cs_total_numbers"  data-number="${slick.slideCount}"><span>${slick.slideCount}</span></span>`,
             );
-          }
+          },
         );
         /* End Count Slide Number */
         // Slick Active Code
@@ -217,10 +215,9 @@
       });
     }
   }
-
-  /*--------------------------------------------------------------
-  6. Modal Video
-  --------------------------------------------------------------*/
+  /*=============================================================
+   06. Modal Video
+  ===============================================================*/
   function modalVideo() {
     if ($.exists(".cs_video_open")) {
       $("body").append(`
@@ -252,17 +249,17 @@
           $("html").removeClass("overflow-hidden");
           $(".cs_video_popup-container iframe").attr("src", "about:blank");
           e.preventDefault();
-        }
+        },
       );
     }
   }
- /*--------------------------------------------------------------
+  /*=============================================================
    07. Scroll Up
-  --------------------------------------------------------------*/
+  ===============================================================*/
   function scrollUp() {
-    $('.cs_scrollup').on('click', function (e) {
+    $(".cs_scrollup").on("click", function (e) {
       e.preventDefault();
-      $('html,body').animate(
+      $("html,body").animate(
         {
           scrollTop: 0,
         },
@@ -270,19 +267,18 @@
       );
     });
   }
-
   /* For Scroll Up */
   function showScrollUp() {
     let scroll = $(window).scrollTop();
     if (scroll >= 350) {
-      $('.cs_scrollup').addClass('active');
+      $(".cs_scrollup").addClass("active");
     } else {
-      $('.cs_scrollup').removeClass('active');
+      $(".cs_scrollup").removeClass("active");
     }
   }
-  /*--------------------------------------------------------------
-  7. Light Gallery
-  --------------------------------------------------------------*/
+  /*============================================================
+   08. Light Gallery
+  ==============================================================*/
   function lightGallery() {
     $(".cs_lightgallery").each(function () {
       $(this).lightGallery({
@@ -293,9 +289,9 @@
       });
     });
   }
- /*--------------------------------------------------------------
-  9. Tabs
-  --------------------------------------------------------------*/
+  /*============================================================
+   09. Tabs
+  ==============================================================*/
   function tabs() {
     $(".cs_tabs .cs_tab_links a").on("click", function (e) {
       var currentAttrValue = $(this).attr("href");
@@ -308,10 +304,9 @@
       e.preventDefault();
     });
   }
-
-  /*=====================================================================
-  10. Counter Animation
-  =======================================================================*/
+  /*============================================================
+   10. Counter Animation
+  ==============================================================*/
   function counterInit() {
     if (!$.exists(".odometer")) return;
 
@@ -327,67 +322,65 @@
       },
       {
         threshold: 0.3,
-      }
+      },
     );
 
     $(".odometer").each(function () {
       observer.observe(this);
     });
   }
-  /*--------------------------------------------------------------
-  8. Dynamic contact form
-  --------------------------------------------------------------*/
+  /*============================================================
+   11. Dynamic contact form
+  ==============================================================*/
   if ($.exists("#cs_form") && $.exists("#cs_result")) {
-  const form = document.getElementById("cs_form");
-  const result = document.getElementById("cs_result");
+    const form = document.getElementById("cs_form");
+    const result = document.getElementById("cs_result");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    // Collect form data
-    const formData = new FormData(form);
-    const payload = {};
+      // Collect form data
+      const formData = new FormData(form);
+      const payload = {};
 
-    formData.forEach((value, key) => {
-      payload[key] = value;
-    });
-
-    // Web3Forms requires access_key
-    if (!payload.access_key) {
-      result.style.display = "block";
-      result.innerHTML = "Missing form access key.";
-      return;
-    }
-
-    result.style.display = "block";
-    result.innerHTML = "Please wait...";
-
-    fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify(payload)
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        result.innerHTML = data.message || "Submission completed.";
-
-        if (data.success) {
-          form.reset();
-        }
-      })
-      .catch(() => {
-        result.innerHTML = "Something went wrong. Please try again later.";
-      })
-      .finally(() => {
-        setTimeout(() => {
-          result.style.display = "none";
-        }, 5000);
+      formData.forEach((value, key) => {
+        payload[key] = value;
       });
-  });
-}
 
+      // Web3Forms requires access_key
+      if (!payload.access_key) {
+        result.style.display = "block";
+        result.innerHTML = "Missing form access key.";
+        return;
+      }
 
+      result.style.display = "block";
+      result.innerHTML = "Please wait...";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          result.innerHTML = data.message || "Submission completed.";
+
+          if (data.success) {
+            form.reset();
+          }
+        })
+        .catch(() => {
+          result.innerHTML = "Something went wrong. Please try again later.";
+        })
+        .finally(() => {
+          setTimeout(() => {
+            result.style.display = "none";
+          }, 5000);
+        });
+    });
+  }
 })(jQuery); // End of use strict
