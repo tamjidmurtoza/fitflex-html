@@ -46,7 +46,6 @@
     scrollUp();
     lightGallery();
     tabs();
-    borderAnimationInit();
     if ($.exists(".cs_getting_year")) {
       const date = new Date();
       $(".cs_getting_year").text(date.getFullYear());
