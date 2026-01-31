@@ -180,6 +180,7 @@ hr {
   right: 30px;
   bottom: 30px;
   font-size: 24px;
+  z-index: 10000;
   opacity: 0;
   transform: translateY(120px);
   color: var(--black-color);
