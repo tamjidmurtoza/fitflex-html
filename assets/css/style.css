@@ -322,6 +322,23 @@ label {
     background: var(--accent-color);
   }
 }
+@-webkit-keyframes translateAnimTop {
+  0% {
+    background: var(--accent-color);
+  }
+  25% {
+    background: var(--accent-color);
+  }
+  50% {
+    background: none;
+  }
+  75% {
+    background: none;
+  }
+  100% {
+    background: var(--accent-color);
+  }
+}
 @keyframes translateAnimBottom {
   0% {
     transform: translateY(0px);
@@ -341,6 +358,23 @@ label {
   }
   100% {
     transform: translateY(0px);
+    background: var(--accent-color);
+  }
+}
+@-webkit-keyframes translateAnimBottom {
+  0% {
+    background: var(--accent-color);
+  }
+  25% {
+    background: var(--accent-color);
+  }
+  50% {
+    background: none;
+  }
+  75% {
+    background: none;
+  }
+  100% {
     background: var(--accent-color);
   }
 }
@@ -366,6 +400,23 @@ label {
     background: var(--accent-color);
   }
 }
+@-webkit-keyframes translateAnimLeft {
+  0% {
+    background: var(--accent-color);
+  }
+  25% {
+    background: var(--accent-color);
+  }
+  50% {
+    background: none;
+  }
+  75% {
+    background: none;
+  }
+  100% {
+    background: var(--accent-color);
+  }
+}
 @keyframes translateAnimRight {
   0% {
     transform: translateX(0px);
@@ -385,6 +436,23 @@ label {
   }
   100% {
     transform: translateX(0px);
+    background: var(--accent-color);
+  }
+}
+@-webkit-keyframes translateAnimRight {
+  0% {
+    background: var(--accent-color);
+  }
+  25% {
+    background: var(--accent-color);
+  }
+  50% {
+    background: none;
+  }
+  75% {
+    background: none;
+  }
+  100% {
     background: var(--accent-color);
   }
 }
@@ -2530,11 +2598,6 @@ hr {
 /*===========================================================
   10. Footer
 =============================================================*/
-.cs_footer_style_1 {
-  /*==========================================
-   Newsletter
-  ============================================*/
-}
 .cs_footer_style_1 .cs_footer_row {
   display: flex;
   justify-content: space-between;
@@ -2599,6 +2662,11 @@ hr {
   background-color: var(--accent-color);
   opacity: 1;
 }
+.cs_footer_style_1 {
+  /*==========================================
+   Newsletter
+  ============================================*/
+}
 .cs_footer_style_1 .cs_newsletter.cs_style_1 {
   display: flex;
   gap: 0px 14px;
@@ -2609,10 +2677,6 @@ hr {
   line-height: 1.625em;
   min-width: 276px;
   padding: 11px 20px;
-}
-.cs_footer_style_1 .cs_newsletter.cs_style_1 .cs_newsletter_input::-moz-placeholder {
-  color: var(--black-color);
-  opacity: 0.5;
 }
 .cs_footer_style_1 .cs_newsletter.cs_style_1 .cs_newsletter_input::placeholder {
   color: var(--black-color);
@@ -2674,8 +2738,7 @@ hr {
 }
 .cs_hero_style_1 .cs_hero_content {
   border: 1px solid;
-  -o-border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
   background: rgba(255, 255, 255, 0.03);
   padding: 35px 40px;
   gap: 25px;
@@ -2813,6 +2876,11 @@ hr {
   overflow: hidden;
   margin-right: 15px;
 }
+.cs_recent_post .cs_recent_post_thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .cs_recent_post .cs_recent_post_thumb:hover .cs_recent_post_thumb_in {
   transform: scale(1.06);
 }
@@ -2899,8 +2967,7 @@ hr {
 .cs_testimonial_card {
   height: 100%;
   border: 1px solid;
-  -o-border-image: linear-gradient(270deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(270deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(270deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
   background: var(--gray-color);
 }
 @media (max-width: 520px) {
@@ -2916,8 +2983,7 @@ hr {
 .cs_testimonial_card .cs_testimonial_image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 520px) {
   .cs_testimonial_card .cs_testimonial_image {
@@ -3000,8 +3066,7 @@ hr {
 }
 .cs_class_about_section img {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .cs_class_about_section .cs_about_content {
   width: min(100%, 420px);
@@ -3043,8 +3108,7 @@ hr {
 .cs_card_style_4 .cs_card_thumbnail img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .cs_card_style_1 .cs_btn_style_1,
 .cs_card_style_2 .cs_btn_style_1,
@@ -3115,8 +3179,7 @@ hr {
   height: 100%;
   padding: 25px 25px 30px;
   border: 1px solid;
-  -o-border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
 }
 .cs_card_style_2 .cs_btn_style_1 {
   color: var(--black-color);
@@ -3136,15 +3199,13 @@ hr {
   padding: 27px 0 0;
 }
 .cs_card_style_2:hover {
-  -o-border-image: linear-gradient(45deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(45deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(45deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
 }
 
 .cs_card_style_3 {
   height: 100%;
   border: 1px solid;
-  -o-border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
 }
 .cs_card_style_3 .cs_card_info {
   padding: 0 30px 23px;
@@ -3163,8 +3224,7 @@ hr {
   display: flex;
   flex-direction: column;
   border: 1px solid;
-  -o-border-image: linear-gradient(360deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(360deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(360deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)) 1;
 }
 .cs_card_style_4 .cs_badge {
   top: 0;
@@ -3173,8 +3233,7 @@ hr {
   letter-spacing: 1.76px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(9px);
-          backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px);
 }
 .cs_card_style_4 .cs_btn_style_1 {
   color: var(--black-color);
@@ -3190,13 +3249,11 @@ hr {
   flex: 1;
   border: 1px solid;
   padding: 33px 20px 31px;
-  -o-border-image: linear-gradient(360deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(360deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(360deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
 }
 .cs_card_style_4:hover {
   border: 1px solid;
-  -o-border-image: linear-gradient(360deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(360deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(360deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
 }
 
 /*===============================================
@@ -3210,8 +3267,7 @@ hr {
   flex: 1;
   justify-content: start;
   border: 1px solid;
-  -o-border-image: linear-gradient(360deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(360deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(360deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
 }
 
 /*========================================================
@@ -3373,11 +3429,6 @@ hr {
   }
 }
 
-.cs_post.cs_style_1 {
-  /*====================================================
-   Blog Details
-  ======================================================*/
-}
 .cs_post.cs_style_1 .cs_post_thumb {
   display: block;
   overflow: hidden;
@@ -3473,6 +3524,11 @@ hr {
 }
 .cs_post.cs_style_1 .cs_btn.cs_style_2:hover::after {
   width: 50%;
+}
+.cs_post.cs_style_1 {
+  /*====================================================
+   Blog Details
+  ======================================================*/
 }
 .cs_post.cs_style_1 p {
   margin-bottom: 35px;
@@ -3611,8 +3667,7 @@ hr {
   padding: 55px 40px 60px 40px;
   height: 100%;
   border: 1px solid;
-  -o-border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
   background: var(--gray-color);
 }
 .cs_pricing_card .cs_pricing_card_content {
@@ -3711,8 +3766,7 @@ hr {
   transform: translate(0%, -100%);
   padding: 27px 50px 30px 40px;
   border: 1px solid;
-  -o-border-image: linear-gradient(270deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(270deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(270deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
   mask-image: linear-gradient(360deg, transparent 0%, black 30%, black 100%);
@@ -3746,8 +3800,7 @@ hr {
 .cs_gallery_style_1 .cs_gallery_item img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 0.6s ease;
 }
 .cs_gallery_style_1 .cs_gallery_item:nth-child(2) {
@@ -4100,8 +4153,7 @@ hr {
 .cs_content_row .cs_content_col:has(*) {
   background-color: rgba(255, 255, 255, 0.02);
   border: 1px solid;
-  -o-border-image: linear-gradient(225deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
-     border-image: linear-gradient(225deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  border-image: linear-gradient(225deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
   visibility: visible;
 }
 .cs_content_row .cs_content_col:has(*):hover {
