@@ -232,3 +232,45 @@ hr {
     display: none;
   }
 }
+.animationonhover {
+  position: relative;
+  overflow: hidden;
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+.animationonhover::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(var(--accent-color), transparent, transparent);
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transition:
+    0.5s,
+    top 0s,
+    left 0s;
+  border-radius: 20px;
+}
+.animationonhover:hover::before {
+  opacity: 1;
+}
+.animationonhover::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #2d2d2d;
+  border-radius: 0px;
+}
+.cs_hover_layer,
+.cs_hover_layer1,
+.cs_hover_layer3,
+.cs_hover_layer4 {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: perspective(600px) translate3d(0, 0, 0);
+}

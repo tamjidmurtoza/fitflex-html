@@ -2032,6 +2032,50 @@ hr {
     display: none;
   }
 }
+.animationonhover {
+  position: relative;
+  overflow: hidden;
+}
+.animationonhover > * {
+  position: relative;
+  z-index: 2;
+}
+
+.animationonhover::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(var(--accent-color), transparent, transparent);
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transition: 0.5s, top 0s, left 0s;
+  border-radius: 20px;
+}
+
+.animationonhover:hover::before {
+  opacity: 1;
+}
+
+.animationonhover::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #2d2d2d;
+  border-radius: 0px;
+}
+
+.cs_hover_layer,
+.cs_hover_layer1,
+.cs_hover_layer3,
+.cs_hover_layer4 {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: perspective(600px) translate3d(0, 0, 0);
+}
+
 /*======================================================
   07. Slider
 ========================================================*/
@@ -3014,11 +3058,14 @@ hr {
   width: 37%;
   flex: none;
   height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 .cs_testimonial_card .cs_testimonial_image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.4s ease;
 }
 @media (max-width: 520px) {
   .cs_testimonial_card .cs_testimonial_image {
@@ -3039,6 +3086,10 @@ hr {
 }
 .cs_testimonial_card .cs_testimonial_content .cs_testimonial_user {
   font-weight: 700;
+}
+.cs_testimonial_card:hover .cs_testimonial_image img {
+  transform: scale(1.05);
+  transform-origin: center left;
 }
 @media (max-width: 1199px) {
   .cs_testimonial_card .cs_testimonial_content {
@@ -3198,10 +3249,17 @@ hr {
   opacity: 0.6;
 }
 
+.cs_card_style_1 .cs_btn_style_1 {
+  transform: translate(-50%, -50%) scale(1.6);
+  transition: all 0.4s ease;
+}
 .cs_card_style_1 .cs_btn_style_1:hover {
   color: var(--black-color);
   border-color: var(--accent-color);
   background-color: var(--accent-color);
+}
+.cs_card_style_1:hover .cs_btn_style_1 {
+  transform: translate(-50%, -50%) scale(1);
 }
 @media (max-width: 450px) {
   .cs_card_style_1 {
@@ -3215,6 +3273,7 @@ hr {
   padding: 25px 25px 30px;
   border: 1px solid;
   border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  transition: all 0.4s ease;
 }
 .cs_card_style_2 .cs_btn_style_1 {
   color: var(--black-color);
@@ -3235,6 +3294,10 @@ hr {
 }
 .cs_card_style_2:hover {
   border-image: linear-gradient(45deg, rgb(242, 253, 132), rgba(255, 255, 255, 0)) 1;
+  transform: translateY(-7px);
+}
+.cs_card_style_2:hover .cs_btn_style_1 {
+  top: 95%;
 }
 
 .cs_card_style_3 {
@@ -3247,6 +3310,9 @@ hr {
 }
 .cs_card_style_3 .cs_card_text {
   line-height: 1.625em;
+}
+.cs_card_style_3.animationonhover::after {
+  background: #2d2d2d;
 }
 @media (max-width: 1199px) {
   .cs_card_style_3 .cs_card_title {
@@ -3339,11 +3405,12 @@ hr {
   width: 61px;
   border: 1px solid var(--accent-color);
   color: var(--accent-color);
-  transition: all 0.4s ease;
+  transition: all 0.6s cubic-bezier(0.7, -0.56, 0.27, 1.6);
 }
 .cs_card_wrapper_1 .cs_card_style_3:hover .cs_card_image {
   color: var(--black-color);
   background-color: var(--accent-color);
+  transform: scale(1.2);
 }
 .cs_card_wrapper_1 .cs_card_style_3 .cs_card_info {
   padding: 0 20px;
@@ -3678,7 +3745,7 @@ hr {
   color: var(--accent-color);
   position: absolute;
   left: 0;
-  top: 4px;
+  top: 5px;
   font-size: 24px;
   line-height: 1em;
 }
@@ -3771,6 +3838,7 @@ hr {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  transition: all 0.6s cubic-bezier(0.7, -0.56, 0.27, 1.6);
 }
 .cs_video_style_1 a img {
   position: relative;
@@ -3788,7 +3856,10 @@ hr {
   border-radius: 50%;
   animation: border-scale 3s cubic-bezier(0.29, 0.36, 0.13, 0.44) infinite;
   z-index: 0;
-  opacity: 0.13;
+  opacity: 0.22;
+}
+.cs_video_style_1 a:hover {
+  transform: translate(-50%, -50%) scale(1.2);
 }
 .cs_video_style_1 a:hover::before {
   animation-play-state: paused;

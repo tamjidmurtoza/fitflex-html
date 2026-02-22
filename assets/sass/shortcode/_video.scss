@@ -11,6 +11,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: all 0.6s cubic-bezier(0.7, -0.56, 0.27, 1.6);
+
     img {
       position: relative;
       z-index: 1;
@@ -27,9 +29,10 @@
       border-radius: 50%;
       animation: border-scale 3s cubic-bezier(0.29, 0.36, 0.13, 0.44) infinite;
       z-index: 0;
-      opacity: 0.13;
+      opacity: 0.22;
     }
     &:hover {
+      transform: translate(-50%, -50%) scale(1.2);
       &::before {
         animation-play-state: paused;
       }

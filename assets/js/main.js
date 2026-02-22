@@ -22,6 +22,8 @@
   | 09. Tabs
   | 10. Counter Animation
   | 11. Dynamic contact form
+  | 12. Hover Animation
+  | 13. Hobble Effect
   |
   */
 
@@ -46,6 +48,8 @@
     scrollUp();
     lightGallery();
     tabs();
+    hobbleEffect();
+    animationOnHover();
     if ($.exists(".cs_getting_year")) {
       const date = new Date();
       $(".cs_getting_year").text(date.getFullYear());
@@ -382,5 +386,111 @@
           }, 5000);
         });
     });
+  }
+  /*--------------------------------------------------------------
+    12. Hover Animation
+  --------------------------------------------------------------*/
+  function animationOnHover() {
+    let cards = document.querySelectorAll(".animationonhover");
+
+    cards.forEach((tmpOnHover) => {
+      // Set initial value
+      tmpOnHover.style.setProperty("--x", "-1px");
+      tmpOnHover.style.setProperty("--y", "-1px");
+
+      tmpOnHover.onmousemove = function (e) {
+        let rect = tmpOnHover.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+
+        tmpOnHover.style.setProperty("--x", `${x}px`);
+        tmpOnHover.style.setProperty("--y", `${y}px`);
+      };
+    });
+  }
+  /*--------------------------------------------------------------
+    13. Hobble Effect
+  --------------------------------------------------------------*/
+  function hobbleEffect() {
+    $(document)
+      .on("mousemove", ".cs_hobble", function (event) {
+        var halfW = this.clientWidth / 2;
+        var halfH = this.clientHeight / 2;
+        var coorX = halfW - (event.pageX - $(this).offset().left);
+        var coorY = halfH - (event.pageY - $(this).offset().top);
+        var degX1 = (coorY / halfH) * 8 + "deg";
+        var degY1 = (coorX / halfW) * -8 + "deg";
+        var degX2 = (coorY / halfH) * -50 + "px";
+        var degY2 = (coorX / halfW) * 70 + "px";
+        var degX3 = (coorY / halfH) * -10 + "px";
+        var degY3 = (coorX / halfW) * 10 + "px";
+        var degX4 = (coorY / halfH) * 15 + "deg";
+        var degY4 = (coorX / halfW) * -15 + "deg";
+        var degX5 = (coorY / halfH) * -30 + "px";
+        var degY5 = (coorX / halfW) * 60 + "px";
+
+        $(this)
+          .find(".cs_hover_layer1")
+          .css("transform", function () {
+            return (
+              "perspective( 800px ) translate3d( 0, 0, 0 ) rotateX(" +
+              degX1 +
+              ") rotateY(" +
+              degY1 +
+              ")"
+            );
+          });
+        $(this)
+          .find(".cs_hover_layer2")
+          .css("transform", function () {
+            return (
+              "perspective( 800px ) translateY(" +
+              degX2 +
+              ") translateX(" +
+              degY2 +
+              ")"
+            );
+          });
+        $(this)
+          .find(".cs_hover_layer3")
+          .css("transform", function () {
+            return (
+              "perspective( 800px ) translateX(" +
+              degX3 +
+              ") translateY(" +
+              degY3 +
+              ") scale(1.02)"
+            );
+          });
+        $(this)
+          .find(".cs_hover_layer4")
+          .css("transform", function () {
+            return (
+              "perspective( 800px ) translate3d( 0, 0, 0 ) rotateX(" +
+              degX4 +
+              ") rotateY(" +
+              degY4 +
+              ")"
+            );
+          });
+        $(this)
+          .find(".cs_hover_layer5")
+          .css("transform", function () {
+            return (
+              "perspective( 800px ) translateY(" +
+              degX5 +
+              ") translateX(" +
+              degY5 +
+              ")"
+            );
+          });
+      })
+      .on("mouseout", ".cs_hobble", function () {
+        $(this).find(".cs_hover_layer1").removeAttr("style");
+        $(this).find(".cs_hover_layer2").removeAttr("style");
+        $(this).find(".cs_hover_layer3").removeAttr("style");
+        $(this).find(".cs_hover_layer4").removeAttr("style");
+        $(this).find(".cs_hover_layer5").removeAttr("style");
+      });
   }
 })(jQuery); // End of use strict
